@@ -2,9 +2,9 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import newUser from '../actions/actions';
-import Button from './Button';
-import Input from './InputField';
+import { newUser } from '../actions/actions';
+import Button from '../Components/Button';
+import Input from '../Components/InputField';
 
 class Login extends Component {
   state = {
