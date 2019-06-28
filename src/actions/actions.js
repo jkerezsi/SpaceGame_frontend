@@ -1,4 +1,4 @@
-export const newUser = (username, password) => {
+export const userLogin = (username, password) => {
   console.log(username, password);
   return {
     type: 'userLogin',
@@ -8,10 +8,10 @@ export const newUser = (username, password) => {
   };
 };
 
-export const userRegistration = (username, password,kingdom) => {
+export const userRegistration = (username, password, kingdom) => {
   console.log(username, password, kingdom);
   return {
-    type: 'userLogin',
+    type: 'userRegister',
     payload: {
       username, password, kingdom,
     },

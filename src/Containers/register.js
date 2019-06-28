@@ -10,7 +10,7 @@ class Register extends Component {
   state = {
     username: null,
     password: null,
-    kingdom: null
+    kingdom: null,
   }
 
   handleChange = (e) => {
@@ -33,7 +33,7 @@ class Register extends Component {
         <form>
           <Input label="Username" id="username" onChange={this.handleChange} />
           <Input label="Password" id="password" onChange={this.handleChange} />
-          <Input label="Kingdom" id="kingdom" onChange={this.handleChange} />
+          <Input label="Kingdom name" id="kingdom" onChange={this.handleChange} />
           <Button onClick={this.handleClick} buttonText="Register" />
         </form>
       </div>

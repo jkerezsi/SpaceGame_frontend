@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { newUser } from '../actions/actions';
+import { userLogin } from '../actions/actions';
 import Button from '../Components/Button';
 import Input from '../Components/InputField';
 
@@ -20,9 +20,9 @@ class Login extends Component {
 
   handleClick = (e) => {
     e.preventDefault();
-    const { newUser } = this.props;
+    const { userLogin } = this.props;
     const { username, password } = this.state;
-    newUser(username, password);
+    userLogin(username, password);
   }
 
 
@@ -41,7 +41,7 @@ class Login extends Component {
 
 
 const mapDispatchToProps = {
-  newUser,
+  userLogin,
 };
 
 export default connect(

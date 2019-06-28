@@ -5,7 +5,8 @@ import createHistory from 'history/createBrowserHistory';
 import { routerMiddleware } from 'react-router-redux';
 import createSagaMiddleware from 'redux-saga';
 import rootReducer from '../reducers/index';
-import { workerSaga, watcherSaga } from '../sagas/sagas';
+import { loginWatcherSaga, loginWorkerSaga } from '../sagas/loginSaga';
+import {registerWorkerSaga, registerWatcherSaga } from '../sagas/registerSaga';
 
 export const history = createHistory();
 
@@ -22,7 +23,7 @@ function configureStoreProd(initialState) {
   const store = createStore(rootReducer, initialState, compose(
     applyMiddleware(...middlewares),
   ));
-  sagaMiddleware.run(workerSaga);
+  sagaMiddleware.run(loginWorkerSaga, registerWorkerSaga);
   return store;
 }
 
@@ -49,7 +50,7 @@ function configureStoreDev(initialState) {
     });
   }
 
-  sagaMiddleware.run(watcherSaga);
+  sagaMiddleware.run(loginWatcherSaga, registerWatcherSaga);
 
   return store;
 }
