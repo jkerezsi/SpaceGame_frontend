@@ -7,15 +7,13 @@ export function* loginWorkerSaga() {
   try {
     // data is obtained after axios call is resolved
     const response = yield call(fetchLogin);
+    console.log(response.data);
     // store data to localStorage
     // Object.keys(data.session).forEach(key, => {
     //   localStorage.setItem(key, data[key]);
     // });
     // redirect to home route after successful login
     // browserHistory.push('/main');
-    const user = response.data.message;
-    console.log(user);
-    console.log(response);
   } catch (error) {
     (
       console.log(error)

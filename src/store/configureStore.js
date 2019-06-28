@@ -6,7 +6,7 @@ import { routerMiddleware } from 'react-router-redux';
 import createSagaMiddleware from 'redux-saga';
 import rootReducer from '../reducers/index';
 import { loginWatcherSaga, loginWorkerSaga } from '../sagas/loginSaga';
-import {registerWorkerSaga, registerWatcherSaga } from '../sagas/registerSaga';
+import { registerWorkerSaga, registerWatcherSaga } from '../sagas/registerSaga';
 
 export const history = createHistory();
 

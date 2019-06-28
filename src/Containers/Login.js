@@ -8,8 +8,9 @@ import Input from '../Components/InputField';
 
 class Login extends Component {
   state = {
-    username: null,
-    password: null,
+    username: '',
+    password: '',
+    error: '',
   }
 
   handleChange = (e) => {
@@ -20,11 +21,21 @@ class Login extends Component {
 
   handleClick = (e) => {
     e.preventDefault();
+    const isValid = this.validate();
     const { userLogin } = this.props;
     const { username, password } = this.state;
     userLogin(username, password);
   }
 
+  // eslint-disable-next-line consistent-return
+  validate = () => {
+    const { username, password, error } = this.state;
+    if (!username || !password) {
+      this.setState({ error: 'All input fields are required' });
+    } else {
+      return true;
+    }
+  };
 
   render() {
     return (
@@ -33,6 +44,7 @@ class Login extends Component {
           <Input label="Username" id="username" onChange={this.handleChange} />
           <Input label="Password" id="password" onChange={this.handleChange} />
           <Button onClick={this.handleClick} buttonText="Login" />
+          <p>{ this.state.error }</p>
         </form>
       </div>
     );

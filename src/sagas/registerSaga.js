@@ -5,8 +5,8 @@ export function* registerWorkerSaga() {
   try {
     const response = yield call(fetchRegister);
     const user = response.data;
+    console.log(response.data);
     console.log(user);
-    console.log(response);
   } catch (error) {
     (
       console.log(error)
@@ -16,5 +16,6 @@ export function* registerWorkerSaga() {
 
 export function* registerWatcherSaga() {
   yield take('userRegister');
+  console.log('valami');
   yield call(registerWorkerSaga);
 }
