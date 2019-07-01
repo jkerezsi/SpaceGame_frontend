@@ -1,9 +1,7 @@
 import axios from 'axios';
 import { userLogin, userRegistration } from '../actions/actions';
 
-
-// function that makes the api request and returns a Promise for response
-export function fetchLogin(userLogin) {
+export function fetchLogin() {
   return axios({
     method: 'get',
     url: 'http://localhost:3007/login',
@@ -11,7 +9,7 @@ export function fetchLogin(userLogin) {
   });
 }
 
-export function fetchRegister(userRegistration) {
+export function fetchRegister() {
   return axios({
     method: 'post',
     url: 'http://localhost:3007/register',

@@ -17,6 +17,9 @@ class Login extends Component {
     this.setState({
       [e.target.id]: e.target.value,
     });
+    this.setState({
+      error: '',
+    });
   };
 
   handleClick = (e) => {

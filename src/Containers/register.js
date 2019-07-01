@@ -8,10 +8,24 @@ import Input from '../Components/InputField';
 
 class Register extends Component {
   state = {
-    username: null,
-    password: null,
-    kingdom: null,
+    username: '',
+    password: '',
+    kingdom: '',
+    error: '',
   }
+
+  validate = () => {
+    const {
+      username, password, kingdom, error,
+    } = this.state;
+    if (!username || !password) {
+      this.setState({ error: 'Username and password are required!' });
+    } else if (password.length < 8) {
+      this.setState({ error: ' Password must contain at least 8 characters!' });
+    } else {
+      return true;
+    }
+  };
 
   handleChange = (e) => {
     this.setState({
@@ -35,6 +49,7 @@ class Register extends Component {
           <Input label="Password" id="password" onChange={this.handleChange} />
           <Input label="Kingdom name" id="kingdom" onChange={this.handleChange} />
           <Button onClick={this.handleClick} buttonText="Register" />
+          <p>{ this.state.error }</p>
         </form>
       </div>
     );

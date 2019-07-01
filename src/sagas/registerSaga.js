@@ -5,7 +5,6 @@ export function* registerWorkerSaga() {
   try {
     const response = yield call(fetchRegister);
     const user = response.data;
-    console.log(response.data);
     console.log(user);
   } catch (error) {
     (
