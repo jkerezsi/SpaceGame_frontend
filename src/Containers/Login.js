@@ -25,9 +25,13 @@ class Login extends Component {
   handleClick = (e) => {
     e.preventDefault();
     const isValid = this.validate();
-    const { userLogin } = this.props;
-    const { username, password } = this.state;
-    userLogin(username, password);
+    if (isValid === true) {
+      const { userLogin } = this.props;
+      const { username, password } = this.state;
+      userLogin(username, password);
+    } else {
+      return false;
+    }
   }
 
   // eslint-disable-next-line consistent-return
