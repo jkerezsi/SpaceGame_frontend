@@ -1,4 +1,4 @@
-import { call, take } from 'redux-saga/effects';
+import { call, takeLatest } from 'redux-saga/effects';
 import { fetchLogin } from '../services/api';
 
 
@@ -23,6 +23,6 @@ export function* loginWorkerSaga() {
 
 // watcher saga: watches for actions dispatched to the store, starts worker saga
 export function* loginWatcherSaga() {
-  yield take('userLogin');
+  yield takeLatest('userLogin');
   yield call(loginWorkerSaga);
 }

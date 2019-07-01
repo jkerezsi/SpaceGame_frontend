@@ -37,7 +37,11 @@ class Register extends Component {
     e.preventDefault();
     const { userRegistration } = this.props;
     const { username, password, kingdom } = this.state;
+    if (kingdom === '' || kingdom === null) {
+      this.setState({ kingdom: `${username}'s kingdom` });
+    }
     userRegistration(username, password, kingdom);
+    console.log(username, password, kingdom);
   }
 
 
@@ -46,7 +50,8 @@ class Register extends Component {
       <div className="registration">
         <form>
           <Input label="Username" id="username" onChange={this.handleChange} />
-          <Input label="Password" id="password" onChange={this.handleChange} />
+          <label htmlFor="password">Password</label>
+          <input type="password" label="Password" id="password" onChange={this.handleChange} placeholder="Password" />
           <Input label="Kingdom name" id="kingdom" onChange={this.handleChange} />
           <Button onClick={this.handleClick} buttonText="Register" />
           <p>{ this.state.error }</p>

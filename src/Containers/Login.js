@@ -45,7 +45,8 @@ class Login extends Component {
       <div className="login">
         <form>
           <Input label="Username" id="username" onChange={this.handleChange} />
-          <Input label="Password" id="password" onChange={this.handleChange} />
+          <label htmlFor="password">Password</label>
+          <input type="password" label="Password" id="password" onChange={this.handleChange} placeholder="Password" />
           <Button onClick={this.handleClick} buttonText="Login" />
           <p>{ this.state.error }</p>
         </form>
