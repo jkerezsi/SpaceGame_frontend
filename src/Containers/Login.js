@@ -36,7 +36,7 @@ class Login extends Component {
 
   // eslint-disable-next-line consistent-return
   validate = () => {
-    const { username, password, error } = this.state;
+    const { username, password } = this.state;
     if (!username || !password) {
       this.setState({ error: 'All input fields are required' });
     } else {

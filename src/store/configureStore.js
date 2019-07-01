@@ -7,6 +7,7 @@ import createSagaMiddleware from 'redux-saga';
 import rootReducer from '../reducers/index';
 import { loginWatcherSaga, loginWorkerSaga } from '../sagas/loginSaga';
 import { registerWorkerSaga, registerWatcherSaga } from '../sagas/registerSaga';
+import rootSaga from '../sagas/rootSaga';
 
 export const history = createHistory();
 
@@ -50,7 +51,7 @@ function configureStoreDev(initialState) {
     });
   }
 
-  sagaMiddleware.run(loginWatcherSaga, registerWatcherSaga);
+  sagaMiddleware.run(rootSaga);
 
   return store;
 }

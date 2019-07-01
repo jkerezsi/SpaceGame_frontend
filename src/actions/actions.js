@@ -8,7 +8,7 @@ export const userLogin = (username, password) => {
   };
 };
 
-export const userRegistration = (username, password, kingdom) => {
+export const userRegister = (username, password, kingdom) => {
   console.log(username, password, kingdom);
   return {
     type: 'userRegister',

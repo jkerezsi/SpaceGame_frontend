@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { userRegistration } from '../actions/actions';
+import { userRegister } from '../actions/actions';
 import Button from '../Components/Button';
 import Input from '../Components/InputField';
 
@@ -16,12 +16,12 @@ class Register extends Component {
 
   validate = () => {
     const {
-      username, password, kingdom, error,
+      username, password,
     } = this.state;
     if (!username || !password) {
       this.setState({ error: 'Username and password are required!' });
     } else if (password.length < 8) {
-      this.setState({ error: ' Password must contain at least 8 characters!' });
+      this.setState({ error: 'Password must contain at least 8 characters!' });
     } else {
       return true;
     }
@@ -31,18 +31,21 @@ class Register extends Component {
     this.setState({
       [e.target.id]: e.target.value,
     });
+    this.setState({
+      error: '',
+    });
   };
 
   handleClick = (e) => {
     e.preventDefault();
-    const { userRegistration } = this.props;
-    const { username, password, kingdom } = this.state;
-    if (kingdom === '' || kingdom === null) {
-      this.setState({ kingdom: `${username}'s kingdom` });
+    const isValid = this.validate();
+    if (isValid === true) {
+      const { userRegister } = this.props;
+      const { username, password, kingdom } = this.state;
+      console.log(username, password, kingdom);
+      return userRegister(username, password, kingdom);
     }
-    userRegistration(username, password, kingdom);
-    console.log(username, password, kingdom);
-  }
+  };
 
 
   render() {
@@ -63,7 +66,7 @@ class Register extends Component {
 
 
 const mapDispatchToProps = {
-  userRegistration,
+  userRegister,
 };
 
 export default connect(

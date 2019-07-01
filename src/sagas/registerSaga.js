@@ -1,5 +1,6 @@
 import { call, take } from 'redux-saga/effects';
 import { fetchRegister } from '../services/api';
+import { userRegister } from '../actions/actions';
 
 export function* registerWorkerSaga() {
   try {
@@ -14,7 +15,7 @@ export function* registerWorkerSaga() {
 }
 
 export function* registerWatcherSaga() {
-  yield take('userRegister');
+  yield take('userRegister', userRegister);
   console.log('valami');
   yield call(registerWorkerSaga);
 }

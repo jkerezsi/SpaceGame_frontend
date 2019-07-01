@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { userLogin, userRegistration } from '../actions/actions';
+import { userLogin, userRegister } from '../actions/actions';
 
 export function fetchLogin() {
   return axios({
@@ -13,6 +13,6 @@ export function fetchRegister() {
   return axios({
     method: 'post',
     url: 'http://localhost:3007/register',
-    data: userRegistration,
+    data: userRegister,
   });
 }
