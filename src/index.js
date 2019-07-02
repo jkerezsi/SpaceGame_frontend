@@ -10,6 +10,7 @@ import Navbar from './Components/Navbar';
 
 const store = configureStore();
 
+
 ReactDOM.render((
   <Router>
     <Provider store={store}>

@@ -3,7 +3,7 @@ import { userLogin, userRegister } from '../actions/actions';
 
 export function fetchLogin() {
   return axios({
-    method: 'get',
+    method: 'post',
     url: 'http://localhost:3007/login',
     data: userLogin,
   });
@@ -12,7 +12,7 @@ export function fetchLogin() {
 export function fetchRegister() {
   return axios({
     method: 'post',
-    url: 'http://localhost:3007/register',
+    url: 'http://localhost:3000/register',
     data: userRegister,
   });
 }

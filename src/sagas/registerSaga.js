@@ -16,6 +16,5 @@ export function* registerWorkerSaga() {
 
 export function* registerWatcherSaga() {
   yield take('userRegister', userRegister);
-  console.log('valami');
   yield call(registerWorkerSaga);
 }

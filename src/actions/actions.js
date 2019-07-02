@@ -19,4 +19,5 @@ export const userRegister = (username, password, kingdom) => {
 };
 
 
-export const requestUser = () => ({ type: 'REQUESTED_USER' });
+export const loginSuccess = () => ({ type: 'LOGIN_SUCCESS', payload: '' });
+export const loginFailed = () => ({ type: 'LOGIN_FAILED' });

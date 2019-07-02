@@ -1,20 +1,20 @@
-import { call, take } from 'redux-saga/effects';
+import { push } from 'react-router-redux';
+import { call, take, put } from 'redux-saga/effects';
 import { fetchLogin } from '../services/api';
 import { userLogin } from '../actions/actions';
 
 
-// worker saga: makes the api call when watcher saga sees the action
 export function* loginWorkerSaga() {
   try {
-    // data is obtained after axios call is resolved
     const response = yield call(fetchLogin);
+    const { token } = response.data.token;
     console.log(response.data);
-    // store data to localStorage
-    // Object.keys(data.session).forEach(key, => {
-    //   localStorage.setItem(key, data[key]);
-    // });
-    // redirect to home route after successful login
-    // browserHistory.push('/main');
+    if (response.data.status === 'ok') {
+      yield put({ type: 'LOGIN_SUCCESS', payload: token });
+      yield put(push('/main'));
+    } else if (response.status === 'error') {
+      yield put({ type: 'LOGIN_FAILED' });
+    }
   } catch (error) {
     (
       console.log(error)
@@ -22,7 +22,6 @@ export function* loginWorkerSaga() {
   }
 }
 
-// watcher saga: watches for actions dispatched to the store, starts worker saga
 export function* loginWatcherSaga() {
   yield take(userLogin);
   yield call(loginWorkerSaga);
