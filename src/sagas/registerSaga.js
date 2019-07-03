@@ -18,6 +18,6 @@ export function* registerWorkerSaga() {
 }
 
 export function* registerWatcherSaga() {
-  yield take(userRegister);
+  yield take('userRegister', userRegister);
   yield call(registerWorkerSaga);
 }

@@ -22,7 +22,7 @@ export function* loginWorkerSaga() {
 }
 
 export function* loginWatcherSaga() {
-  yield take(userLogin);
+  yield take('userLogin', userLogin);
   console.log('valami');
   yield call(loginWorkerSaga);
 }
