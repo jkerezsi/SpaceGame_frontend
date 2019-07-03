@@ -1,5 +1,5 @@
-/* eslint-disable react/button-has-type */
 /* eslint-disable jsx-a11y/label-has-associated-control */
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { userLogin } from '../actions/actions';
@@ -29,30 +29,29 @@ class Login extends Component {
       const { userLogin } = this.props;
       const { username, password } = this.state;
       userLogin(username, password);
-    } else {
-      return false;
     }
+    return false;
   }
 
-  // eslint-disable-next-line consistent-return
   validate = () => {
     const { username, password } = this.state;
     if (!username || !password) {
       this.setState({ error: 'All input fields are required' });
-    } else {
-      return true;
+      return false;
     }
+    return true;
   };
 
   render() {
+    const { error } = this.state;
     return (
       <div className="login">
         <form>
           <Input label="Username" id="username" onChange={this.handleChange} />
-          <label htmlFor="password">Password</label>
+          <label id="password" htmlFor="password">Password</label>
           <input type="password" label="Password" id="password" onChange={this.handleChange} placeholder="Password" />
           <Button onClick={this.handleClick} buttonText="Login" />
-          <p>{ this.state.error }</p>
+          <p>{ error }</p>
         </form>
       </div>
     );

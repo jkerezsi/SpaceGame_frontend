@@ -1,5 +1,5 @@
-import { push } from 'react-router-redux';
 import { call, take, put } from 'redux-saga/effects';
+import { push } from 'react-router-redux';
 import { fetchLogin } from '../services/api';
 import { userLogin } from '../actions/actions';
 
@@ -7,11 +7,10 @@ import { userLogin } from '../actions/actions';
 export function* loginWorkerSaga() {
   try {
     const response = yield call(fetchLogin);
-    const { token } = response.data.token;
-    console.log(response.data);
+    console.log(response.data.token);
     if (response.data.status === 'ok') {
-      yield put({ type: 'LOGIN_SUCCESS', payload: token });
-      yield put(push('/main'));
+      yield put({ type: 'LOGIN_SUCCESS', payload: response.data.token });
+      yield put(push('/kingdom'));
     } else if (response.status === 'error') {
       yield put({ type: 'LOGIN_FAILED' });
     }
@@ -24,5 +23,6 @@ export function* loginWorkerSaga() {
 
 export function* loginWatcherSaga() {
   yield take(userLogin);
+  console.log('valami');
   yield call(loginWorkerSaga);
 }

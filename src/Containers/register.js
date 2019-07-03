@@ -20,11 +20,12 @@ class Register extends Component {
     } = this.state;
     if (!username || !password) {
       this.setState({ error: 'Username and password are required!' });
-    } else if (password.length < 8) {
+      return false;
+    } if (password.length < 8) {
       this.setState({ error: 'Password must contain at least 8 characters!' });
-    } else {
-      return true;
+      return false;
     }
+    return true;
   };
 
   handleChange = (e) => {
@@ -40,15 +41,18 @@ class Register extends Component {
     e.preventDefault();
     const isValid = this.validate();
     if (isValid === true) {
+      // eslint-disable-next-line react/prop-types
       const { userRegister } = this.props;
       const { username, password, kingdom } = this.state;
       console.log(username, password, kingdom);
-      return userRegister(username, password, kingdom);
+      userRegister(username, password, kingdom);
     }
+    return false;
   };
 
 
   render() {
+    const { error } = this.state;
     return (
       <div className="registration">
         <form>
@@ -57,7 +61,7 @@ class Register extends Component {
           <input type="password" label="Password" id="password" onChange={this.handleChange} placeholder="Password" />
           <Input label="Kingdom name" id="kingdom" onChange={this.handleChange} />
           <Button onClick={this.handleClick} buttonText="Register" />
-          <p>{ this.state.error }</p>
+          <p>{ error }</p>
         </form>
       </div>
     );
