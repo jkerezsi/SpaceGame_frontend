@@ -1,5 +1,4 @@
 export const userLogin = (username, password) => {
-  console.log(username, password);
   return {
     type: 'userLogin',
     payload: {
@@ -9,7 +8,6 @@ export const userLogin = (username, password) => {
 };
 
 export const userRegister = (username, password, kingdom) => {
-  console.log(username, password, kingdom);
   return {
     type: 'userRegister',
     payload: {

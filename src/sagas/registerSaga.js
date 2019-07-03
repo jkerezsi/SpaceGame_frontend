@@ -5,8 +5,6 @@ import { userRegister } from '../actions/actions';
 export function* registerWorkerSaga() {
   try {
     const response = yield call(fetchRegister);
-    // const user = response.data;
-    console.log(response.data.message);
     if (response.data.status === 'error') {
       yield put({ type: 'userRegister', error: response.data.message });
     }
