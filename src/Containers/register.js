@@ -62,11 +62,18 @@ class Register extends Component {
           <Input label="Kingdom name" id="kingdom" onChange={this.handleChange} />
           <Button onClick={this.handleClick} buttonText="Register" />
           <p>{ error }</p>
+          <p>{ this.props.error}</p>
         </form>
       </div>
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    error: state.registerAuthentication.error,
+  };
+};
 
 
 const mapDispatchToProps = {
@@ -74,6 +81,6 @@ const mapDispatchToProps = {
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps,
 )(Register);
