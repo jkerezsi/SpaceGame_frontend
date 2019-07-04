@@ -61,7 +61,7 @@ class Register extends Component {
           <Input label="Kingdom name" id="kingdom" onChange={this.handleChange} />
           <Button onClick={this.handleClick} buttonText="Register" />
           <p>{ error }</p>
-          <p>{ this.props.error}</p>
+          <p>{ this.props.error }</p>
         </form>
       </div>
     );
@@ -69,6 +69,7 @@ class Register extends Component {
 }
 
 const mapStateToProps = (state) => {
+  console.log(state);
   return {
     error: state.registerAuthentication.error,
   };

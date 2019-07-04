@@ -1,12 +1,13 @@
 import { call, take, put } from 'redux-saga/effects';
 import { fetchRegister } from '../services/api';
-import { userRegister } from '../actions/actions';
+import { userRegister, registerFailed } from '../actions/actions';
 
 export function* registerWorkerSaga() {
   try {
     const response = yield call(fetchRegister);
     if (response.data.status === 'error') {
-      yield put({ type: 'REGSITER_FAILED', error: response.data.message });
+      yield put({ type: 'REGISTER_FAILED', payload: response.data.message });
+      console.log(registerFailed);
     } else if (response.data.status.statusCode === '200') {
       yield put({ type: 'REGISTER_SUCCESS', payload: response.data });
     }

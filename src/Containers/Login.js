@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable arrow-body-style */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
