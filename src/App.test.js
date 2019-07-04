@@ -8,8 +8,10 @@ describe('actions', () => {
     const password = 'tyutyesz';
     const expectedAction = {
       type: 'userLogin',
-      payload: username,
-      password,
+      payload: {
+        username,
+        password,
+      },
     };
     expect(actions.userLogin(username, password)).toEqual(expectedAction);
   });
