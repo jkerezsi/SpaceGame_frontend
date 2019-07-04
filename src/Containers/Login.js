@@ -46,7 +46,7 @@ class Login extends Component {
 
   render() {
     const { error } = this.state;
-
+    const { backendError } = this.props;
     return (
       <div className="login">
         <form>
@@ -55,7 +55,7 @@ class Login extends Component {
           <input type="password" label="Password" id="password" onChange={this.handleChange} placeholder="Password" />
           <Button onClick={this.handleClick} buttonText="Login" />
           <p>{ error }</p>
-          <p>{ this.props.error}</p>
+          <p>{ backendError }</p>
         </form>
       </div>
     );
@@ -65,7 +65,7 @@ class Login extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    error: state.loginAuthentication.error,
+    backendError: state.loginAuthentication.error,
   };
 };
 

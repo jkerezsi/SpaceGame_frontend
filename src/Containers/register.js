@@ -41,7 +41,6 @@ class Register extends Component {
     e.preventDefault();
     const isValid = this.validate();
     if (isValid === true) {
-      // eslint-disable-next-line react/prop-types
       const { userRegister } = this.props;
       const { username, password, kingdom } = this.state;
       userRegister(username, password, kingdom);
@@ -52,6 +51,7 @@ class Register extends Component {
 
   render() {
     const { error } = this.state;
+    const { registerBackendError } = this.props;
     return (
       <div className="registration">
         <form>
@@ -61,7 +61,7 @@ class Register extends Component {
           <Input label="Kingdom name" id="kingdom" onChange={this.handleChange} />
           <Button onClick={this.handleClick} buttonText="Register" />
           <p>{ error }</p>
-          <p>{ this.props.error }</p>
+          <p>{ registerBackendError }</p>
         </form>
       </div>
     );
@@ -69,9 +69,8 @@ class Register extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
-    error: state.registerAuthentication.error,
+    registerBackendError: state.registerAuthentication.error,
   };
 };
 
