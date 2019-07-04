@@ -1,15 +1,18 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import HelloWorldRedux from '../Containers/HelloWorldRedux/HelloWorldRedux';
-import HelloWorldSaga from '../Containers/HelloWorldSaga/HelloWorldSaga';
-import HelloWorldSimple from './HelloWorldSimple/HelloWorldSimple';
+import kindgom from './menu/kingdom';
 import '../stylesheets/App.css';
+import leaderboard from './leaderboard';
 
 const App = () => (
   <Switch>
-    <Route exact path="/" component={HelloWorldRedux} />
-    <Route exact path="/simple" component={HelloWorldSimple} />
-    <Route exact path="/saga" component={HelloWorldSaga} />
+    <Route exact path="/kingdom" component={kindgom} />
+    <Route exact path="/kingdom/buildings" />
+    <Route exact path="/kingdom/troops" />
+    <Route exact path="/kingdom/battle" />
+    <Route exact path="/kingdom/leaderboard" component={leaderboard} />
+    <Route exact path="/kingdom/leaderboard/buildings" />
+    <Route exact path="/kingdom/leaderboard/troops" />
   </Switch>
 );
 
