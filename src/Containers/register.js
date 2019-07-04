@@ -1,4 +1,6 @@
 /* eslint-disable react/button-has-type */
+/* eslint-disable arrow-body-style */
+/* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -41,8 +43,8 @@ class Register extends Component {
     e.preventDefault();
     const isValid = this.validate();
     if (isValid === true) {
-      const { userRegister } = this.props;
       const { username, password, kingdom } = this.state;
+      const { userRegister } = this.props;
       userRegister(username, password, kingdom);
     }
     return false;

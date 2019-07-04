@@ -7,7 +7,6 @@ export function* registerWorkerSaga() {
     const response = yield call(fetchRegister);
     if (response.data.status === 'error') {
       yield put({ type: 'REGISTER_FAILED', payload: response.data.message });
-      console.log(registerFailed);
     } else if (response.data.status.statusCode === '200') {
       yield put({ type: 'REGISTER_SUCCESS', payload: response.data });
     }

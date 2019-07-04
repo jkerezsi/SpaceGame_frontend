@@ -14,7 +14,6 @@ const registerAuthentication = (state = initialState, action) => {
         kingdomId: action.paylod.kingdomId,
       };
     case 'REGISTER_FAILED':
-      console.log(action);
       return {
         error: action.payload,
       };
