@@ -1,6 +1,6 @@
 import { call, take, put } from 'redux-saga/effects';
 import { fetchRegister } from '../services/api';
-import { userRegister, registerFailed } from '../actions/actions';
+import { userRegister } from '../actions/actions';
 
 export function* registerWorkerSaga() {
   try {
