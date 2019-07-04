@@ -44,7 +44,6 @@ class Register extends Component {
       // eslint-disable-next-line react/prop-types
       const { userRegister } = this.props;
       const { username, password, kingdom } = this.state;
-      console.log(username, password, kingdom);
       userRegister(username, password, kingdom);
     }
     return false;

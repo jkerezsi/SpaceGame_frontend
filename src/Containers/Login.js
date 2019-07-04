@@ -1,3 +1,4 @@
+/* eslint-disable arrow-body-style */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
 import React, { Component } from 'react';
