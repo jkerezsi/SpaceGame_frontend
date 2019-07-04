@@ -1,20 +1,16 @@
-export const userLogin = (username, password) => {
-  return {
-    type: 'userLogin',
-    payload: {
-      username, password,
-    },
-  };
-};
+export const userLogin = (username, password) => ({
+  type: 'userLogin',
+  payload: {
+    username, password,
+  },
+});
 
-export const userRegister = (username, password, kingdom) => {
-  return {
-    type: 'userRegister',
-    payload: {
-      username, password, kingdom,
-    },
-  };
-};
+export const userRegister = (username, password, kingdom) => ({
+  type: 'userRegister',
+  payload: {
+    username, password, kingdom,
+  },
+});
 
 
 export const loginSuccess = () => ({ type: 'LOGIN_SUCCESS', payload: '' });
