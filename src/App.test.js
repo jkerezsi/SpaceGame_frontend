@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as types from '../../constants/ActionTypes';
 import * as actions from './actions/actions';
 
 describe('actions', () => {
@@ -8,7 +7,7 @@ describe('actions', () => {
     const username = 'jani';
     const password = 'tyutyesz';
     const expectedAction = {
-      type: types.userLogin,
+      type: 'userLogin',
       payload: username,
       password,
     };
