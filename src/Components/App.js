@@ -4,6 +4,7 @@ import kindgom from './menu/kingdom';
 import '../stylesheets/App.css';
 import leaderboard from './leaderboard';
 
+
 const App = () => (
   <Switch>
     <Route exact path="/kingdom" component={kindgom} />
