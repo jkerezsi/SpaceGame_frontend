@@ -1,5 +1,4 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+
 import * as userAction from './actions/actions';
 
 describe('userAction', () => {
