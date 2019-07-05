@@ -7,11 +7,17 @@
   font-weight: bold;  
 }
 
-/* .leaderbuttons{
-  padding-top: 200px;
+.leaderbuttons{
+  display: flex;
+  padding-top: 50px;
   padding-left: 50px;
+  padding-right: 50px;
+} 
 
-} */
+.leaderbuttons[img] {
+  width: 120px;
+  height: 90px; 
+}
 
 .menu {
   display: flex;
@@ -21,8 +27,7 @@
 }
 
 button {
-  float: left;
-  width: 150px;
+  width: 140px;
   height: 150px;
   background-color: transparent;
   border: 0;
@@ -31,7 +36,6 @@ button {
 }
 
 img {
-  float: center;
   width: 120px;
   height: 90px; 
 }

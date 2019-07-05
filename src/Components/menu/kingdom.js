@@ -17,7 +17,7 @@ const Kingdom = () => (
       </NavLink>
     </button>
 
-    <button type="submit" className="building">
+    <button type="submit">
       <NavLink to="/kingdom/troops" className="linkbutton">
         <img src={troop} alt="Pic comes here" />
         <br />
