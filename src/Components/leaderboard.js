@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import '../stylesheets/menubuttons.css';
-import building from '../assets/building.png';
-import troop from '../assets/troop3.png';
+import building from '../assets/images/build4.gif';
+import troop from '../assets/images/troop1.gif';
 
 
 const leaderboard = () => (
@@ -11,14 +11,14 @@ const leaderboard = () => (
       <NavLink to="/kingdom/leaderboard/buildings" className="linkbutton">
         <img src={building} alt="Pic comes here" />
         <br />
-        Buildings
+        <p>Buildings</p>
       </NavLink>
     </button>
     <button type="submit">
       <NavLink to="/kingdom/leaderboard/troops" className="linkbutton">
         <img src={troop} alt="Pic comes here" />
         <br />
-        Troops
+        <p>Troops</p>
       </NavLink>
     </button>
   </nav>

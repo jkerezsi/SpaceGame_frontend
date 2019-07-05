@@ -1,33 +1,36 @@
-body{
-  background-color: rgb(205, 205, 205);
-}
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
 .linkbutton {
   text-decoration: none;
-  font-size: 1rem;
-  color: rgb(84, 84, 84);
-  font-weight: bold;
+  font-family: 'Orbitron'; 
+  font-size: 16px;
+  font-weight: bold;  
 }
 
 .menu {
-  padding-top: 150px;
-  padding-left: 150px;
+  display: flex;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 button {
+  float: left;
   width: 150px;
-  background-color: rgb(205, 205, 205);
+  height: 150px;
+  background-color: transparent;
   border: 0;
+  padding: 10px;
+  margin: 10px;
 }
-
-/* .building {
-  background-color:red;
-} */
 
 img {
+  float: center;
   width: 120px;
-  height: 120px;
+  height: 90px; 
 }
 
-/* button[type=submit]{
-  padding-left: 20px;
-} */
+p {
+  color: rgb(236, 21, 207);  
+  text-align: center;
+}
