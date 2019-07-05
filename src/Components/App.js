@@ -8,8 +8,8 @@ import Navbar from './Navbar';
 
 const App = () => (
   <div>
-    <Navbar />
     <Switch>
+      <Route exact path="/" component={Navbar} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/register" component={Register} />
       <Route exact path="/kingdom" component={Settings} />
