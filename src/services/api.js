@@ -1,4 +1,18 @@
-export const HelloWorldApi = () => ({ name: 'Hello World' });
+import axios from 'axios';
+import { userLogin, userRegister } from '../actions/actions';
 
-export const StarWarsApi = () => fetch('https://swapi.co/api/people/1/')
-  .then(res => res.json());
+export function fetchLogin() {
+  return axios({
+    method: 'post',
+    url: 'http://localhost:3012/login',
+    data: userLogin,
+  });
+}
+
+export function fetchRegister() {
+  return axios({
+    method: 'post',
+    url: 'http://localhost:3012/register',
+    data: userRegister,
+  });
+}

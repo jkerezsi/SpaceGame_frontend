@@ -1,9 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import HelloWorldSimple from './Components/HelloWorldSimple/HelloWorldSimple';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<HelloWorldSimple />, div);
-  ReactDOM.unmountComponentAtNode(div);
+import * as userAction from './actions/actions';
+
+describe('userAction', () => {
+  it('should create an action to allow user login', () => {
+    const username = 'jani';
+    const password = 'tyutyesz';
+    const expectedAction = {
+      type: 'userLogin',
+      payload: {
+        username, password,
+      },
+    };
+    expect(userAction.userLogin(username, password)).toEqual(expectedAction);
+  });
 });

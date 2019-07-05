@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
-import helloworld from './hello-world';
+import loginAuthentication from './loginReducer';
+import registerAuthentication from './registerReducer';
 
 const rootReducer = combineReducers({
-  helloworld,
+  loginAuthentication,
+  registerAuthentication,
   routing: routerReducer,
 });
 
