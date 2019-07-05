@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updateKingdomName } from '../actions/actions';
@@ -22,11 +24,10 @@ class Settings extends Component {
     e.preventDefault();
     const isValid = this.validate();
     if (isValid === true) {
-      const {updateKingdomName } = this.props;
-      const {storeToken} = this.props;
+      const { updateKingdomName } = this.props;
+      const { storeToken } = this.props;
       const { newKingdomName } = this.state;
       updateKingdomName(newKingdomName, storeToken);
-      console.log(newKingdomName, storeToken)
     }
     return false;
   }
@@ -54,11 +55,9 @@ class Settings extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    storeToken: state.loginAuthentication.token,
-  };
-};
+const mapStateToProps = state => ({
+  storeToken: state.loginAuthentication.token,
+});
 
 
 const mapDispatchToProps = {
