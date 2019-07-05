@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { userLogin, userRegister } from '../actions/actions';
+import { userLogin, userRegister, updateKingdomName } from '../actions/actions';
 
 export function fetchLogin() {
   return axios({
@@ -14,5 +14,13 @@ export function fetchRegister() {
     method: 'post',
     url: 'http://localhost:3012/register',
     data: userRegister,
+  });
+}
+
+export function fetchSettings() {
+  return axios({
+    method: 'put',
+    url: 'http://localhost:3012/kingdom',
+    data: updateKingdomName,
   });
 }
