@@ -5,9 +5,9 @@ import building from '../assets/images/build4.gif';
 import troop from '../assets/images/troop1.gif';
 
 
-const leaderboard = () => (
-  <nav className="menu">
-    <button type="submit" >
+const Leaderboard = () => (
+  <nav className="leaderbuttons">
+    <button type="submit">
       <NavLink to="/kingdom/leaderboard/buildings" className="linkbutton">
         <img src={building} alt="Pic comes here" />
         <br />
@@ -25,4 +25,4 @@ const leaderboard = () => (
 );
 
 
-export default leaderboard;
+export default Leaderboard;
