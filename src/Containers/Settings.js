@@ -22,10 +22,11 @@ class Settings extends Component {
     e.preventDefault();
     const isValid = this.validate();
     if (isValid === true) {
-    //   const { newKingdomName } = this.props;
+      const {updateKingdomName } = this.props;
+      const {storeToken} = this.props;
       const { newKingdomName } = this.state;
-      const { token } = this.props;
-      newKingdomName(newKingdomName, token);
+      updateKingdomName(newKingdomName, storeToken);
+      console.log(newKingdomName, storeToken)
     }
     return false;
   }
@@ -41,26 +42,24 @@ class Settings extends Component {
 
   render() {
     const { error } = this.state;
-    const { backendError } = this.props;
     return (
       <div className="settings">
         <form>
           <Input label="New Kingdom" id="newKingdomName" onChange={this.handleChange} />
           <Button onClick={this.handleClick} buttonText="Change Kingdom Name" />
           <p>{ error }</p>
-          <p>{ backendError }</p>
         </form>
       </div>
     );
   }
 }
 
-
 const mapStateToProps = (state) => {
   return {
-    backendError: state.loginAuthentication.error,
+    storeToken: state.loginAuthentication.token,
   };
 };
+
 
 const mapDispatchToProps = {
   updateKingdomName,

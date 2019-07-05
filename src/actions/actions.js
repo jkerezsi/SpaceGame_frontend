@@ -21,6 +21,8 @@ export const registerFailed = () => ({ type: 'REGISTER_FAILED', payload: '' });
 
 export const updateKingdomName = (newKingdomName, token) => ({
   type: 'UPDATE_KINGDOM_NAME',
-  payload: newKingdomName,token
+  payload: {
+    newKingdomName, token,
+  },
 });
 export const updateKingdomNameSuccess = () => ({ type: 'KINGDOM_NAME_CHANGED', payload: '' });

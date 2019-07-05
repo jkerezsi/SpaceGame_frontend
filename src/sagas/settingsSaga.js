@@ -6,7 +6,7 @@ import { updateKingdomName } from '../actions/actions';
 export function* settingsWorkerSaga() {
   try {
     const response = yield call(fetchSettings);
-   yield put({ type: 'KINGDOM_NAME_CHANGED', payload: response.data });
+    yield put({ type: 'KINGDOM_NAME_CHANGED', payload: response.data });
   } catch (error) {
     (
       console.log(error)

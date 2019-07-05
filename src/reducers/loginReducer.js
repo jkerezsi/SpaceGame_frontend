@@ -1,6 +1,6 @@
 
 const initialState = {
-  token: null,
+  token: 2345234523453245,
   status: 'logged out',
   error: '',
 };

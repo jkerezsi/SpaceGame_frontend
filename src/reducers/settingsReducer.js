@@ -1,17 +1,16 @@
 const initialState = {
-    newKingdomName: '',
-  };
-  
-  const changeKingdomName = (state = initialState, action) => {
-    switch (action.type) {
-      case 'UPDATE_KINGDOM_NAME':
-        return{
-        newKingdomName: action.payload
-        };
-      default:
-        return state;
-    }
-  };
-  
-  export default changeKingdomName;
-  
+  newKingdomName: '',
+};
+
+const changeKingdomName = (state = initialState, action) => {
+  switch (action.type) {
+    case 'KINGDOM_NAME_CHANGED':
+      return {
+        newKingdomName: action.payload.kingdomName,
+      };
+    default:
+      return state;
+  }
+};
+
+export default changeKingdomName;
