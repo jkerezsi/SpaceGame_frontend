@@ -18,3 +18,5 @@ export const loginFailed = () => ({ type: 'LOGIN_FAILED', payload: '' });
 
 export const registerSuccess = () => ({ type: 'REGISTER_SUCCESS', payload: '' });
 export const registerFailed = () => ({ type: 'REGISTER_FAILED', payload: '' });
+
+export const logout = () => ({ type: 'LOGOUT' });
