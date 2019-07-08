@@ -13,8 +13,8 @@ const App = () => (
     <Route exact path="/kingdom/troops" component={kindgom} />
     <Route exact path="/kingdom/battle" component={kindgom} />
     <Route exact path="/kingdom/leaderboard" component={leaderboardContent} />
-    <Route exact path="/kingdom/leaderboard/buildings" />
-    <Route exact path="/kingdom/leaderboard/troops" />
+    <Route exact path="/kingdom/leaderboard/buildings" component={kindgom} />
+    <Route exact path="/kingdom/leaderboard/troops" component={kindgom} />
   </Switch>
 );
 
