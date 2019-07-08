@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Kingdom from './Components/menu/kingdom'
+import App from './Components/App';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Kingdom />, div);
+  ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
