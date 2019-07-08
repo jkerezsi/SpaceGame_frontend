@@ -1,37 +1,27 @@
+/* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import NavbarLoggedIn from './NavbarLoggedIn';
+import NavbarLoggedOut from './NavbarLoggedOut';
 import '../stylesheets/Navbar.css';
 
-
 class Navbar extends Component {
-  state = {
-    login: true,
-  };
-
   render() {
-    const { login } = this.state;
-    if (login) {
-      return (
-        <div className="header">
-          <ul>
-            <li className="kingdom"><Link to="/kingdom">Whoevers Kingdom</Link></li>
-            <div className="controlBar">
-              <li className="settings"><Link to="/settings">Settings</Link></li>
-              <li className="logout"><Link to="/login" onClick={() => { this.setState({ login: false }); }}>Logout</Link></li>
-            </div>
-          </ul>
-        </div>
-      );
+    const { login } = this.props;
+    if (login === 'logged in') {
+      return <NavbarLoggedIn />;
     }
-    return (
-      <div className="header">
-        <ul>
-          <li className="login"><Link to="/login" className="loginNavbar">Login</Link></li>
-          <li className="register"><Link to="/register" className="registerNavbar">Register</Link></li>
-        </ul>
-      </div>
-    );
+    return <NavbarLoggedOut />;
   }
 }
 
-export default Navbar;
+const mapStateToProps = (state) => {
+  return {
+    login: state.loginAuthentication.status,
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  null,
+)(Navbar);
