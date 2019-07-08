@@ -25,4 +25,4 @@ yarn-error.log*
 package-lock.json
 
 
-App.test.js
+src/App.test.js
