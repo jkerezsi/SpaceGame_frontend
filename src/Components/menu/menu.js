@@ -7,7 +7,7 @@ import leaderboard from '../../assets/images/leader1.gif';
 import troop from '../../assets/images/troop1.gif';
 
 
-const Kingdom = () => (
+const Menu = () => (
   <nav className="menu">
     <button type="submit">
       <NavLink to="/kingdom/buildings" className="linkbutton">
@@ -44,4 +44,4 @@ const Kingdom = () => (
 );
 
 
-export default Kingdom;
+export default Menu;

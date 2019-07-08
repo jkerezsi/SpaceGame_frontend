@@ -1,21 +1,23 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import kindgom from './menu/kingdom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import menu from './menu/menu';
 import '../stylesheets/App.css';
 // import leaderboard from './leaderboard';
 import leaderboardContent from '../Containers/leaderboardContent';
 
 
 const App = () => (
-  <Switch>
-    <Route exact path="/kingdom" component={kindgom} />
-    <Route exact path="/kingdom/buildings" component={kindgom} />
-    <Route exact path="/kingdom/troops" component={kindgom} />
-    <Route exact path="/kingdom/battle" component={kindgom} />
-    <Route exact path="/kingdom/leaderboard" component={leaderboardContent} />
-    <Route exact path="/kingdom/leaderboard/buildings" component={kindgom} />
-    <Route exact path="/kingdom/leaderboard/troops" component={kindgom} />
-  </Switch>
+  <Router>
+    <Switch>
+      <Route exact path="/kingdom" component={menu} />
+      <Route exact path="/kingdom/buildings" component={menu} />
+      <Route exact path="/kingdom/troops" component={menu} />
+      <Route exact path="/kingdom/battle" component={menu} />
+      <Route exact path="/kingdom/leaderboard" component={leaderboardContent} />
+      <Route exact path="/kingdom/leaderboard/buildings" component={menu} />
+      <Route exact path="/kingdom/leaderboard/troops" component={menu} />
+    </Switch>
+  </Router>
 );
 
 export default App;

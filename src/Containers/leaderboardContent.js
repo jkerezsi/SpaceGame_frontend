@@ -1,11 +1,11 @@
 import React from 'react';
 import Leaderboard from '../Components/leaderboard';
-import Kindgom from '../Components/menu/kingdom';
+import Menu from '../Components/menu/menu';
 
 
 const leaderboardContent = () => (
   <div>
-    <Kindgom />
+    <Menu />
     <Leaderboard />
   </div>
 );
