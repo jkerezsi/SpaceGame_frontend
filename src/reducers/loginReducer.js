@@ -1,7 +1,7 @@
 
 const initialState = {
-  token: 2345234523453245,
-  status: 'logged out',
+  token: 'asdfsadfwerwoeqiuroqewr',
+  status: 'logged in',
   error: '',
 };
 
@@ -17,6 +17,13 @@ const loginAuthentication = (state = initialState, action) => {
       return {
         ...state,
         error: action.payload,
+      };
+    case 'LOGOUT':
+      console.log('logout');
+      localStorage.removeItem('TOKEN');
+      return {
+        token: null,
+        status: 'logged out',
       };
     default:
       return state;

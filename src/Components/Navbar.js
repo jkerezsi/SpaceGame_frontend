@@ -1,14 +1,29 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+/* eslint-disable arrow-body-style */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/prefer-stateless-function */
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import NavbarLoggedIn from './NavbarLoggedIn';
+import NavbarLoggedOut from './NavbarLoggedOut';
+import '../stylesheets/Navbar.css';
 
+class Navbar extends Component {
+  render() {
+    const { login } = this.props;
+    if (login === 'logged in') {
+      return <NavbarLoggedIn />;
+    }
+    return <NavbarLoggedOut />;
+  }
+}
 
-const Navbar = () => (
-  <nav className="navbar">
-    <div className="header">
-      <div><NavLink to="/login" className="loginNavbar">Login</NavLink></div>
-      <div><NavLink to="/register" className="registerNavbar">Register</NavLink></div>
-    </div>
-  </nav>
-);
+const mapStateToProps = (state) => {
+  return {
+    login: state.loginAuthentication.status,
+  };
+};
 
-export default Navbar;
+export default connect(
+  mapStateToProps,
+  null,
+)(Navbar);
