@@ -1,4 +1,3 @@
-
 import * as userAction from './actions/actions';
 
 describe('userAction', () => {
