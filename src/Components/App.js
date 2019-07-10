@@ -4,7 +4,7 @@ import Menu from './menu/menu';
 import Kingdom from '../Containers/Kingdom';
 import Settings from '../Containers/Settings';
 import Login from '../Containers/Login';
-import Register from '../Containers/Register';
+import Register from '../Containers/register';
 import '../stylesheets/App.css';
 import leaderboardContent from '../Containers/leaderboardContent';
 

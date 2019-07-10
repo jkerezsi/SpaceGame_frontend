@@ -1,7 +1,3 @@
-/* eslint-disable react/button-has-type */
-/* eslint-disable arrow-body-style */
-/* eslint-disable react/prop-types */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { userRegister } from '../actions/actions';
