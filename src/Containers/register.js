@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import { userRegister } from '../actions/actions';
 import Button from '../Components/Button';
 import Input from '../Components/InputField';
+import video3 from '../assets/images/registerVideo.mp4';
 
 class Register extends Component {
   state = {
@@ -56,6 +57,9 @@ class Register extends Component {
     const { registerBackendError } = this.props;
     return (
       <div className="registration">
+        <video autoPlay loop muted>
+          <source src={video3} type="video/mp4" />
+        </video> 
         <form>
           <Input label="Username" id="username" onChange={this.handleChange} />
           <label htmlFor="password">Password</label>

@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import { userLogin } from '../actions/actions';
 import Button from '../Components/Button';
 import Input from '../Components/InputField';
+import video2 from '../assets/images/loginVideo.mp4';
 
 class Login extends Component {
   state = {
@@ -47,16 +48,19 @@ class Login extends Component {
   render() {
     const { error } = this.state;
     const { backendError } = this.props;
-    return (
+    return (     
       <div className="login">
-        <form>
+        <video autoPlay loop muted>
+          <source src={video2} type="video/mp4" />
+        </video> 
+        <form>       
           <Input label="Username" id="username" onChange={this.handleChange} />
           <label id="password" htmlFor="password">Password</label>
           <input type="password" label="Password" id="password" onChange={this.handleChange} placeholder="Password" />
           <Button onClick={this.handleClick} buttonText="Login" />
           <p>{ error }</p>
           <p>{ backendError }</p>
-        </form>
+        </form>        
       </div>
     );
   }
