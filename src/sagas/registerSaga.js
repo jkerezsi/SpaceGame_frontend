@@ -1,19 +1,16 @@
 import { call, takeEvery, put } from 'redux-saga/effects';
+import { push } from 'react-router-redux';
 import { fetchRegister } from '../services/api';
 
 export function* registerWorkerSaga(action) {
   try {
     const response = yield call(fetchRegister, action.payload);
-    if (response.data.status === 'error') {
-      yield put({ type: 'REGISTER_FAILED', payload: response.data.message });
-    } else if (response.data.status.statusCode === '200') {
+    if (response.status === '200') {
       yield put({ type: 'REGISTER_SUCCESS', payload: response.data });
+      yield put(push('/kingdom/map'));
     }
   } catch (error) {
-    (
-      // eslint-disable-next-line no-console
-      console.log(error)
-    );
+    yield put({ type: 'REGISTER_FAILED', payload: 'Username is already taken!' });
   }
 }
 

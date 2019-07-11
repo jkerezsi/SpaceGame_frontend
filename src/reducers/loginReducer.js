@@ -1,6 +1,6 @@
 const initialState = {
-  token: 'asdfsadfwerwoeqiuroqewr',
-  status: 'logged in',
+  token: '',
+  status: '',
   error: '',
 };
 

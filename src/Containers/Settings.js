@@ -26,9 +26,9 @@ class Settings extends Component {
     const isValid = this.validate();
     if (isValid === true) {
       const { updateKingdomName } = this.props;
-      const { storeToken } = this.props;
+      const localStorageToken = localStorage.getItem('TOKEN');
       const { newKingdomName } = this.state;
-      updateKingdomName(newKingdomName, storeToken);
+      updateKingdomName(newKingdomName, localStorageToken);
     }
     return false;
   }
