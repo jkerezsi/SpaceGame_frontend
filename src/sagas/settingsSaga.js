@@ -3,6 +3,7 @@ import { fetchSettings } from '../services/api';
 
 
 export function* settingsWorkerSaga(action) {
+  console.log(action.payload);
   try {
     const response = yield call(fetchSettings, action.payload);
     yield put({ type: 'KINGDOM_NAME_CHANGED', payload: response.data });

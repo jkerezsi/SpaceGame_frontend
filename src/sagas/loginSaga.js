@@ -8,13 +8,10 @@ export function* loginWorkerSaga(action) {
     if (response.data.status === 'ok') {
       yield put({ type: 'LOGIN_SUCCESS', payload: response.data.token });
       yield put(push('/kingdom'));
-    } else if (response.data.status === 'error') {
-      yield put({ type: 'LOGIN_FAILED', payload: response.data.error });
     }
   } catch (error) {
-    (
-      console.log(error)
-    );
+    yield put({ type: 'LOGIN_FAILED', payload: 'Username or password is incorrect!' });
+    console.log(error);
   }
 }
 

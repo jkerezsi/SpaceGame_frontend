@@ -1,7 +1,7 @@
 
 const initialState = {
-  token: 'asdfsadfwerwoeqiuroqewr',
-  status: 'logged in',
+  token: '',
+  status: '',
   error: '',
 };
 
@@ -9,6 +9,7 @@ const loginAuthentication = (state = initialState, action) => {
   switch (action.type) {
     case 'LOGIN_SUCCESS':
       localStorage.setItem('TOKEN', action.payload);
+      console.log(action.payload);
       return {
         token: action.payload,
         status: 'logged in',
