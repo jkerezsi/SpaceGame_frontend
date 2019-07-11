@@ -1,7 +1,6 @@
-
 const initialState = {
-  token: 'asdfsadfwerwoeqiuroqewr',
-  status: 'logged in',
+  token: '',
+  status: '',
   error: '',
 };
 
@@ -19,7 +18,6 @@ const loginAuthentication = (state = initialState, action) => {
         error: action.payload,
       };
     case 'LOGOUT':
-      console.log('logout');
       localStorage.removeItem('TOKEN');
       return {
         token: null,

@@ -1,15 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
 import Menu from './menu/menu';
 import Kingdom from '../Containers/Kingdom';
 import Settings from '../Containers/Settings';
 import Login from '../Containers/Login';
-import Register from '../Containers/register';
+import Register from '../Containers/Register';
 import '../stylesheets/App.css';
 import leaderboardContent from '../Containers/leaderboardContent';
+import { history } from '../store/configureStore';
 
 const App = () => (
-  <Router>
+  <Router history={history}>
     <Switch>
       <Route exact path="/kingdom" component={Kingdom} />
       <Route exact path="/kingdom/buildings" component={Menu} />
