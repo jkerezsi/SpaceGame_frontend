@@ -8,6 +8,7 @@ export function* settingsWorkerSaga(action) {
     yield put({ type: 'KINGDOM_NAME_CHANGED', payload: response.data });
   } catch (error) {
     (
+      // eslint-disable-next-line no-console
       console.log(error)
     );
   }
