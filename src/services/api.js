@@ -1,26 +1,25 @@
 import axios from 'axios';
-import { userLogin, userRegister, updateKingdomName } from '../actions/actions';
 
-export function fetchLogin() {
+export function fetchLogin(payload) {
   return axios({
     method: 'post',
     url: 'http://localhost:3012/login',
-    data: userLogin,
+    data: payload,
   });
 }
 
-export function fetchRegister() {
+export function fetchRegister(payload) {
   return axios({
     method: 'post',
     url: 'http://localhost:3012/register',
-    data: userRegister,
+    data: payload,
   });
 }
 
-export function fetchSettings() {
+export function fetchSettings(payload) {
   return axios({
     method: 'put',
     url: 'http://localhost:3012/kingdom',
-    data: updateKingdomName,
+    data: payload,
   });
 }

@@ -1,11 +1,10 @@
-import { call, take, put } from 'redux-saga/effects';
+import { call, takeEvery, put } from 'redux-saga/effects';
 import { fetchSettings } from '../services/api';
-import { updateKingdomName } from '../actions/actions';
 
 
-export function* settingsWorkerSaga() {
+export function* settingsWorkerSaga(action) {
   try {
-    const response = yield call(fetchSettings);
+    const response = yield call(fetchSettings, action.payload);
     yield put({ type: 'KINGDOM_NAME_CHANGED', payload: response.data });
   } catch (error) {
     (
@@ -15,6 +14,5 @@ export function* settingsWorkerSaga() {
 }
 
 export function* settingsWatcherSaga() {
-  yield take('UPDATE_KINGDOM_NAME', updateKingdomName);
-  yield call(settingsWorkerSaga);
+  yield takeEvery('UPDATE_KINGDOM_NAME', settingsWorkerSaga);
 }
