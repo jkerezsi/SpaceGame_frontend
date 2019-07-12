@@ -18,6 +18,7 @@ export function fetchRegister(payload) {
 }
 
 export function fetchSettings(payload) {
+  console.log(payload);
   return axios({
     method: 'put',
     url: 'http://localhost:3012/kingdom',
