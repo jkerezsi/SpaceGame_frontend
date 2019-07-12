@@ -28,3 +28,6 @@ export const updateKingdomName = (newKingdomName, token) => ({
 
 export const updateKingdomNameSuccess = () => ({ type: 'KINGDOM_NAME_CHANGED', payload: '' });
 export const logout = () => ({ type: 'LOGOUT' });
+
+
+export const addBuildingAction = (type, token) => ({ type: 'ADD_BUILDING', payload: { type, token } });
