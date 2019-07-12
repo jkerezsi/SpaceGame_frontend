@@ -34,3 +34,12 @@ export function fetchMap(payload) {
     data: payload,
   });
 }
+
+export function fetchAllCountry() {
+  console.log('belefut');
+  return axios({
+    method: 'get',
+    url: 'http://localhost:3012/kingdom/map',
+    data: '',
+  });
+}

@@ -10,11 +10,10 @@ export function* registerWorkerSaga(action) {
     if (response.status === 200) {
       yield put({ type: 'REGISTER_SUCCESS', payload: response.data });
       history.push('/register/map');
-      console.log('regSagaOk');
     }
   } catch (error) {
     console.log(error);
-    // yield put({ type: 'REGISTER_FAILED', payload: 'Username is already taken!' });
+    yield put({ type: 'REGISTER_FAILED', payload: 'Username is already taken!' });
   }
 }
 

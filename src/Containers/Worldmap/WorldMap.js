@@ -10,7 +10,7 @@ import {
 } from 'react-simple-maps';
 import mapInfo from './world-50m.json';
 import Button from '../../Components/Button';
-import { selectCountry } from '../../actions/actions';
+import { listAllCountry } from '../../actions/actions';
 
 const wrapperStyles = {
   width: '100%',
@@ -24,25 +24,44 @@ class WorldMap extends Component {
       error: '',
     };
 
+    componentWillMount() {
+      const { listAllCountry } = this.props;
+      listAllCountry();
+    }
+
     handleCountryClick = (countryName) => {
       this.setState({ selectedCountryId: countryName });
-      const { selectCountry } = this.props;
-      selectCountry(countryName);
-      console.log(countryName);
-      console.log(selectCountry);
+      const { occupiedCountries } = this.props;
+      console.log(occupiedCountries);
     };
 
     submitButton = (e) => {
       e.preventDefault();
+      const isValid = this.validate();
+      if (isValid === true) {
+        const { selectCountry } = this.props;
+        const { selectedCountryId } = this.state;
+        selectCountry(selectedCountryId);
+        console.log(selectedCountryId);
+      }
+      return false;
+    }
+
+    validate = () => {
+      const { selectedCountryId } = this.state;
+      if (!selectedCountryId) {
+        const { error } = this.state;
+        this.setState({ error: 'Please select a country!' });
+        return false;
+      }
+      return true;
     };
 
     render() {
     //   console.log(mapInfo.objects.units.geometries[88].properties.name);
-      const { mapRegister } = this.props;
       return (
         <div style={wrapperStyles}>
           <h1>PLEASE SELECT YOUR COUNTRY</h1>
-          <h3>{ mapRegister }</h3>
           <Button onClick={this.submitButton} buttonText="SELECT" />
           <ComposableMap
             projectionConfig={{
@@ -95,11 +114,11 @@ class WorldMap extends Component {
 }
 
 const mapStateToProps = state => ({
-  mapRegister: state.mapReducer.message,
+  occupiedCountries: state.mapReducer.countryList,
 });
 
 const mapDispatchToProps = {
-  selectCountry,
+  listAllCountry,
 };
 
 export default connect(

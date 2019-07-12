@@ -29,6 +29,8 @@ export const updateKingdomName = (newKingdomName, token) => ({
 export const updateKingdomNameSuccess = () => ({ type: 'KINGDOM_NAME_CHANGED', payload: '' });
 export const logout = () => ({ type: 'LOGOUT' });
 
+export const listAllCountry = () => ({ type: 'LIST_ALL_COUNTRY', payload: '' });
+export const listAllCountry2 = () => ({ type: 'LIST_ALL_COUNTRY2', payload: '' });
 
 export const selectCountry = country => ({ type: 'SELECT_COUNTRY', payload: country });
 export const selectCountrySuccess = () => ({ type: 'COUNTRY_AVAILABLE', payload: '' });

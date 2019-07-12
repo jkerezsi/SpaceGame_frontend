@@ -6,7 +6,7 @@ export function* selectCountryWorkerSaga(action) {
   try {
     const response = yield call(fetchMap, action.payload);
     console.log(response);
-    if (response.data.status === 'ok') {
+    if (response.data.status === 200) {
       yield put({ type: 'COUNTRY_AVAILABLE' });
       history.push('/login');
     }
