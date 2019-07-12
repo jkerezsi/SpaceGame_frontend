@@ -39,7 +39,7 @@ class Login extends Component {
   validate = () => {
     const { username, password } = this.state;
     if (!username || !password) {
-      this.setState({ error: 'All input fields are required' });
+      this.setState({ error: 'All input fields are required!' });
       return false;
     }
     return true;
@@ -50,10 +50,11 @@ class Login extends Component {
     const { backendError } = this.props;
     return (     
       <div className="login">
-        <video autoPlay loop muted>
+        <video className= "logVid" autoPlay loop>
           <source src={video2} type="video/mp4" />
         </video> 
-        <form>       
+        <div className="gamerLogin"></div>        
+        <form className="loginForm">           
           <Input label="Username" id="username" onChange={this.handleChange} />
           <label id="password" htmlFor="password">Password</label>
           <input type="password" label="Password" id="password" onChange={this.handleChange} placeholder="Password" />

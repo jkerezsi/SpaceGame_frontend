@@ -57,10 +57,11 @@ class Register extends Component {
     const { registerBackendError } = this.props;
     return (
       <div className="registration">
-        <video autoPlay loop muted>
+        <video className= "regVid" autoPlay loop>
           <source src={video3} type="video/mp4" />
         </video> 
-        <form>
+        <div className="gamerRegister"></div>
+        <form className="registerForm">
           <Input label="Username" id="username" onChange={this.handleChange} />
           <label htmlFor="password">Password</label>
           <input type="password" label="Password" id="password" onChange={this.handleChange} placeholder="Password" />
