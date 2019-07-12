@@ -6,12 +6,15 @@ import { history } from '../store/configureStore';
 export function* registerWorkerSaga(action) {
   try {
     const response = yield call(fetchRegister, action.payload);
-    if (response.status === '200') {
+    console.log(response);
+    if (response.status === 200) {
       yield put({ type: 'REGISTER_SUCCESS', payload: response.data });
       history.push('/register/map');
+      console.log('regSagaOk');
     }
   } catch (error) {
-    yield put({ type: 'REGISTER_FAILED', payload: 'Username is already taken!' });
+    console.log(error);
+    // yield put({ type: 'REGISTER_FAILED', payload: 'Username is already taken!' });
   }
 }
 

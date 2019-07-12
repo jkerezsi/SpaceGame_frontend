@@ -28,3 +28,8 @@ export const updateKingdomName = (newKingdomName, token) => ({
 
 export const updateKingdomNameSuccess = () => ({ type: 'KINGDOM_NAME_CHANGED', payload: '' });
 export const logout = () => ({ type: 'LOGOUT' });
+
+
+export const selectCountry = country => ({ type: 'SELECT_COUNTRY', payload: country });
+export const selectCountrySuccess = () => ({ type: 'COUNTRY_AVAILABLE', payload: '' });
+export const selectCountryReject = () => ({ type: 'COUNTRY_TAKEN', payload: '' });

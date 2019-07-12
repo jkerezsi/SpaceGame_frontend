@@ -8,6 +8,7 @@ import '../stylesheets/App.css';
 import leaderboardContent from '../Containers/leaderboardContent';
 import { history } from '../store/configureStore';
 import Navbar from './Navbar';
+import WorldMap from '../Containers/Worldmap/WorldMap';
 
 const App = () => (
   <Router history={history}>
@@ -24,6 +25,7 @@ const App = () => (
         <Route exact path="/kingdom/leaderboard/troops" component={Menu} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
+        <Route exact path="/register/map" component={WorldMap} />
       </Switch>
     </div>
   </Router>

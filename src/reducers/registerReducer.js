@@ -9,9 +9,9 @@ const registerAuthentication = (state = initialState, action) => {
   switch (action.type) {
     case 'REGISTER_SUCCESS':
       return {
-        id: action.payload.id,
+        id: action.payload.userID,
         username: action.payload.username,
-        kingdomId: action.paylod.kingdomId,
+        kingdomId: action.payload.kingdomID,
       };
     case 'REGISTER_FAILED':
       return {
