@@ -8,7 +8,7 @@ import '../stylesheets/Navbar.css';
 
 class Navbar extends Component {
   render() {
-    if (localStorage.getItem('token')) {
+    if (localStorage.getItem('TOKEN')) {
       return <NavbarLoggedIn />;
     }
     return <NavbarLoggedOut />;
