@@ -3,7 +3,7 @@ import AddBuilding from '../Components/AddBuildingComponent';
 import Menu from '../Components/menu/menu';
 
 
-const addBuildingComponent = () => (
+const addBuildingPlusMenu = () => (
   <div>
     <Menu />
     <AddBuilding />
@@ -11,4 +11,4 @@ const addBuildingComponent = () => (
 );
 
 
-export default addBuildingComponent;
+export default addBuildingPlusMenu;
