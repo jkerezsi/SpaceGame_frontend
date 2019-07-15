@@ -1,19 +1,16 @@
-import { call, takeEvery } from 'redux-saga/effects';
+import { call, takeEvery, put } from 'redux-saga/effects';
 import { fetchNewBuilding } from '../services/api';
 // import { history } from '../store/configureStore';
 
 export function* addBuildingSaga(action) {
-  console.log(action)
+  console.log(action);
   try {
     const response = yield call(fetchNewBuilding, action.payload);
-    // console.log(response);
-    if (response.data.status === 'ok') {
-      // yield put({ type: 'LOGIN_SUCCESS', payload: response.data.token });
-      // history.push('/kingdom');
+    if (response.status === 200) {
+      yield put({ type: 'ADD_BUILDING_SUCCESS', payload: 'Building successfully added.' });
     }
   } catch (error) {
-    // yield put({ type: 'LOGIN_FAILED', payload: 'Username or password is incorrect!' });
-    console.log(error);
+    yield put({ type: 'ADD_BUILDING_FAIL', payload: 'You cannot afford this.' });
   }
 }
 

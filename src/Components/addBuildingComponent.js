@@ -4,60 +4,49 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Button from './Button';
 import { addBuildingAction } from '../actions/actions';
 import '../stylesheets/buildingbuttons.css';
 
 
 class AddBuilding extends Component {
-  // state = {
-  //   buildingType: '',
-  // };
 
   addFarm = (e) => {
     e.preventDefault();
-    // this.setState({
-    //   buildingType: 'farm',
-    // });
     const { addBuildingAction } = this.props;
     const localStorageToken = localStorage.getItem('TOKEN');
-    // const { buildingType } = this.state;
     addBuildingAction('farm', localStorageToken);
   };
 
   addMine = (e) => {
     e.preventDefault();
-    // this.setState({
-    //   buildingType: 'mine',
-    // });
     const { addBuildingAction } = this.props;
     const localStorageToken = localStorage.getItem('TOKEN');
-    // const { buildingType } = this.state;
     addBuildingAction('mine', localStorageToken);
   }
 
   render() {
+    const { status } = this.props;
     return (
-      <div>
+      <div className="addBuildings">
         <button className="addFarm" type="submit" onClick={this.addFarm}>Add Farm</button>
         <button className="addMine" type="submit" onClick={this.addMine}>Add Mine</button>
-        {/* <p>{ error }</p> */}
+        <h1 className="buildingStatus">{ status }</h1>
       </div>
     );
   }
 }
 
-// const mapStateToProps = (state) => {
-//   return {
-//     backendError: state.loginAuthentication.error,
-//   };
-// };
+const mapStateToProps = (state) => {
+  return {
+    status: state.addBuildingReducer.status,
+  };
+};
 
 const mapDispatchToProps = {
   addBuildingAction,
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps,
 )(AddBuilding);

@@ -31,3 +31,5 @@ export const logout = () => ({ type: 'LOGOUT' });
 
 
 export const addBuildingAction = (type, token) => ({ type: 'ADD_BUILDING', payload: { type, token } });
+export const addBuildingSuccess = () => ({ type: 'ADD_BUILDING_SUCCESS', payload: '' });
+export const addBuildingFail = () => ({ type: 'ADD_BUILDING_FAIL', payload: '' });
