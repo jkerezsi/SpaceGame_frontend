@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getResources } from '../actions/actions';
@@ -8,7 +9,6 @@ class ShowResources extends Component {
   }
 
   refreshInfo = () => {
-    // eslint-disable-next-line react/prop-types
     const { getResources } = this.props;
     const localStorageToken = localStorage.getItem('TOKEN');
     return getResources(localStorageToken);
@@ -16,19 +16,27 @@ class ShowResources extends Component {
 
 
   render() {
-    // const { resources } = this.props;
+    const { food, gold } = this.props;
     return (
       <div className="resources">
-        <p>{0}</p>
-        <p>{0}</p>
+        <p>
+          <span role="img" aria-label="Bread">🍞</span>
+          {food}
+        </p>
+        <p>
+          <span role="img" aria-label="Money">💰</span>
+          {gold}
+
+        </p>
       </div>
     );
   }
 }
 
-/* const mapStateToProps = state => ({
-  resources: state.gotResources.,
-}); */
+const mapStateToProps = state => ({
+  food: state.showResources.food,
+  gold: state.showResources.gold,
+});
 
 const mapDispatchToProps = {
   getResources,
@@ -36,6 +44,6 @@ const mapDispatchToProps = {
 
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps,
 )(ShowResources);

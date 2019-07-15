@@ -36,3 +36,4 @@ export const getResources = token => ({
   },
 });
 export const gotResources = () => ({ type: 'GOT_RESOURCES', payload: '' });
+export const FailedGotResources = () => ({ type: 'GET_RESOURCES_FAILED', payload: '' });

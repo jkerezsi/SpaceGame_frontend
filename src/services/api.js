@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-const localStorageToken = localStorage.getItem('TOKEN');
-axios.defaults.headers.common.token = localStorageToken;
+axios.defaults.headers.common.token = localStorage.getItem('TOKEN');
 
 
 export function fetchLogin(payload) {

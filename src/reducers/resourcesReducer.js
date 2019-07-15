@@ -11,7 +11,7 @@ const showResources = (state = initialState, action) => {
         food: action.payload[0].amount,
         gold: action.payload[1].amount,
       };
-    case 'REGISTER_FAILED':
+    case 'GET_RESOURCES_FAILED':
       return {
         error: action.payload,
       };

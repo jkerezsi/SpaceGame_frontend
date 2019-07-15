@@ -15,7 +15,7 @@ const App = () => (
     <div>
       <Navbar />
       <Switch>
-        <Route exact path="/test" component={ShowResource} />
+        <Route path="/kingdom" component={ShowResource} />
         <Route exact path="/kingdom" component={Menu} />
         <Route exact path="/kingdom/buildings" component={Menu} />
         <Route exact path="/kingdom/troops" component={Menu} />
