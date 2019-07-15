@@ -1,5 +1,5 @@
 import React from 'react';
-import AddBuilding from '../Components/addBuildingComponent';
+import AddBuilding from '../Components/AddBuildingComponent';
 import Menu from '../Components/menu/menu';
 
 
