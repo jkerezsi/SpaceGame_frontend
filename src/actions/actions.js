@@ -28,3 +28,11 @@ export const updateKingdomName = (newKingdomName, token) => ({
 
 export const updateKingdomNameSuccess = () => ({ type: 'KINGDOM_NAME_CHANGED', payload: '' });
 export const logout = () => ({ type: 'LOGOUT' });
+
+export const getResources = token => ({
+  type: 'getResources',
+  payload: {
+    token,
+  },
+});
+export const gotResources = () => ({ type: 'GOT_RESOURCES', payload: '' });

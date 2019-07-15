@@ -1,5 +1,9 @@
 import axios from 'axios';
 
+const localStorageToken = localStorage.getItem('TOKEN');
+axios.defaults.headers.common.token = localStorageToken;
+
+
 export function fetchLogin(payload) {
   console.log(payload);
   return axios({
@@ -22,6 +26,14 @@ export function fetchSettings(payload) {
   return axios({
     method: 'put',
     url: 'http://localhost:3012/kingdom',
+    data: payload,
+  });
+}
+
+export function fetchResources(payload) {
+  return axios({
+    method: 'get',
+    url: 'http://localhost:3012/kingdom/resource',
     data: payload,
   });
 }
