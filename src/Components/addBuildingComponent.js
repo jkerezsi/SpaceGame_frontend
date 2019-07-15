@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Button from './Button';
 import { addBuildingAction } from '../actions/actions';
+import '../stylesheets/buildingbuttons.css';
 
 
 class AddBuilding extends Component {
@@ -37,13 +38,10 @@ class AddBuilding extends Component {
 
   render() {
     return (
-      <div className="addbuildings">
-        <form>
-          <Button onClick={this.addFarm} buttonText="Add Farm" />
-          <Button onClick={this.addMine} buttonText="Add Mine" />
-          
-          {/* <p>{ error }</p> */}
-        </form>
+      <div>
+        <button className="addFarm" type="submit" onClick={this.addFarm}>Add Farm</button>
+        <button className="addMine" type="submit" onClick={this.addMine}>Add Mine</button>
+        {/* <p>{ error }</p> */}
       </div>
     );
   }

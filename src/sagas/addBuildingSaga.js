@@ -6,7 +6,7 @@ export function* addBuildingSaga(action) {
   console.log(action)
   try {
     const response = yield call(fetchNewBuilding, action.payload);
-    console.log(response);
+    // console.log(response);
     if (response.data.status === 'ok') {
       // yield put({ type: 'LOGIN_SUCCESS', payload: response.data.token });
       // history.push('/kingdom');
