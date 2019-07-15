@@ -9,7 +9,6 @@ import '../stylesheets/buildingbuttons.css';
 
 
 class AddBuilding extends Component {
-
   addFarm = (e) => {
     e.preventDefault();
     const { addBuildingAction } = this.props;
