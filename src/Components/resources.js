@@ -16,7 +16,7 @@ class ShowResources extends Component {
 
 
   render() {
-    const { food, gold,error } = this.props;
+    const { food, gold, error } = this.props;
     return (
       <div className="resources">
         <p>
