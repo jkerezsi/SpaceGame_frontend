@@ -16,7 +16,7 @@ class ShowResources extends Component {
 
 
   render() {
-    const { food, gold } = this.props;
+    const { food, gold,error } = this.props;
     return (
       <div className="resources">
         <p>
@@ -28,6 +28,7 @@ class ShowResources extends Component {
           {gold}
 
         </p>
+        <p>{error}</p>
       </div>
     );
   }
@@ -36,6 +37,7 @@ class ShowResources extends Component {
 const mapStateToProps = state => ({
   food: state.showResources.food,
   gold: state.showResources.gold,
+  error: state.showResources.error,
 });
 
 const mapDispatchToProps = {
