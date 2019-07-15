@@ -8,6 +8,7 @@ import { userLogin } from '../actions/actions';
 import Button from '../Components/Button';
 import Input from '../Components/InputField';
 import video2 from '../assets/images/loginVideo.mp4';
+import track from '../assets/images/.vtt';
 
 class Login extends Component {
   state = {
@@ -48,25 +49,25 @@ class Login extends Component {
   render() {
     const { error } = this.state;
     const { backendError } = this.props;
-    return (     
+    return (
       <div className="login">
-        <video className= "logVid" autoPlay loop>
+        <video className="logVid" autoPlay loop>
           <source src={video2} type="video/mp4" />
-        </video> 
-        <div className="gamerLogin"></div>        
-        <form className="loginForm">           
+          <track default kind="captions" srcLang="en" src={track} />
+        </video>
+        <div className="gamerLogin" />
+        <form className="loginForm">
           <Input label="Username" id="username" onChange={this.handleChange} />
           <label id="password" htmlFor="password">Password</label>
           <input type="password" label="Password" id="password" onChange={this.handleChange} placeholder="Password" />
           <Button onClick={this.handleClick} buttonText="Login" />
           <p>{ error }</p>
           <p>{ backendError }</p>
-        </form>        
+        </form>
       </div>
     );
   }
 }
-
 
 const mapStateToProps = (state) => {
   return {
