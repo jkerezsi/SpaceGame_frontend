@@ -33,3 +33,11 @@ export function fetchResources() {
     url: 'http://localhost:3012/kingdom/resource',
   });
 }
+
+export function fetchNewBuilding(payload) {
+  return axios({
+    method: 'post',
+    url: 'http://localhost:3012/kingdom/buildings',
+    data: payload,
+  });
+}
