@@ -10,7 +10,7 @@ import {
 } from 'react-simple-maps';
 import mapInfo from './world-50m.json';
 import Button from '../../Components/Button';
-import { listAllCountry, selectCountry } from '../../actions/actions';
+import { selectCountry } from '../../actions/actions';
 
 
 const wrapperStyles = {
@@ -34,15 +34,21 @@ class WorldMap extends Component {
         setTimeout(() => this.loopAll(json), 1000);
       }
 
+      // componentWillUpdate = (nextProps, nextState) => {
+      //   console.log('Component should update', nextProps, nextState);
+      //   this.render();
+      //   return true;
+      // }
 
-  handleCountryClick = (countryName) => {
-    const { finalcountries } = this.state;
+  handleCountryClick = (countryCode, countryName) => {
+    const { finalcountries, selectedCountryId } = this.state;
     if (finalcountries.includes(countryName)) {
       this.setState({ error: 'This country is taken' });
     } else {
-      this.setState({ selectedCountryId: countryName });
+      this.setState({ selectedCountryId: countryCode });
       this.setState({ error: `You have selected ${countryName}` });
     }
+    console.log(selectedCountryId);
   };
 
     submitButton = (e) => {
@@ -50,6 +56,7 @@ class WorldMap extends Component {
       const isValid = this.validate();
       if (isValid === true) {
         const { selectedCountryId } = this.state;
+        const { selectCountry } = this.props;
         selectCountry(selectedCountryId);
         console.log(selectedCountryId);
       }
@@ -65,6 +72,23 @@ class WorldMap extends Component {
       return true;
     };
 
+    checkCountryColor = (item) => {
+      const { finalcountries, selectedCountryId } = this.state;
+      let color = '';
+      if (finalcountries.indexOf(item) > -1) {
+        console.log('piros');
+        color = 'red';
+      } else if (selectedCountryId === item) {
+        console.log('zold');
+        color = 'green';
+      } else {
+        console.log('feher');
+        color = 'white';
+      }
+      return color;
+    }
+
+
     loopAll = (object) => {
       const all = [];
       for (let i = 0; i < object.kingdoms.length; i++) {
@@ -78,9 +102,9 @@ class WorldMap extends Component {
     }
 
     render() {
-      console.log(mapInfo.objects);
-      const { error } = this.state;
-      const { finalcountries } = this.state;
+      // console.log(mapInfo.objects.units.geometries[88].id);
+      const { error, finalcountries } = this.state;
+      const { countryError } = this.props;
       if (finalcountries === '') {
         return (
           <div>
@@ -92,6 +116,7 @@ class WorldMap extends Component {
         <div style={wrapperStyles}>
           <h1 style={{ color: 'white' }}>PLEASE SELECT YOUR COUNTRY</h1>
           <h3 style={{ color: 'white' }}>{ error }</h3>
+          <h3 style={{ color: 'white' }}>{ countryError }</h3>
           <Button className="selectCountry" onClick={this.submitButton} buttonText="SELECT" />
           <ComposableMap
             projectionConfig={{
@@ -110,12 +135,12 @@ class WorldMap extends Component {
                 {(geographies, projection) => geographies.map((geography, i) => (
                   <Geography
                     key={i}
-                    onClick={() => this.handleCountryClick(mapInfo.objects.units.geometries[i].properties.name)}
+                    onClick={() => this.handleCountryClick(mapInfo.objects.units.geometries[i].id, mapInfo.objects.units.geometries[i].properties.name)}
                     geography={geography}
                     projection={projection}
                     style={{
                       default: {
-                        fill: this.state.finalcountries.indexOf(mapInfo.objects.units.geometries[i].properties.name) > -1 ? '#FF0000' : '#ECEFF1',
+                        fill: this.checkCountryColor(mapInfo.objects.units.geometries[i].id),
                         stroke: '#607D8B',
                         strokeWidth: 0.75,
                         outline: 'none',
@@ -144,11 +169,11 @@ class WorldMap extends Component {
 }
 
 const mapStateToProps = state => ({
-  occupiedCountries: state.mapReducer.countryList,
+  countryError: state.mapReducer.error,
 });
 
 const mapDispatchToProps = {
-  listAllCountry,
+  selectCountry,
 };
 
 export default connect(

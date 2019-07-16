@@ -8,8 +8,8 @@ import rootReducer from '../reducers/index';
 import { loginWorkerSaga } from '../sagas/loginSaga';
 import { registerWorkerSaga } from '../sagas/registerSaga';
 import rootSaga from '../sagas/rootSaga';
-import { listCountryWorkerSaga } from '../sagas/listCountry';
 import { settingsWorkerSaga } from '../sagas/settingsSaga';
+import { selectCountryWorkerSaga } from '../sagas/worldMapSaga';
 
 export const history = createHistory();
 
@@ -26,7 +26,7 @@ function configureStoreProd(initialState) {
   const store = createStore(rootReducer, initialState, compose(
     applyMiddleware(...middlewares),
   ));
-  sagaMiddleware.run(listCountryWorkerSaga, loginWorkerSaga, registerWorkerSaga, settingsWorkerSaga);
+  sagaMiddleware.run(selectCountryWorkerSaga, loginWorkerSaga, registerWorkerSaga, settingsWorkerSaga);
   return store;
 }
 

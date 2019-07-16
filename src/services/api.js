@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+axios.defaults.headers.common.token = localStorage.getItem('TOKEN');
+
 export function fetchLogin(payload) {
   console.log(payload);
   return axios({
@@ -32,14 +34,5 @@ export function fetchMap(payload) {
     method: 'post',
     url: 'http://localhost:3012/register/map',
     data: payload,
-  });
-}
-
-export function fetchAllCountry() {
-  console.log('belefut');
-  return axios({
-    method: 'get',
-    url: 'http://localhost:3012/kingdom/map',
-    data: '',
   });
 }

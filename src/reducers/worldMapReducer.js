@@ -1,7 +1,5 @@
 const initialState = {
-  message: '',
   error: '',
-  countryList: '',
 };
 
 const mapReducer = (state = initialState, action) => {
@@ -10,15 +8,9 @@ const mapReducer = (state = initialState, action) => {
       return {
         ...state,
       };
-    case 'COUNTRY_TAKEN':
+    case 'COUNTRY_REJECT':
       return {
-        message: action.payload,
-      };
-    case 'LIST_ALL_COUNTRY2':
-      console.log(action.payload);
-      return {
-        ...state,
-        countryList: action.payload,
+        error: action.payload,
       };
     default:
       return state;
