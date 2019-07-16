@@ -3,6 +3,7 @@ import { fetchMap } from '../services/api';
 import { history } from '../store/configureStore';
 
 export function* selectCountryWorkerSaga(action) {
+  console.log(action);
   try {
     const response = yield call(fetchMap, action.payload);
     console.log(response);

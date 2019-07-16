@@ -42,8 +42,9 @@ class WorldMap extends Component {
 
   handleCountryClick = (countryCode, countryName) => {
     const { finalcountries, selectedCountryId } = this.state;
-    if (finalcountries.includes(countryName)) {
+    if (finalcountries.includes(countryCode)) {
       this.setState({ error: 'This country is taken' });
+      this.setState({ selectedCountryId: '' });
     } else {
       this.setState({ selectedCountryId: countryCode });
       this.setState({ error: `You have selected ${countryName}` });

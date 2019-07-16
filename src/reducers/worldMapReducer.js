@@ -8,10 +8,10 @@ const mapReducer = (state = initialState, action) => {
       return {
         ...state,
       };
-    case 'COUNTRY_REJECT':
-      return {
-        error: action.payload,
-      };
+    // case 'COUNTRY_REJECT':
+    //   return {
+    //     error: action.payload,
+    //   };
     default:
       return state;
   }
