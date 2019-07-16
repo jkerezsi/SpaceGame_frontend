@@ -4,7 +4,6 @@ import {
 } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 import Navbar from './Navbar';
-import Kingdom from '../Containers/Kingdom';
 import Menu from './menu/menu';
 import Settings from '../Containers/Settings';
 import Login from '../Containers/Login';
