@@ -1,23 +1,20 @@
-import { call, take, put } from 'redux-saga/effects';
+import { call, takeEvery, put } from 'redux-saga/effects';
 import { fetchRegister } from '../services/api';
-import { userRegister } from '../actions/actions';
+import { history } from '../store/configureStore';
 
-export function* registerWorkerSaga() {
+
+export function* registerWorkerSaga(action) {
   try {
-    const response = yield call(fetchRegister);
-    if (response.data.status === 'error') {
-      yield put({ type: 'REGISTER_FAILED', payload: response.data.message });
-    } else if (response.data.status.statusCode === '200') {
+    const response = yield call(fetchRegister, action.payload);
+    if (response.status === '200') {
       yield put({ type: 'REGISTER_SUCCESS', payload: response.data });
+      history.push('/register/map');
     }
   } catch (error) {
-    (
-      console.log(error)
-    );
+    yield put({ type: 'REGISTER_FAILED', payload: 'Username is already taken!' });
   }
 }
 
 export function* registerWatcherSaga() {
-  yield take('userRegister', userRegister);
-  yield call(registerWorkerSaga);
+  yield takeEvery('userRegister', registerWorkerSaga);
 }
