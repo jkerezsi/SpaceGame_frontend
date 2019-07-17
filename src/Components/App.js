@@ -11,6 +11,8 @@ import Register from '../Containers/Register';
 import leaderboardContent from '../Containers/leaderboardContent';
 import addBuildingPlusMenu from '../Containers/addBuilding';
 import { history } from '../store/configureStore';
+import Navbar from './Navbar';
+import ShowResource from './resources';
 import '../stylesheets/App.css';
 
 const App = () => (
@@ -18,14 +20,15 @@ const App = () => (
     <div>
       <Navbar />
       <Switch>
-        <PrivateRoute exact path="/kingdom" component={Menu} />
-        <PrivateRoute exact path="/kingdom/buildings" component={addBuildingPlusMenu} />
-        <PrivateRoute exact path="/kingdom/troops" component={Menu} />
-        <PrivateRoute exact path="/settings" component={Settings} />
-        <PrivateRoute exact path="/kingdom/battle" component={Menu} />
-        <PrivateRoute exact path="/kingdom/leaderboard" component={leaderboardContent} />
-        <PrivateRoute exact path="/kingdom/leaderboard/buildings" component={Menu} />
-        <PrivateRoute exact path="/kingdom/leaderboard/troops" component={Menu} />
+        <Route path="/kingdom" component={ShowResource} />
+        <Route exact path="/kingdom" component={Menu} />
+        <Route exact path="/kingdom/buildings" component={Menu} />
+        <Route exact path="/kingdom/troops" component={Menu} />
+        <Route exact path="/settings" component={Settings} />
+        <Route exact path="/kingdom/battle" component={Menu} />
+        <Route exact path="/kingdom/leaderboard" component={leaderboardContent} />
+        <Route exact path="/kingdom/leaderboard/buildings" component={Menu} />
+        <Route exact path="/kingdom/leaderboard/troops" component={Menu} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
       </Switch>
