@@ -86,8 +86,8 @@ class WorldMap extends Component {
 
     loopAll = (object) => {
       const all = [];
-      for (let i = 0; i < object.kingdoms.length; i++) {
-        for (let j = 0; j < object.kingdoms[i].location.length; j++) {
+      for (let i = 0; i < object.kingdoms.length; i += 1) {
+        for (let j = 0; j < object.kingdoms[i].location.length; j += 1) {
           all.push(object.kingdoms[i].location[j]);
         }
       }
@@ -128,8 +128,10 @@ class WorldMap extends Component {
                 <Geographies geography={mapInfo} disableOptimization>
                   {(geographies, projection) => geographies.map((geography, i) => (
                     <Geography
+                      // eslint-disable-next-line react/no-array-index-key
                       key={i}
-                      onClick={() => this.handleCountryClick(mapInfo.objects.units.geometries[i].id, mapInfo.objects.units.geometries[i].properties.name)}
+                      onClick={
+() => this.handleCountryClick(mapInfo.objects.units.geometries[i].id, mapInfo.objects.units.geometries[i].properties.name)}
                       geography={geography}
                       projection={projection}
                       style={{

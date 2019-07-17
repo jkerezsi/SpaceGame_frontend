@@ -8,12 +8,8 @@ export function* settingsWorkerSaga(action) {
     const response = yield call(fetchSettings, action.payload);
     yield put({ type: 'KINGDOM_NAME_CHANGED', payload: response.data });
     history.push('/kingdom');
-
   } catch (error) {
-    (
-      // eslint-disable-next-line no-console
-      console.log(error)
-    );
+    console.log(error);
   }
 }
 
