@@ -12,7 +12,7 @@ export function* selectCountryWorkerSaga(action) {
       history.push('/login');
     }
   } catch (error) {
-    yield put({ type: 'COUNTRY_REJECT', payload: 'Country code is required!' });
+    yield put({ type: 'COUNTRY_REJECT' });
   }
 }
 

@@ -34,8 +34,5 @@ export function fetchMap(payload) {
     method: 'post',
     url: 'http://localhost:3012/register/map',
     data: payload,
-    headers: {
-      token: 'eyJhbGciOiJIUzI1NiJ9.NWQyZGMyM2FmNTUyMzUyMWE0YmYzYmE3.jiWX78-uhg2VCIdTiFdEarEblw8BBNTmVVtfbZA_PGs',
-    },
   });
 }

@@ -32,4 +32,4 @@ export const logout = () => ({ type: 'LOGOUT' });
 
 export const selectCountry = country_code => ({ type: 'SELECT_COUNTRY', payload: { country_code } });
 export const selectCountrySuccess = () => ({ type: 'COUNTRY_AVAILABLE', payload: '' });
-export const selectCountryReject = () => ({ type: 'COUNTRY_REJECT', payload: '' });
+export const selectCountryReject = () => ({ type: 'COUNTRY_REJECT', payload: 'Country code is required!' });

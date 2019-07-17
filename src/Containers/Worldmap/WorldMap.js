@@ -46,6 +46,7 @@ class WorldMap extends Component {
       this.setState({ error: 'This country is taken' });
       this.setState({ selectedCountryId: '' });
     } else {
+      localStorage.setItem('COUNTRY', countryCode);
       this.setState({ selectedCountryId: countryCode });
       this.setState({ error: `You have selected ${countryName}` });
     }
@@ -74,12 +75,12 @@ class WorldMap extends Component {
     };
 
     checkCountryColor = (item) => {
-      const { finalcountries, selectedCountryId } = this.state;
+      const { finalcountries } = this.state;
       let color = '';
       if (finalcountries.indexOf(item) > -1) {
         console.log('piros');
         color = 'red';
-      } else if (selectedCountryId === item) {
+      } else if (localStorage.getItem('COUNTRY') === item) {
         console.log('zold');
         color = 'green';
       } else {
@@ -112,13 +113,13 @@ class WorldMap extends Component {
             <h2 style={{ color: 'white' }}>Loading...</h2>
           </div>
         );
-      }
+      } 
       return (
         <div style={wrapperStyles}>
           <h1 style={{ color: 'white' }}>PLEASE SELECT YOUR COUNTRY</h1>
           <h3 style={{ color: 'white' }}>{ error }</h3>
           <h3 style={{ color: 'white' }}>{ countryError }</h3>
-          <Button className="selectCountry" onClick={this.submitButton} buttonText="SELECT" />
+          <Button className="selectCountry" backgroundColor="white" onClick={this.submitButton} buttonText="SELECT" />
           <ComposableMap
             projectionConfig={{
               scale: 205,
