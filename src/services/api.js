@@ -41,3 +41,10 @@ export function fetchNewBuilding(payload) {
     data: payload,
   });
 }
+
+export function fetchTroops() {
+  return axios({
+    method: 'get',
+    url: 'http://localhost:3012/kingdom/troops',
+  });
+}
