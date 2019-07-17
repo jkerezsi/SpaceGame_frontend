@@ -21,54 +21,48 @@ const wrapperStyles = {
 
 
 class WorldMap extends Component {
-      state = {
-        selectedCountryId: '',
-        finalcountries: '',
-        error: '',
-        message: '',
-      };
+  constructor() {
+    super();
+    this.state = {
+      selectedCountryCode: '',
+      occupiedCountries: '',
+      error: '',
+      message: '',
+    };
+  }
 
-
-      async componentWillMount() {
-        const response = await fetch('http://localhost:3012/kingdom/map');
-        const json = await response.json();
-        setTimeout(() => this.loopAll(json), 1000);
-      }
-
-      // componentWillUpdate = (nextProps, nextState) => {
-      //   console.log('Component should update', nextProps, nextState);
-      //   this.render();
-      //   return true;
-      // }
+  async componentWillMount() {
+    const response = await fetch('http://localhost:3012/kingdom/map');
+    const json = await response.json();
+    setTimeout(() => this.loopAll(json), 1000);
+  }
 
   handleCountryClick = (countryCode, countryName) => {
-    const { finalcountries } = this.state;
-    if (finalcountries.includes(countryCode)) {
+    const { occupiedCountries } = this.state;
+    if (occupiedCountries.includes(countryCode)) {
       this.setState({ message: 'This country is taken' });
-      this.setState({ selectedCountryId: '' });
+      this.setState({ selectedCountryCode: '' });
     } else {
-      localStorage.setItem('COUNTRY', countryCode);
-      this.setState({ selectedCountryId: countryCode });
+      this.setState({ selectedCountryCode: countryCode });
       this.setState({ message: `You have selected ${countryName}` });
     }
-    console.log(this.state);
   };
+
 
     submitButton = (e) => {
       e.preventDefault();
       const isValid = this.validate();
       if (isValid === true) {
-        const { selectedCountryId } = this.state;
+        const { selectedCountryCode } = this.state;
         const { selectCountry } = this.props;
-        selectCountry(selectedCountryId);
-        console.log(selectedCountryId);
+        selectCountry(selectedCountryCode);
       }
       return false;
     }
 
     validate = () => {
-      const { selectedCountryId } = this.state;
-      if (!selectedCountryId) {
+      const { selectedCountryCode } = this.state;
+      if (!selectedCountryCode) {
         this.setState({ error: 'Please select a country!' });
         return false;
       }
@@ -76,18 +70,15 @@ class WorldMap extends Component {
     };
 
     checkCountryColor = (item) => {
-      const { finalcountries } = this.state;
-      const { selectedCountryId } = this.state;
+      const { occupiedCountries } = this.state;
+      const { selectedCountryCode } = this.state;
       let color = '';
-      if (finalcountries.indexOf(item) > -1) {
-        console.log('piros');
-        color = 'red';
-      } else if (selectedCountryId === item) {
-        console.log('zold');
-        color = 'green';
+      if (occupiedCountries.indexOf(item) > -1) {
+        color = '#FF4500';
+      } else if (selectedCountryCode === item) {
+        color = '#00FF00';
       } else {
-        console.log('feher');
-        color = 'white';
+        color = '#D3D3D3';
       }
       return color;
     }
@@ -100,74 +91,73 @@ class WorldMap extends Component {
           all.push(object.kingdoms[i].location[j]);
         }
       }
-      this.setState({ finalcountries: all });
-      const { finalcountries } = this.state;
-      console.log(finalcountries);
+      this.setState({ occupiedCountries: all });
     }
 
     render() {
-      // console.log(mapInfo.objects.units.geometries[88].id);
-      const { error, finalcountries, message } = this.state;
+      const { error, occupiedCountries, message } = this.state;
       const { countryError } = this.props;
-      if (finalcountries === '') {
+      if (occupiedCountries === '') {
         return (
           <div>
             <h2 style={{ color: 'white' }}>Loading...</h2>
           </div>
         );
-      };
+      }
       return (
-        <div style={wrapperStyles}>
-          <h2 style={{ color: 'white' }}>PLEASE SELECT YOUR COUNTRY</h2>
-          <h3 style={{ color: 'white' }}>{ error }</h3>
-          <h3 style={{ color: 'white' }}>{ message }</h3>
-          <h3 style={{ color: 'white' }}>{ countryError }</h3>
-          <Button className="selectCountry" backgroundColor="white" onClick={this.submitButton} buttonText="SELECT" />
-          <ComposableMap
-            projectionConfig={{
-              scale: 205,
-              rotation: [-11, 0, 0],
-            }}
-            width={980}
-            height={551}
-            style={{
-              width: '100%',
-              height: 'auto',
-            }}
-          >
-            <ZoomableGroup center={[0, 20]} disablePanning>
-              <Geographies geography={mapInfo}>
-                {(geographies, projection) => geographies.map((geography, i) => (
-                  <Geography
-                    key={i}
-                    onClick={() => this.handleCountryClick(mapInfo.objects.units.geometries[i].id, mapInfo.objects.units.geometries[i].properties.name)}
-                    geography={geography}
-                    projection={projection}
-                    style={{
-                      default: {
-                        fill: this.checkCountryColor(mapInfo.objects.units.geometries[i].id),
-                        stroke: '#607D8B',
-                        strokeWidth: 0.75,
-                        outline: 'none',
-                      },
-                      hover: {
-                        fill: '#607D8B',
-                        stroke: '#607D8B',
-                        strokeWidth: 0.75,
-                        outline: 'none',
-                      },
-                      pressed: {
-                        fill: '#FF5722',
-                        stroke: '#607D8B',
-                        strokeWidth: 0.75,
-                        outline: 'none',
-                      },
-                    }}
-                  />
-                ))}
-              </Geographies>
-            </ZoomableGroup>
-          </ComposableMap>
+        <div>
+          <div style={wrapperStyles}>
+            <h2 style={{ color: 'white' }}>Please select your kingdom</h2>
+            <h3 style={{ color: 'white' }}>{ error }</h3>
+            <h3 style={{ color: 'white' }}>{ message }</h3>
+            <h3 style={{ color: 'white' }}>{ countryError }</h3>
+            <Button className="selectCountry" onClick={this.submitButton} buttonText="SELECT" />
+            <ComposableMap
+              projectionConfig={{
+                scale: 205,
+                rotation: [-11, 0, 0],
+              }}
+              width={980}
+              height={551}
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+            >
+              <ZoomableGroup center={[0, 20]} disablePanning>
+                <Geographies geography={mapInfo} disableOptimization>
+                  {(geographies, projection) => geographies.map((geography, i) => (
+                    <Geography
+                      key={i}
+                      onClick={() => this.handleCountryClick(mapInfo.objects.units.geometries[i].id, mapInfo.objects.units.geometries[i].properties.name)}
+                      geography={geography}
+                      projection={projection}
+                      style={{
+                        default: {
+                          fill: this.checkCountryColor(mapInfo.objects.units.geometries[i].id),
+                          stroke: '#607D8B',
+                          strokeWidth: 0.75,
+                          outline: 'none',
+                        },
+                        hover: {
+                          fill: '#607D8B',
+                          stroke: '#607D8B',
+                          strokeWidth: 0.75,
+                          outline: 'none',
+                        },
+                        pressed: {
+                          fill: '#FFE4B5',
+                          stroke: '#607D8B',
+                          strokeWidth: 0.75,
+                          outline: 'none',
+                        },
+                      }}
+                    />
+                  ))}
+                </Geographies>
+              </ZoomableGroup>
+            </ComposableMap>
+          </div>
         </div>
       );
     }
