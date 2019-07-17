@@ -25,6 +25,7 @@ class WorldMap extends Component {
         selectedCountryId: '',
         finalcountries: '',
         error: '',
+        message: '',
       };
 
 
@@ -41,16 +42,16 @@ class WorldMap extends Component {
       // }
 
   handleCountryClick = (countryCode, countryName) => {
-    const { finalcountries, selectedCountryId } = this.state;
+    const { finalcountries } = this.state;
     if (finalcountries.includes(countryCode)) {
-      this.setState({ error: 'This country is taken' });
+      this.setState({ message: 'This country is taken' });
       this.setState({ selectedCountryId: '' });
     } else {
       localStorage.setItem('COUNTRY', countryCode);
       this.setState({ selectedCountryId: countryCode });
-      this.setState({ error: `You have selected ${countryName}` });
+      this.setState({ message: `You have selected ${countryName}` });
     }
-    console.log(selectedCountryId);
+    console.log(this.state);
   };
 
     submitButton = (e) => {
@@ -76,11 +77,12 @@ class WorldMap extends Component {
 
     checkCountryColor = (item) => {
       const { finalcountries } = this.state;
+      const { selectedCountryId } = this.state;
       let color = '';
       if (finalcountries.indexOf(item) > -1) {
         console.log('piros');
         color = 'red';
-      } else if (localStorage.getItem('COUNTRY') === item) {
+      } else if (selectedCountryId === item) {
         console.log('zold');
         color = 'green';
       } else {
@@ -105,7 +107,7 @@ class WorldMap extends Component {
 
     render() {
       // console.log(mapInfo.objects.units.geometries[88].id);
-      const { error, finalcountries } = this.state;
+      const { error, finalcountries, message } = this.state;
       const { countryError } = this.props;
       if (finalcountries === '') {
         return (
@@ -113,11 +115,12 @@ class WorldMap extends Component {
             <h2 style={{ color: 'white' }}>Loading...</h2>
           </div>
         );
-      } 
+      };
       return (
         <div style={wrapperStyles}>
-          <h1 style={{ color: 'white' }}>PLEASE SELECT YOUR COUNTRY</h1>
+          <h2 style={{ color: 'white' }}>PLEASE SELECT YOUR COUNTRY</h2>
           <h3 style={{ color: 'white' }}>{ error }</h3>
+          <h3 style={{ color: 'white' }}>{ message }</h3>
           <h3 style={{ color: 'white' }}>{ countryError }</h3>
           <Button className="selectCountry" backgroundColor="white" onClick={this.submitButton} buttonText="SELECT" />
           <ComposableMap
