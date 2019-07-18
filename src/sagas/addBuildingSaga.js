@@ -3,7 +3,6 @@ import { fetchNewBuilding } from '../services/api';
 // import { history } from '../store/configureStore';
 
 export function* addBuildingSaga(action) {
-  console.log(action);
   try {
     const response = yield call(fetchNewBuilding, action.payload);
     if (response.status === 200) {

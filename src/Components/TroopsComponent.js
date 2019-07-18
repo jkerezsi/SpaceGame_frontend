@@ -5,7 +5,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getTroopsAction } from '../actions/actions';
-import '../stylesheets/troops.css'
+import '../stylesheets/troops.css';
 
 
 class GetTroopsComponent extends React.Component {
@@ -24,7 +24,7 @@ class GetTroopsComponent extends React.Component {
       return (
         <div className="troops">
           {troop.map((troops, i) => (
-            <div key={i} className="troop">
+            <div className="troop">
               <h4>
                 Troop number:
                 {i + 1}

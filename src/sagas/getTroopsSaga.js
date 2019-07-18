@@ -15,4 +15,3 @@ export function* getTroopsSaga() {
 export function* getTroopsWatcherSaga() {
   yield takeEvery('GET_TROOPS', getTroopsSaga);
 }
-
