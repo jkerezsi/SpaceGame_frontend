@@ -3,7 +3,6 @@ import axios from 'axios';
 axios.defaults.headers.common.token = localStorage.getItem('TOKEN');
 
 export function fetchLogin(payload) {
-  console.log(payload);
   return axios({
     method: 'post',
     url: 'http://localhost:3012/login',
@@ -31,6 +30,18 @@ export function fetchMap(payload) {
   return axios({
     method: 'post',
     url: 'http://localhost:3012/register/map',
+
+export function fetchResources() {
+  return axios({
+    method: 'get',
+    url: 'http://localhost:3012/kingdom/resource',
+  });
+}
+
+export function fetchNewBuilding(payload) {
+  return axios({
+    method: 'post',
+    url: 'http://localhost:3012/kingdom/buildings',
     data: payload,
   });
 }

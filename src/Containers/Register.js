@@ -2,11 +2,14 @@
 /* eslint-disable arrow-body-style */
 /* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/label-has-associated-control */
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { userRegister } from '../actions/actions';
 import Button from '../Components/Button';
 import Input from '../Components/InputField';
+import video3 from '../assets/images/registerVideo.mp4';
+import track from '../assets/images/.vtt';
 
 class Register extends Component {
   state = {
@@ -50,13 +53,17 @@ class Register extends Component {
     return false;
   };
 
-
   render() {
     const { error } = this.state;
     const { registerBackendError } = this.props;
     return (
       <div className="registration">
-        <form>
+        <video className="regVid" autoPlay loop>
+          <source src={video3} type="video/mp4" />
+          <track default kind="captions" srcLang="en" src={track} />
+        </video>
+        <div className="gamerRegister" />
+        <form className="registerForm">
           <Input label="Username" id="username" onChange={this.handleChange} />
           <label htmlFor="password">Password</label>
           <input type="password" label="Password" id="password" onChange={this.handleChange} placeholder="Password" />
@@ -75,7 +82,6 @@ const mapStateToProps = (state) => {
     registerBackendError: state.registerAuthentication.error,
   };
 };
-
 
 const mapDispatchToProps = {
   userRegister,
