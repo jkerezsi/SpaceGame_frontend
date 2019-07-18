@@ -1,0 +1,58 @@
+.header {
+  background-color: blueviolet;
+  height: 70px;
+  width: 100%;
+}
+
+ul {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  white-space: nowrap;
+  height: 5em;
+  width: 100%;
+  list-style-type: none;
+}
+
+li { 
+  font-weight: bold;
+  color: white;
+  display: inline;
+}
+
+h1 {
+  text-align: center;
+}
+
+.kingdom {
+  font-size: 30px;
+  padding-left: 120px;
+}
+
+.settings {
+  padding-right: 50px;
+}
+
+.controlBar {
+  font-size: 20px;
+  padding-right: 120px;
+  padding-top: 7px;
+  float: right;
+}
+
+.login, .register {
+  font-size: 20px;
+  padding-top: 20px;
+  padding-left: 30%;
+}
+
+li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+li a:hover {
+  text-decoration: none;
+  color: palegoldenrod;
+}

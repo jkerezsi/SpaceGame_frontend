@@ -1,26 +1,19 @@
-import { call, take, put } from 'redux-saga/effects';
-import { push } from 'react-router-redux';
+import { call, takeEvery, put } from 'redux-saga/effects';
 import { fetchLogin } from '../services/api';
-import { userLogin } from '../actions/actions';
+import { history } from '../store/configureStore';
 
-
-export function* loginWorkerSaga() {
+export function* loginWorkerSaga(action) {
   try {
-    const response = yield call(fetchLogin);
+    const response = yield call(fetchLogin, action.payload);
     if (response.data.status === 'ok') {
       yield put({ type: 'LOGIN_SUCCESS', payload: response.data.token });
-      yield put(push('/kingdom'));
-    } else if (response.data.status === 'error') {
-      yield put({ type: 'LOGIN_FAILED', payload: response.data.error });
+      history.push('/kingdom');
     }
   } catch (error) {
-    (
-      console.log(error)
-    );
+    yield put({ type: 'LOGIN_FAILED', payload: 'Username or password is incorrect!' });
   }
 }
 
 export function* loginWatcherSaga() {
-  yield take('userLogin', userLogin);
-  yield call(loginWorkerSaga);
+  yield takeEvery('userLogin', loginWorkerSaga);
 }

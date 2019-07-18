@@ -1,15 +1,18 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+/* eslint-disable arrow-body-style */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/prefer-stateless-function */
+import React, { Component } from 'react';
+import NavbarLoggedIn from './NavbarLoggedIn';
+import NavbarLoggedOut from './NavbarLoggedOut';
+import '../stylesheets/Navbar.css';
 
-
-const Navbar = () => (
-  <nav className="navbar">
-    <div className="header">
-      <div className="title">GAME</div>
-      <div><NavLink to="/login" className="loginNavbar">Login</NavLink></div>
-      <div><NavLink to="/register" className="registerNavbar">Register</NavLink></div>
-    </div>
-  </nav>
-);
+class Navbar extends Component {
+  render() {
+    if (localStorage.getItem('TOKEN')) {
+      return <NavbarLoggedIn />;
+    }
+    return <NavbarLoggedOut />;
+  }
+}
 
 export default Navbar;
