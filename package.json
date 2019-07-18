@@ -33,5 +33,18 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/green-fox-academy/ferrilata-infinite-frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/green-fox-academy/ferrilata-infinite-frontend/issues"
+  },
+  "homepage": "https://github.com/green-fox-academy/ferrilata-infinite-frontend#readme"
 }
