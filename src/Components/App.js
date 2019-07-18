@@ -11,6 +11,7 @@ import leaderboardContent from '../Containers/leaderboardContent';
 import addBuildingPlusMenu from '../Containers/addBuilding';
 import { history } from '../store/configureStore';
 import '../stylesheets/App.css';
+import GetTroopsComponent from './TroopsComponent';
 
 const App = () => (
   <Router history={history}>
@@ -19,7 +20,7 @@ const App = () => (
       <Switch>
         <Route exact path="/kingdom" component={Menu} />
         <Route exact path="/kingdom/buildings" component={addBuildingPlusMenu} />
-        <Route exact path="/kingdom/troops" component={Menu} />
+        <Route exact path="/kingdom/troops" component={GetTroopsComponent} />
         <Route exact path="/settings" component={Settings} />
         <Route exact path="/kingdom/battle" component={Menu} />
         <Route exact path="/kingdom/leaderboard" component={leaderboardContent} />
