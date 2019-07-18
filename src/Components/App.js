@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter as Router, Route, Switch,
+  Router, Route, Switch,
 } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 import Navbar from './Navbar';
@@ -11,7 +11,6 @@ import Register from '../Containers/Register';
 import leaderboardContent from '../Containers/leaderboardContent';
 import addBuildingPlusMenu from '../Containers/addBuilding';
 import { history } from '../store/configureStore';
-import Navbar from './Navbar';
 import ShowResource from './resources';
 import '../stylesheets/App.css';
 
