@@ -11,8 +11,8 @@ import leaderboardContent from '../Containers/leaderboardContent';
 import addBuildingPlusMenu from '../Containers/addBuilding';
 import { history } from '../store/configureStore';
 import '../stylesheets/App.css';
-import GetTroopsComponent from './TroopsComponent';
 import PrivateRoute from './PrivateRoute';
+import TroopsContent from '../Containers/troopsContent';
 
 const App = () => (
   <Router history={history}>
@@ -21,7 +21,7 @@ const App = () => (
       <Switch>
         <PrivateRoute exact path="/kingdom" component={Menu} />
         <PrivateRoute exact path="/kingdom/buildings" component={addBuildingPlusMenu} />
-        <PrivateRoute exact path="/kingdom/troops" component={GetTroopsComponent} />
+        <PrivateRoute exact path="/kingdom/troops" component={TroopsContent} />
         <PrivateRoute exact path="/settings" component={Settings} />
         <PrivateRoute exact path="/kingdom/battle" component={Menu} />
         <PrivateRoute exact path="/kingdom/leaderboard" component={leaderboardContent} />
