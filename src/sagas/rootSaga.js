@@ -5,6 +5,7 @@ import { settingsWatcherSaga } from './settingsSaga';
 import { selectCountryWatcherSaga, selectCountryWorkerSaga } from './worldMapSaga';
 import { resourceWatcherSaga } from './resourcesSaga';
 import { addBuildingWatcherSaga } from './addBuildingSaga';
+import { getTroopsSaga } from './getTroopsSaga';
 
 export default function* rootSaga() {
   yield all([
@@ -15,5 +16,6 @@ export default function* rootSaga() {
     fork(selectCountryWorkerSaga),
     fork(resourceWatcherSaga),
     fork(addBuildingWatcherSaga),
+    fork(getTroopsSaga),
   ]);
 }
