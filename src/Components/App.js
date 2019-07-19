@@ -11,7 +11,6 @@ import Register from '../Containers/Register';
 import leaderboardContent from '../Containers/leaderboardContent';
 import addBuildingPlusMenu from '../Containers/addBuilding';
 import { history } from '../store/configureStore';
-import Navbar from './Navbar';
 import WorldMap from '../Containers/Worldmap/WorldMap';
 import ShowResource from './resources';
 import '../stylesheets/App.css';
