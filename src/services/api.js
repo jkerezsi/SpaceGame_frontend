@@ -30,6 +30,8 @@ export function fetchMap(payload) {
   return axios({
     method: 'post',
     url: 'http://localhost:3012/register/map',
+  });
+}
 
 export function fetchResources() {
   return axios({
