@@ -27,7 +27,7 @@ function configureStoreProd(initialState) {
   const store = createStore(rootReducer, initialState, compose(
     applyMiddleware(...middlewares),
   ));
-  
+
   sagaMiddleware.run(selectCountryWorkerSaga, loginWorkerSaga, registerWorkerSaga, settingsWorkerSaga);
   sagaMiddleware.run(loginWorkerSaga, registerWorkerSaga, addBuildingSaga);
   return store;
