@@ -27,9 +27,11 @@ export function fetchSettings(payload) {
 }
 
 export function fetchMap(payload) {
+  console.log(payload);
   return axios({
     method: 'post',
     url: 'http://localhost:3012/register/map',
+    data: payload,
   });
 }
 
