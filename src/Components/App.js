@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Router, Route, Switch,
+  BrowserRouter as Router, Route, Switch,
 } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 import Navbar from './Navbar';
@@ -11,8 +11,11 @@ import Register from '../Containers/Register';
 import leaderboardContent from '../Containers/leaderboardContent';
 import addBuildingPlusMenu from '../Containers/addBuilding';
 import { history } from '../store/configureStore';
+import WorldMap from '../Containers/Worldmap/WorldMap';
 import ShowResource from './resources';
 import '../stylesheets/App.css';
+import Landing from './Landing';
+
 
 const App = () => (
   <Router history={history}>
@@ -30,6 +33,8 @@ const App = () => (
         <Route exact path="/kingdom/leaderboard/troops" component={Menu} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
+        <Route exact path="/register/map" component={WorldMap} />
+        <Route exact path="/" component={Landing} />
       </Switch>
     </div>
   </Router>

@@ -29,6 +29,11 @@ export const updateKingdomName = (newKingdomName, token) => ({
 export const updateKingdomNameSuccess = () => ({ type: 'KINGDOM_NAME_CHANGED', payload: '' });
 export const logout = () => ({ type: 'LOGOUT' });
 
+// eslint-disable-next-line camelcase
+export const selectCountry = country_code => ({ type: 'SELECT_COUNTRY', payload: country_code });
+export const selectCountrySuccess = () => ({ type: 'COUNTRY_AVAILABLE', payload: '' });
+export const selectCountryReject = () => ({ type: 'COUNTRY_REJECT', payload: 'Country code is required!' });
+
 export const getResources = token => ({
   type: 'getResources',
   payload: {
@@ -41,3 +46,4 @@ export const FailedGotResources = () => ({ type: 'GET_RESOURCES_FAILED', payload
 export const addBuildingAction = (type, token) => ({ type: 'ADD_BUILDING', payload: { type, token } });
 export const addBuildingSuccess = () => ({ type: 'ADD_BUILDING_SUCCESS', payload: '' });
 export const addBuildingFail = () => ({ type: 'ADD_BUILDING_FAIL', payload: '' });
+
