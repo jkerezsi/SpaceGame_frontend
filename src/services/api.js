@@ -25,3 +25,12 @@ export function fetchSettings(payload) {
     data: payload,
   });
 }
+
+export function fetchBuildings(payload) {
+  console.log(payload);
+  return axios({
+    method: 'get',
+    url: 'http://localhost:3012/buildings',
+    data: payload,
+  });
+}

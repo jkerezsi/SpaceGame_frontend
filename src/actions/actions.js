@@ -12,7 +12,6 @@ export const userRegister = (username, password, kingdom) => ({
   },
 });
 
-
 export const loginSuccess = () => ({ type: 'LOGIN_SUCCESS', payload: '' });
 export const loginFailed = () => ({ type: 'LOGIN_FAILED', payload: '' });
 
@@ -25,6 +24,10 @@ export const updateKingdomName = (newKingdomName, token) => ({
     newKingdomName, token,
   },
 });
-
 export const updateKingdomNameSuccess = () => ({ type: 'KINGDOM_NAME_CHANGED', payload: '' });
+
 export const logout = () => ({ type: 'LOGOUT' });
+
+export const getBuildingsAction = () => ({ type: 'GETBUILDINGS', payload: '' });
+export const getBuildingsSucces = () => ({ type: 'GETBUILDINGS_SUCCESS', payload: '' });
+export const getBuildingsFailed = () => ({ type: 'GETBUILDINGS_FAILED', payload: '' });
