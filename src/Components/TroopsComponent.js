@@ -6,6 +6,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { getTroopsAction } from '../actions/actions';
 import '../stylesheets/troops.css';
+import '../stylesheets/App.css';
 
 
 class GetTroopsComponent extends React.Component {

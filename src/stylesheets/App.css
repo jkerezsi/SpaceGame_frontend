@@ -29,6 +29,10 @@ video {
   opacity: 0.9;
 }
 
+.kingVid {
+  opacity: 0.9;
+}
+
 audio {
   position: absolute;
   top: 90%;
@@ -39,31 +43,44 @@ audio {
   border: none;
 }
 
-.melting {
+.melting1 {
   position: fixed;
   top: 13%;
   right: 1.5%;
-  width: 300px;
+  width: 359px;
   height: 237px;
   background: url(../assets/images/melting2.png);
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.9;
+}
+
+.melting2 {
+  position: fixed;
+  top: 13%;
+  left: 1.5%;
+  width: 359px;
+  height: 237px;
+  background: url(../assets/images/melting2.png);
+  transform: scaleX(-1);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .welcome {
   position: fixed;
-  top: 10%;
-  left: 30%;
-  width: 564px;
-  height: 564px;
-  background: url(../assets/images/welcome.jpg);
+  top: 5.5%;
+  left: 28%;
+  width: 600px;
+  height: 429.5px;
+  /*width: 564px;
+  height: 564px;*/
+  background: url(../assets/images/welcome_title.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
-nav {
+.header {
   background: url(../assets/images/navBg.jpg);
   background-repeat: repeat;
   overflow: hidden;
@@ -74,9 +91,10 @@ nav {
   padding: 2px 15px 10px 15px;
 }
 
-.title {
+/*.title {
   float: left;
-  padding-top: 15px;
+  padding-top: 5px;
+  margin-top: 2.5px;
   width: 300px;
   height: 60px;
   background: url(../assets/images/titleBg.gif);
@@ -84,42 +102,77 @@ nav {
   background-repeat: no-repeat;
   color: #f0ec15;
   text-align: center;
-
+  opacity: 0.7;
   width: 110px;
   text-decoration: none;
-  font-size: 35px;
+  font-size: 25px;
+}*/
+
+a.loginNavbar {
+  float: right;
+  background:linear-gradient(to right, rgb(65, 219, 27), rgb(124, 124, 216));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 15px;
+  margin-top: 5px;
+  margin-left: 20px;
+  width: 110px;
+  text-decoration: none;
+  font-size: 25px;
 }
 
-a {
+a.registerNavbar {
   float: right;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 22px;
-  width: 110px;
+  background:linear-gradient(to right, rgb(255, 0, 200) , rgb(212, 19, 67), rgb(219, 216, 27));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center; 
+  margin-top: 5px;
+  margin-right: 20px;
+  padding: 15px;
   text-decoration: none;
   font-size: 25px;
 }
 
 a.active {
   float: right;
-  color: #f2f2f2;
   text-align: center;
-  padding: 22px;
+  margin-top: 5px;
+  padding: 15px;
   width: 110px;
   text-decoration: none;
+  -webkit-text-fill-color: rgb(152, 161, 236);
   font-size: 25px;
   background: url(../assets/images/activeBg2.gif);
   background-position: center;
-  background-size: 100%;
+  background-size: 110%;
+  background-repeat: no-repeat; 
+}
+
+.loginForm {
+  width: 400px;
+  height: 450px;
+  background: url(../assets/images/gamerLogin.gif);
+  background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 40px;
+  opacity: 0.4;
+  margin: 10px auto 0 auto;
+  text-align: center;
 }
 
-a.RegisterNavBar {
-  background-color: rgba(208, 21, 241, 0.6);
-}
-
-a.LoginNavBar {
-  background-color: rgba(208, 21, 241, 0.6);
+.registerForm {
+  width: 400px;
+  height: 450px;
+  background: url(../assets/images/gamerRegister.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 40px;
+  opacity: 0.6;
+  margin: 10px auto 0 auto;
+  text-align: center;
 }
 
 label {
@@ -129,10 +182,11 @@ label {
 input {
   font-size: 20px;
   font-family: 'arcadepixregular';
+  border-radius: 40px;
 }
 
 input::placeholder {
-  color: rgb(167, 164, 164);
+  color: rgb(157, 43, 233);
 }
 
 #username {
@@ -140,13 +194,14 @@ input::placeholder {
   margin: 8px 0;
   box-sizing: border-box;
   font-size: 20px;
-  background: url(../assets/images/regback1.png);
+  background-color: rgb(171, 188, 243);
+  /*background: url(../assets/images/regback1.png);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100% 100%;*/
   opacity: 0.8;
   border: none;
   width: 317px;
-  color: rgb(188, 88, 206);
+  color: rgb(76, 18, 211);
 }
 
 #password {
@@ -154,13 +209,14 @@ input::placeholder {
   margin: 8px 0;
   box-sizing: border-box;
   font-size: 20px;
-  background: url(../assets/images/regback2.png);
+  background-color: rgb(171, 188, 243);
+  /*background: url(../assets/images/regback2.png);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100% 100%;*/
   opacity: 0.8;
   border: none;
   width: 317px;
-  color: rgb(188, 88, 206);
+  color: rgb(76, 18, 211);
 }
 
 #kingdom {
@@ -168,26 +224,23 @@ input::placeholder {
   margin: 8px 0;
   box-sizing: border-box;
   font-size: 20px;
-  background: url(../assets/images/regback3.png);
+  background-color: rgb(171, 188, 243);
+  /*background: url(../assets/images/regback3.png);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100% 100%;*/
   opacity: 0.8;
   border: none;
   width: 317px;
-  color: rgb(188, 88, 206);
+  color: rgb(76, 18, 211);
 }
 
 p {
-  padding: 10px;
-  margin: 8px 0px;
-  box-sizing: border-box;
-  font-size: 15px;
-  color: rgb(224, 18, 97);
-  width: 317px;
-  height: 45px;
+  font-size: 20px;
+  color: rgb(226, 30, 151);
   font-weight: bold;
   border: none;
   text-align: center;
+  margin: 10px;
 }
 
 form {
@@ -207,16 +260,12 @@ button {
   font-family: 'arcadepixregular';
   font-size: 25px;
   font-weight: bold;
+  color: silver;
   text-align: center;
-  padding: 0px;
-  margin: 20px 20px;
-  border: none;
   position: absolute;
-  top: 80%;
-  left: 24%;
-  width: 150px;
-  height: 100px;
-  color: rgb(219, 216, 216);
+  top: 75%;
+  left: 30%;
+  border-radius: 50%;
   border: none;
   transition: 0.1s;
   opacity: 0.7;
@@ -224,14 +273,17 @@ button {
 
 .button :active {
   background: url(../assets/images/buttonBg2.gif);
+  background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(28, 203, 209);
 }
 
 button:focus {
   outline: 0;
 }
 
-.gamerRegister {
+/*.gamerRegister {
   position: fixed;
   top: 15%;
   left: 42%;
@@ -241,20 +293,21 @@ button:focus {
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.9;
-}
+}*/
 
-.gamerLogin {
-  position: absolute;
-  top: 15%;
-  left: 42%;
-  width: 211.2px;
-  height: 312px;
-  background: url(../assets/images/gamerLogin.gif);
-  background-size: cover;
+/*.controlBar {
+  float: left;
+  background:linear-gradient(to right, rgb(65, 219, 27), rgb(124, 124, 216));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   background-repeat: no-repeat;
-  opacity: 0.7;
-}
-body {
-  background: url(../assets/images/bg1.jpg);
-  background-size: cover;
-}
+  text-align: center;
+  padding: 15px;
+  margin-top: 5px;
+  margin-left: 20px;
+  width: 110px;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+}*/
+

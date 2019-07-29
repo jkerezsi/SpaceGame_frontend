@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { logout } from '../actions/actions';
-import '../stylesheets/Navbar.css';
+import '../stylesheets/App.css';
 
 class NavbarLoggedIn extends Component {
   handleClick = (e) => {

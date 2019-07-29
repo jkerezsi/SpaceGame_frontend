@@ -1,14 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Orbitron');
+/*@font-face {
+  font-family: 'arcadepixregular';
+  src: url('./fonts/arcadepi.ttf') format('ttf'),
+    url('./fonts/arcadepi-webfont.woff2') format('woff2'),
+    url('./fonts/arcadepi-webfont.woff') format('woff');
+}
 
 .linkbutton {
   text-decoration: none;
-  font-family: 'Orbitron'; 
+  font-family: 'arcadepixregular'; 
   font-size: 16px;
-  font-weight: bold;  
+  font-weight: bold;
 }
 
 .leaderbuttons{
   display: flex;
+  flex: 1 1 auto;
   padding-top: 50px;
   padding-left: 50px;
   padding-right: 50px;
@@ -21,6 +27,7 @@
 
 .menu {
   display: flex;
+  flex: 1 1 auto;
   padding-top: 50px;
   padding-left: 50px;
   padding-right: 50px;
@@ -40,7 +47,7 @@ img {
   height: 90px; 
 }
 
-p {
+/*p {
   color: rgb(236, 21, 207);  
   text-align: center;
-}
+}*/

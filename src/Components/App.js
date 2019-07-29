@@ -14,8 +14,8 @@ import '../stylesheets/App.css';
 import PrivateRoute from './PrivateRoute';
 import TroopsContent from '../Containers/troopsContent';
 import WorldMap from '../Containers/Worldmap/WorldMap';
-import ShowResource from './resources';
 import Landing from './Landing';
+
 
 const App = () => (
   <Router history={history}>
