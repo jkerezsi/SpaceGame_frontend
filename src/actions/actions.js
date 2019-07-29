@@ -46,3 +46,8 @@ export const FailedGotResources = () => ({ type: 'GET_RESOURCES_FAILED', payload
 export const addBuildingAction = (type, token) => ({ type: 'ADD_BUILDING', payload: { type, token } });
 export const addBuildingSuccess = () => ({ type: 'ADD_BUILDING_SUCCESS', payload: '' });
 export const addBuildingFail = () => ({ type: 'ADD_BUILDING_FAIL', payload: '' });
+
+export const getTroopsAction = () => ({ type: 'GET_TROOPS', payload: '' });
+export const getTroopsSuccess = () => ({ type: 'GET_TROOPS_SUCCESS', payload: '' });
+export const getTroopsFail = () => ({ type: 'GET_TROOPS_FAIL', payload: '' });
+
