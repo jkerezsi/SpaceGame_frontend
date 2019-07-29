@@ -43,6 +43,7 @@ class WorldMap extends Component {
       this.setState({ message: 'This country is taken' });
       this.setState({ selectedCountryCode: '' });
     } else {
+      this.setState({ error: '' });
       this.setState({ selectedCountryCode: countryCode });
       this.setState({ message: `You have selected ${countryName}` });
     }
@@ -111,7 +112,7 @@ class WorldMap extends Component {
             <h3 style={{ color: 'white' }}>{ error }</h3>
             <h3 style={{ color: 'white' }}>{ message }</h3>
             <h3 style={{ color: 'white' }}>{ countryError }</h3>
-            <Button className="selectCountry" onClick={this.submitButton} buttonText="SELECT" />
+            <Button className="selectCountry" onClick={this.submitButton} buttonText="Submit" />
             <ComposableMap
               projectionConfig={{
                 scale: 205,

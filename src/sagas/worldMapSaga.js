@@ -5,9 +5,10 @@ import { history } from '../store/configureStore';
 export function* selectCountryWorkerSaga(action) {
   try {
     const response = yield call(fetchMap, action.payload);
+    console.log(response.data);
     if (response.status === 200) {
       yield put({ type: 'COUNTRY_AVAILABLE' });
-      history.push('/login');
+      history.push('/kingdom');
     }
   } catch (error) {
     yield put({ type: 'COUNTRY_REJECT' });

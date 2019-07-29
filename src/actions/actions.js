@@ -30,7 +30,7 @@ export const updateKingdomNameSuccess = () => ({ type: 'KINGDOM_NAME_CHANGED', p
 export const logout = () => ({ type: 'LOGOUT' });
 
 // eslint-disable-next-line camelcase
-export const selectCountry = country_code => ({ type: 'SELECT_COUNTRY', payload: country_code });
+export const selectCountry = country_code => ({ type: 'SELECT_COUNTRY', payload: { country_code } });
 export const selectCountrySuccess = () => ({ type: 'COUNTRY_AVAILABLE', payload: '' });
 export const selectCountryReject = () => ({ type: 'COUNTRY_REJECT', payload: 'Country code is required!' });
 
@@ -47,7 +47,7 @@ export const addBuildingAction = (type, token) => ({ type: 'ADD_BUILDING', paylo
 export const addBuildingSuccess = () => ({ type: 'ADD_BUILDING_SUCCESS', payload: '' });
 export const addBuildingFail = () => ({ type: 'ADD_BUILDING_FAIL', payload: '' });
 
-
 export const getTroopsAction = () => ({ type: 'GET_TROOPS', payload: '' });
 export const getTroopsSuccess = () => ({ type: 'GET_TROOPS_SUCCESS', payload: '' });
 export const getTroopsFail = () => ({ type: 'GET_TROOPS_FAIL', payload: '' });
+
