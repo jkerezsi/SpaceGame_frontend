@@ -13,6 +13,7 @@ import '../stylesheets/App.css';
 import PrivateRoute from './PrivateRoute';
 import TroopsContent from '../Containers/troopsContent';
 import WorldMap from '../Containers/Worldmap/WorldMap';
+import addBuildingPlusMenu from '../Containers/addBuilding';
 import ShowResource from './resources';
 import Landing from './Landing';
 
