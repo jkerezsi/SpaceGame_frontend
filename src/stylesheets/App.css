@@ -211,9 +211,6 @@ button {
   padding: 0px;
   margin: 20px 20px;
   border: none;
-  position: absolute;
-  top: 80%;
-  left: 24%;
   width: 150px;
   height: 100px;
   color: rgb(219, 216, 216);
@@ -254,7 +251,10 @@ button:focus {
   background-repeat: no-repeat;
   opacity: 0.7;
 }
+
 body {
   background: url(../assets/images/bg1.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
