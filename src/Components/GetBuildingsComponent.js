@@ -10,56 +10,60 @@ class GetBuildingsComponent extends React.Component {
 
   refreshInfo = () => {
     const { getBuildingsAction } = this.props;
-    const localStorageToken = localStorage.getItem('TOKEN');
-    return getBuildingsAction(localStorageToken);
+    // const localStorageToken = localStorage.getItem('TOKEN');
+    // return getBuildingsAction(localStorageToken);
+    return getBuildingsAction();
   }
 
   render() {
     const {
-      townhall, academy, farm, mine, error 
+      // townhall, academy, farm, mine, error 
+      building
     } = this.props;
+    console.log(building)
     return (
-      <div className="buildings">
-        {building.map((buildings, i) => (
-          <div className="building">
-            <h4>
-              Troop number:
-              {i + 1}
-            </h4>
-            <h4>
-              townhall:
-              {buildings.townhall}
-            </h4>
-            <h4>
-              academy:
-              {buildings.academy}
-            </h4>
-            <h4>
-              farm:
-              {buildings.farm}
-            </h4>
-            <h4>
-              mine:
-              {buildings.mine}
-            </h4>
-            <h4>
+      <div>
+         <h4>HAAALLLLOOOOO</h4>
+      </div>
+    )
+  //   return (
+  //     <div className="buildings">
+  //       {building.map((buildings, i) => (
+  //         <div className="building">
+  //           <h4>
+  //             Troop number:
+  //             {i + 1}
+  //           </h4>
+  //           <h4>
+  //             townhall:
+  //             {buildings.townhall}
+  //           </h4>
+  //           <h4>
+  //             academy:
+  //             {buildings.academy}
+  //           </h4>
+  //           <h4>
+  //             farm:
+  //             {buildings.farm}
+  //           </h4>
+  //           <h4>
+  //             mine:
+  //             {buildings.mine}
+  //           </h4>
+  //           <h4>
 
-              error:
-                {error}
-              </h4>
-            </div>
-          ))}
-        </div>
-    );
-  }
-}
+  //             error:
+  //               {error}
+  //             </h4>
+  //           </div>
+  //         ))}
+  //       </div>
+  //   );
+  };
+};
 
 const mapStateToProps = state => ({
-  townhall: state.GetBuildingsReducer.townhall,
-  academy: state.GetBuildingsReducer.academy,
-  farm: state.GetBuildingsReducer.farm,
-  mine: state.GetBuildingsReducer.mine,
-  error: state.GetBuildingsReducer.error,
+  building: state.GetBuildingsReducer.status,
 });
 
 const mapDispatchToProps = {

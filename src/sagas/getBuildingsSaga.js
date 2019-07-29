@@ -1,11 +1,11 @@
 import { call, takeEvery, put } from 'redux-saga/effects';
 import { fetchBuildings } from '../services/api';
 
-export function* getBuildingsWorkerSaga(action) {
+export function* getBuildingsWorkerSaga() {
   try {
-    const response = yield call(fetchBuildings, action.payload);
+    const response = yield call(fetchBuildings);
     if (response.status === '200') {
-      yield put({ type: 'GETBUILDINGS_SUCCESS', payload: response.data });
+      yield put({ type: 'GETBUILDINGS_SUCCESS', payload: response.data.buildings });
     }
   } catch (error) {
     yield put({ type: 'GETBUILDINGS_FAILED', payload: '<id> not found' });

@@ -1,5 +1,8 @@
 import axios from 'axios';
 
+console.log(localStorage.getItem('TOKEN'));
+axios.defaults.headers.common.token = localStorage.getItem('TOKEN');
+
 export function fetchLogin(payload) {
   console.log(payload);
   return axios({
@@ -26,11 +29,10 @@ export function fetchSettings(payload) {
   });
 }
 
-export function fetchBuildings(payload) {
-  console.log(payload);
+export function fetchBuildings() {
+  //console.log(payload);
   return axios({
     method: 'get',
-    url: 'http://localhost:3012/buildings',
-    data: payload,
+    url: 'http://localhost:3012/kingdom/buildings',
   });
 }
