@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import '../stylesheets/App.css';
+import '../stylesheets/App.css'
+
 
 const NavbarLoggedIn = () => (
   <div className="header">

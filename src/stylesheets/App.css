@@ -72,8 +72,6 @@ audio {
   left: 28%;
   width: 600px;
   height: 429.5px;
-  /*width: 564px;
-  height: 564px;*/
   background: url(../assets/images/welcome_title.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -210,9 +208,6 @@ input::placeholder {
   box-sizing: border-box;
   font-size: 20px;
   background-color: rgb(171, 188, 243);
-  /*background: url(../assets/images/regback2.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;*/
   opacity: 0.8;
   border: none;
   width: 317px;
@@ -225,9 +220,6 @@ input::placeholder {
   box-sizing: border-box;
   font-size: 20px;
   background-color: rgb(171, 188, 243);
-  /*background: url(../assets/images/regback3.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;*/
   opacity: 0.8;
   border: none;
   width: 317px;
@@ -252,7 +244,7 @@ form {
   box-sizing: border-box;
 }
 
-button {
+.buttonComponent {
   background: url(../assets/images/buttonBg.gif);
   background-position: center;
   background-size: cover;
@@ -271,7 +263,7 @@ button {
   opacity: 0.7;
 }
 
-.button :active {
+.buttonComponent:active {
   background: url(../assets/images/buttonBg2.gif);
   background-position: center;
   background-size: cover;
@@ -279,7 +271,7 @@ button {
   color: rgb(28, 203, 209);
 }
 
-button:focus {
+.buttonComponent:focus {
   outline: 0;
 }
 
@@ -294,8 +286,8 @@ button:focus {
   background-repeat: no-repeat;
   opacity: 0.9;
 }*/
-
-/*.controlBar {
+/*
+.controlBar {
   float: left;
   background:linear-gradient(to right, rgb(65, 219, 27), rgb(124, 124, 216));
   -webkit-background-clip: text;
@@ -309,5 +301,27 @@ button:focus {
   text-decoration: none;
   font-size: 25px;
   font-weight: bold;
-}*/
+}
+*/
 
+.foodImage {
+  position: absolute;
+  right: 53%;
+  top: 23.5%;
+  width: 25px;
+  height: 25px;
+  background: url(../assets/images/food.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.goldImage {
+  position: absolute;
+  right: 54%;
+  top: 28.7%;
+  width: 20px;
+  height: 20px;
+  background: url(../assets/images/gold.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import '../stylesheets/menubuttons.css';
-import '../stylesheets/App.css';
 import building from '../assets/images/build4.gif';
 import troop from '../assets/images/troop1.gif';
 

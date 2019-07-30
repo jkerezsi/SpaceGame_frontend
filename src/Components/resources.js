@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getResources } from '../actions/actions';
 
+
 class ShowResources extends Component {
   componentWillMount() {
     this.refreshInfo();
@@ -20,11 +21,11 @@ class ShowResources extends Component {
     return (
       <div className="resources">
         <p>
-          <span role="img" aria-label="Bread">🍞</span>
+          <div className="foodImage" />
           {food}
         </p>
         <p>
-          <span role="img" aria-label="Money">💰</span>
+          <div className="goldImage" />
           {gold}
 
         </p>

@@ -4,7 +4,6 @@
 import React, { Component } from 'react';
 import NavbarLoggedIn from './NavbarLoggedIn';
 import NavbarLoggedOut from './NavbarLoggedOut';
-import '../stylesheets/App.css';
 
 class Navbar extends Component {
   render() {

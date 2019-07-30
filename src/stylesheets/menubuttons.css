@@ -1,4 +1,4 @@
-/*@font-face {
+@font-face {
   font-family: 'arcadepixregular';
   src: url('./fonts/arcadepi.ttf') format('ttf'),
     url('./fonts/arcadepi-webfont.woff2') format('woff2'),
@@ -7,9 +7,6 @@
 
 .linkbutton {
   text-decoration: none;
-  font-family: 'arcadepixregular'; 
-  font-size: 16px;
-  font-weight: bold;
 }
 
 .leaderbuttons{
@@ -19,7 +16,7 @@
   padding-left: 50px;
   padding-right: 50px;
 } 
-
+****
 .leaderbuttons[img] {
   width: 120px;
   height: 90px; 
@@ -33,7 +30,7 @@
   padding-right: 50px;
 }
 
-button {
+.buttonMenu {
   width: 140px;
   height: 150px;
   background-color: transparent;
@@ -47,7 +44,11 @@ img {
   height: 90px; 
 }
 
-/*p {
+p {
   color: rgb(236, 21, 207);  
   text-align: center;
-}*/
+  text-decoration: none;
+  font-family: 'arcadepixregular'; 
+  font-size: 16px;
+  font-weight: bold;
+}

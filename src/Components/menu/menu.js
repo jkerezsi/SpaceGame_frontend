@@ -7,18 +7,17 @@ import troop from '../../assets/images/troop1.gif';
 import ShowResource from '../resources';
 import video4 from '../../assets/images/kingdomVideo.mp4';
 import track from '../../assets/images/.vtt';
-
+import '../../stylesheets/menubuttons.css';
 
 
 const Menu = () => (
-  <div className="kingdom">
+  <div>
     <video className="kingVid" autoPlay loop>
       <source src={video4} type="video/mp4" />
       <track default kind="captions" srcLang="en" src={track} />
     </video>
-    
+
     <nav className="menu">
-  
       <button type="submit">
         <NavLink to="/kingdom/buildings" className="linkbutton">
           <img src={building} alt="Pic comes here" />
@@ -50,9 +49,7 @@ const Menu = () => (
           <p>Leaderboard</p>
         </NavLink>
       </button>
-     
     </nav>
-    
     <ShowResource />
   </div>
 );
