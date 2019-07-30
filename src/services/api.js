@@ -1,8 +1,5 @@
 import axios from 'axios';
 
-console.log(localStorage.getItem('TOKEN'));
-axios.defaults.headers.common.token = localStorage.getItem('TOKEN');
-
 export function fetchLogin(payload) {
   return axios({
     method: 'post',
@@ -24,6 +21,7 @@ export function fetchSettings(payload) {
     method: 'put',
     url: 'http://localhost:3012/kingdom',
     data: payload,
+    headers: { token: localStorage.getItem('TOKEN') },
   });
 }
 
@@ -33,6 +31,7 @@ export function fetchMap(payload) {
     method: 'post',
     url: 'http://localhost:3012/register/map',
     data: payload,
+    headers: { token: localStorage.getItem('TOKEN') },
   });
 }
 
@@ -40,6 +39,7 @@ export function fetchResources() {
   return axios({
     method: 'get',
     url: 'http://localhost:3012/kingdom/resource',
+    headers: { token: localStorage.getItem('TOKEN') },
   });
 }
 
@@ -48,6 +48,7 @@ export function fetchNewBuilding(payload) {
     method: 'post',
     url: 'http://localhost:3012/kingdom/buildings',
     data: payload,
+    headers: { token: localStorage.getItem('TOKEN') },
   });
 }
 
@@ -55,5 +56,6 @@ export function fetchTroops() {
   return axios({
     method: 'get',
     url: 'http://localhost:3012/kingdom/troops',
+    headers: { token: localStorage.getItem('TOKEN') },
   });
 }
