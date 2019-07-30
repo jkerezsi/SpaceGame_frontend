@@ -1,3 +1,8 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable arrow-body-stlye */
+/* eslint-disable jsx-a11y/label-has-associated-control */
+
+
 import React from 'react';
 import { connect } from 'react-redux';
 import { getBuildingsAction } from '../actions/actions';
@@ -22,7 +27,7 @@ class GetBuildingsComponent extends React.Component {
           {building.map((buildings, i) => (
             <div className="building">
               <h4>
-                Building nr {i + 1}: 
+                Building nr {i + 1}:
               </h4>
               <h4>
                 {buildings.type}
