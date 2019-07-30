@@ -5,7 +5,7 @@
     url('./fonts/arcadepi-webfont.woff') format('woff');
 }
 
-.linkbutton {
+.menu .button {
   text-decoration: none;
 }
 
@@ -30,7 +30,7 @@
   padding-right: 50px;
 }
 
-.buttonMenu {
+.menu .button {
   width: 140px;
   height: 150px;
   background-color: transparent;

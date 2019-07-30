@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = ({ onClick, buttonText }) => (
-  <div className="buttonComponent">
-    <button variant="primary" type="button" onClick={onClick}>
+  <div>
+    <button type="button" onClick={onClick}>
       {buttonText}
     </button>
   </div>

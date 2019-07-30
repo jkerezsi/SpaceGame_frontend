@@ -13,7 +13,9 @@ import { history } from '../store/configureStore';
 import PrivateRoute from './PrivateRoute';
 import TroopsContent from '../Containers/troopsContent';
 import WorldMap from '../Containers/Worldmap/WorldMap';
+import ShowResource from './resources';
 import Landing from './Landing';
+import '../stylesheets/App.css';
 
 
 const App = () => (
