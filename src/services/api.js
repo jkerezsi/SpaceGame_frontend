@@ -30,7 +30,6 @@ export function fetchSettings(payload) {
 }
 
 export function fetchBuildings() {
-  //console.log(payload);
   return axios({
     method: 'get',
     url: 'http://localhost:3012/kingdom/buildings',
