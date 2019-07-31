@@ -12,7 +12,6 @@ export const userRegister = (username, password, kingdom) => ({
   },
 });
 
-
 export const loginSuccess = () => ({ type: 'LOGIN_SUCCESS', payload: '' });
 export const loginFailed = () => ({ type: 'LOGIN_FAILED', payload: '' });
 
@@ -50,4 +49,3 @@ export const addBuildingFail = () => ({ type: 'ADD_BUILDING_FAIL', payload: '' }
 export const getTroopsAction = () => ({ type: 'GET_TROOPS', payload: '' });
 export const getTroopsSuccess = () => ({ type: 'GET_TROOPS_SUCCESS', payload: '' });
 export const getTroopsFail = () => ({ type: 'GET_TROOPS_FAIL', payload: '' });
-
