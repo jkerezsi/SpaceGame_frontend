@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable react/prop-types */
 /* eslint-disable arrow-body-style */
 /* eslint-disable jsx-a11y/label-has-associated-control */
@@ -10,39 +11,47 @@ import '../stylesheets/troops.css';
 
 class GetTroopsComponent extends React.Component {
   componentWillMount() {
-    this.countTroops();
-  }
-
-  countTroops() {
     const { getTroopsAction } = this.props;
     return getTroopsAction();
   }
 
+
+  gettroopsFromProps() {
+    const { troop } = this.props;
+    return (
+      <div className="troops">
+        {[].concat(troop).sort((a, b) => b.level - a.level).map((troops, i) => (
+          <div className={troops.level}>
+            <h4>
+              Troop number:
+              {i + 1}
+            </h4>
+            <h4>
+              level:
+              {troops.level}
+            </h4>
+            <h4>
+              attack:
+              {troops.attack}
+            </h4>
+            <h4>
+              defence:
+              {troops.defence}
+            </h4>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
   render() {
     const { troop } = this.props;
-    if (troop[0]) {
-      return (
-        <div className="troops">
-          {troop.map((troops, i) => (
-            <div className="troop">
-              <h4>
-                Troop number:
-                {i + 1}
-              </h4>
-              <h4>
-                attack:
-                {troops.attack}
-              </h4>
-              <h4>
-                defence:
-                {troops.attack}
-              </h4>
-            </div>
-          ))}
-        </div>
-      );
+    if (troop.length === 0) {
+      return <h1 className="troops">There are no troops.</h1>;
     }
-    return <h1 className="troops">There are no troops.</h1>;
+    return (
+      this.gettroopsFromProps()
+    );
   }
 }
 
