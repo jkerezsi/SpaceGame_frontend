@@ -1,17 +1,15 @@
 .header {
-  background-color: blueviolet;
+  background-color: rgb(0, 0, 0);
+  margin: 0;
   height: 70px;
-  width: 100%;
+  width: 100vw;
 }
 
 ul {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  padding-top: 20px;
   white-space: nowrap;
-  height: 5em;
-  width: 100%;
   list-style-type: none;
 }
 
@@ -25,34 +23,6 @@ h1 {
   text-align: center;
 }
 
-.kingdom {
-  font-size: 30px;
-  padding-left: 120px;
-}
-
-.settings {
-  padding-right: 50px;
-}
-
-.controlBar {
-  font-size: 20px;
-  padding-right: 120px;
-  padding-top: 7px;
-  float: right;
-}
-
-.login, .register {
-  font-size: 20px;
-  padding-top: 20px;
-  padding-left: 30%;
-}
-
-li a {
-  text-decoration: none;
-  color: aliceblue;
-}
-
 li a:hover {
-  text-decoration: none;
-  color: palegoldenrod;
+  color: rgb(238, 232, 170);
 }
