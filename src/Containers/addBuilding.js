@@ -4,7 +4,7 @@ import Menu from '../Components/menu/menu';
 
 
 const addBuildingPlusMenu = () => (
-  <div>
+  <div className="buildingsPage">
     <Menu />
     <AddBuilding />
   </div>

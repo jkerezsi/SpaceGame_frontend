@@ -1,0 +1,11 @@
+.kingVid {
+  opacity: 0.9;
+  }
+  
+p {
+  color: rgb(233, 119, 13);
+  display: flex;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'hacked';
+  }

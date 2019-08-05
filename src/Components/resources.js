@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getResources } from '../actions/actions';
+import foodPic from '../assets/images/food.png';
+import goldPic from '../assets/images/gold.png';
 
 
 class ShowResources extends Component {
@@ -21,15 +23,14 @@ class ShowResources extends Component {
     return (
       <div className="resources">
         <p>
-          <div className="foodImage" />
+          <img className="foodPic" src={foodPic} alt="Food pic" />
           {food}
         </p>
         <p>
-          <div className="goldImage" />
+          <img className="goldPic" src={goldPic} alt="Money pic" />
           {gold}
-
         </p>
-        <p>{error}</p>
+        <p className="error">{error}</p>
       </div>
     );
   }

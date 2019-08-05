@@ -1,12 +1,10 @@
 @font-face {
-  font-family: 'arcadepixregular';
-  src: url('./fonts/arcadepi.ttf') format('ttf'),
-    url('./fonts/arcadepi-webfont.woff2') format('woff2'),
-    url('./fonts/arcadepi-webfont.woff') format('woff');
+  font-family: hacked;
+  src: url(./fonts/hacked.ttf);
 }
 
-:root {
-  font-family: 'arcadepixregular';
+body {
+  font-family: 'hacked';
 }
 
 video {
@@ -22,305 +20,35 @@ video {
   z-index: -1;
 }
 
-.regVid {
-  opacity: 0.9;
-}
-.logVid {
-  opacity: 0.9;
-}
 
-.kingVid {
-  opacity: 0.9;
-}
+
 
 audio {
   position: absolute;
   top: 90%;
   left: 0.5%;
-  width: 250px;
+  width: 100px;
   height: 50px;
-  opacity: 0.1;
+  opacity: 0.3;
   border: none;
 }
 
-.melting1 {
-  position: fixed;
-  top: 13%;
-  right: 1.5%;
-  width: 359px;
-  height: 237px;
-  background: url(../assets/images/melting2.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.9;
+audio::-webkit-media-controls-play,
+audio::-webkit-media-controls-pause,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-volume-slider-container,
+audio::-webkit-media-controls-volume-slider
+{
+	display: none;
 }
 
-.melting2 {
-  position: fixed;
-  top: 13%;
-  left: 1.5%;
-  width: 359px;
-  height: 237px;
-  background: url(../assets/images/melting2.png);
-  transform: scaleX(-1);
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.9;
+audio::-webkit-media-controls-panel {
+	background: rgb(145, 187, 28);
+  border-radius: 0;
 }
 
-.welcome {
-  position: fixed;
-  top: 5.5%;
-  left: 28%;
-  width: 600px;
-  height: 429.5px;
-  background: url(../assets/images/welcome_title.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.6;
-}
-/* vagy nav */
-.header {
-  background: url(../assets/images/navBg.jpg);
-  background-repeat: repeat;
-  overflow: hidden;
-  opacity: 0.7;
-  font-weight: bold;
-  height: 60px;
-  margin: 10px;
-  padding: 2px 15px 10px 15px;
-}
-
-/*.title {
-  float: left;
-  padding-top: 5px;
-  margin-top: 2.5px;
-  width: 300px;
-  height: 60px;
-  background: url(../assets/images/titleBg.gif);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  color: #f0ec15;
-  text-align: center;
-  opacity: 0.7;
-  width: 110px;
-  text-decoration: none;
-  font-size: 25px;
-}*/
-
-a.loginNavbar {
-  float: right;
-  background:linear-gradient(to right, rgb(65, 219, 27), rgb(124, 124, 216));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-repeat: no-repeat;
-  text-align: center;
-  padding: 15px;
-  margin-top: 5px;
-  margin-left: 20px;
-  width: 110px;
-  text-decoration: none;
-  font-size: 25px;
-}
-
-a.registerNavbar {
-  float: right;
-  background:linear-gradient(to right, rgb(255, 0, 200) , rgb(212, 19, 67), rgb(219, 216, 27));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center; 
-  margin-top: 5px;
-  margin-right: 20px;
-  padding: 15px;
-  text-decoration: none;
-  font-size: 25px;
-}
-/* ne mindig */
-a.active {
-  float: right;
-  text-align: center;
-  margin-top: 5px;
-  padding: 15px;
-  width: 110px;
-  text-decoration: none;
-  -webkit-text-fill-color: rgb(152, 161, 236);
-  font-size: 25px;
-  background: url(../assets/images/activeBg2.gif);
-  background-position: center;
-  background-size: 110%;
-  background-repeat: no-repeat; 
-}
-
-.loginForm {
-  width: 400px;
-  height: 450px;
-  background: url(../assets/images/gamerLogin.gif);
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 40px;
-  opacity: 0.4;
-  margin: 10px auto 0 auto;
-  text-align: center;
-}
-
-.registerForm {
-  width: 400px;
-  height: 450px;
-  background: url(../assets/images/gamerRegister.gif);
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 40px;
-  opacity: 0.6;
-  margin: 10px auto 0 auto;
-  text-align: center;
-}
-
-label {
+audio.input[type="file"]::-webkit-file-upload-button {
   display: none;
-}
-
-input {
-  font-size: 20px;
-  font-family: 'arcadepixregular';
-  border-radius: 40px;
-}
-
-input::placeholder {
-  color: rgb(157, 43, 233);
-}
-
-#username {
-  padding: 10px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  font-size: 20px;
-  background-color: rgb(171, 188, 243);
-  /*background: url(../assets/images/regback1.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;*/
-  opacity: 0.8;
-  border: none;
-  width: 317px;
-  color: rgb(76, 18, 211);
-}
-
-#password {
-  padding: 10px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  font-size: 20px;
-  background-color: rgb(171, 188, 243);
-  opacity: 0.8;
-  border: none;
-  width: 317px;
-  color: rgb(76, 18, 211);
-}
-
-#kingdom {
-  padding: 10px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  font-size: 20px;
-  background-color: rgb(171, 188, 243);
-  opacity: 0.8;
-  border: none;
-  width: 317px;
-  color: rgb(76, 18, 211);
-}
-
-p {
-  font-size: 20px;
-  color: rgb(226, 30, 151);
-  text-align: center;
-  /*margin: 10px;*/
-}
-
-form {
-  position: absolute;
-  top: 20%;
-  left: 35%;
-  padding: 20px 20px;
-  margin: 20px 20px;
-  box-sizing: border-box;
-}
-
-button {
-  background: url(../assets/images/buttonBg.gif);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  font-family: 'arcadepixregular';
-  font-size: 25px;
-  font-weight: bold;
-  color: silver;
-  text-align: center;
-  padding: 0px;
-  margin: 20px 20px;
-  border: none;
-  top: 75%;
-  left: 30%;
-  border-radius: 50%;
-  border: none;
-  transition: 0.1s;
-  opacity: 0.7;
-}
-
-button:active {
-  background: url(../assets/images/buttonBg2.gif);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: rgb(28, 203, 209);
-}
-
-button:focus {
-  outline: 0;
-}
-
-/*.gamerRegister {
-  position: fixed;
-  top: 15%;
-  left: 42%;
-  width: 209px;
-  height: 384px;
-  background: url(../assets/images/gamerRegister.gif);
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.9;
-}*/
-
-.controlBar {
-  float: left;
-  background:linear-gradient(to right, rgb(65, 219, 27), rgb(124, 124, 216));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-repeat: no-repeat;
-  text-align: center;
-  width: 110px;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: bold;
-}
-
-
-.foodImage {
-  position: absolute;
-  right: 53%;
-  top: 23.5%;
-  width: 25px;
-  height: 25px;
-  background: url(../assets/images/food.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.goldImage {
-  position: absolute;
-  right: 54%;
-  top: 28.7%;
-  width: 20px;
-  height: 20px;
-  background: url(../assets/images/gold.png);
-  background-size: contain;
-  background-repeat: no-repeat;
 }

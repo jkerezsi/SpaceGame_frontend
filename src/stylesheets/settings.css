@@ -1,0 +1,99 @@
+.settingsPage {
+  background-color: blueviolet;
+}
+
+form.settingsForm {
+  width: 450px;
+  height: 450px;
+  background: url(../assets/images/--.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 80px;
+  opacity: 0.9;
+  margin: 10px auto 0 auto;
+  }
+
+label {
+  display: none;
+}
+  
+input {
+  font-size: 20px;
+  border-radius: 40px;
+  font-family: 'hacked';
+  text-align: center;
+}
+  
+input::placeholder {
+  color: rgb(43, 179, 233);
+  text-align: center;
+  font-family: 'hacked';
+}
+  
+#newKingdomName {
+  padding: 10px;
+  margin-top: 90px;
+  box-sizing: border-box;
+  font-size: 20px;
+  background-color: rgb(171, 188, 243);
+    /*background: url(../assets/images/regback1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;*/
+  opacity: 1;
+  border: none;
+  width: 317px;
+  color: rgb(18, 140, 211);
+  text-align: center;
+  font-family: 'hacked';
+  }
+  
+.settingsForm button {
+  background: url(../assets/images/cube.gif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: silver;
+  font-family: 'hacked';
+  padding: 0px;
+  /*margin: 20px 20px;*/
+  border: none;
+  top: 75%;
+  left: 30%;
+  border: none;
+  transition: 0.1s;
+  padding: 50px;
+  width: 300px;
+  height: 300px;
+  margin-left: 100px;
+  margin-top: 45px;
+  }
+  
+  .ball1 {
+    background: url(../assets/images/--.png);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;  
+    height: 350px;
+    margin-left: 200px;
+    opacity: 0.7;
+  }
+  
+  .ball2 {
+    background: url(../assets/images/--.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    width: 150x;
+    height: 150px;
+  }
+
+p {
+  color: rgb(126, 13, 233);
+  display: flex;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'hacked';
+  }  

@@ -4,7 +4,7 @@ import Menu from '../Components/menu/menu';
 
 
 const TroopsContent = () => (
-  <div>
+  <div className="troopsPage">
     <Menu />
     <GetTroopsComponent />
   </div>

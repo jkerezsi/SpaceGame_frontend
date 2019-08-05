@@ -15,7 +15,7 @@ class NavbarLoggedIn extends Component {
 
   render() {
     return (
-      <div className="header">
+      <div className="navbar">
         <ul>
           <li className="kingdom"><NavLink to="/kingdom">Kingdom Name</NavLink></li>
           <div className="controlBar">

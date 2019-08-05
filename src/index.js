@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './stylesheets/menubuttons.css';
 import { Provider } from 'react-redux';
 import App from './Components/App';
 import * as serviceWorker from './serviceWorker';

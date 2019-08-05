@@ -1,59 +1,112 @@
-/*.header {
-  background-color: blueviolet;
-  height: 70px;
-  width: 100%;
-}
-
-ul {
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-  padding-top: 20px;
-  white-space: nowrap;
-  height: 5em;
-  width: 100%;
-  list-style-type: none;
-}
-
-li { 
+.navbar {
+  background: url(../assets/images/navBg.jpg);
+  background-repeat: repeat;
+  overflow: hidden;
+  opacity: 0.7;
   font-weight: bold;
-  color: white;
-  display: inline;
+  height: 70px;
+  margin-top: 10px;
+  opacity: 0.6;
 }
 
-h1 {
+.login {
+  float: right;
   text-align: center;
+  margin-top: 3px;
+  margin-left: 20px;
+  padding: 15px; 
+  height: 30px;
+  text-decoration: none;
+  font-size: 35px;
+  background:linear-gradient(to right, rgb(240, 243, 242), rgb(56, 150, 187));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: center;
+  background-size: 110%;
+  background-repeat: no-repeat;   
 }
+
+.register {
+  float: right;
+  background:linear-gradient(to right, rgb(219, 29, 156) , rgb(240, 243, 243));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center; 
+  margin-top: 3px;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 35px;  
+  height: 30px;
+}
+
+.register a.active {
+  float: right;
+  text-align: center;
+  height: 30px;
+  margin-top: -15px; 
+  padding: 15px;
+  text-decoration: none;
+  -webkit-text-fill-color: rgb(152, 161, 236);
+  font-size: 35px;
+  background: url(../assets/images/activeBg2.gif);
+  background-position: center;
+  background-size: 130%;
+  background-repeat: no-repeat;   
+}
+
+.login a.active {
+  float: right;
+  text-align: center;
+  height: 30px;
+  margin-top: -15px; 
+  padding: 15px;
+  text-decoration: none;
+  -webkit-text-fill-color: rgb(152, 161, 236);
+  font-size: 35px;
+  background: url(../assets/images/activeBg2.gif);
+  background-position: center;
+  background-size: 130%;
+  background-repeat: no-repeat;   
+}
+
 
 .kingdom {
-  font-size: 30px;
-  padding-left: 120px;
-}
-
-.settings {
-  padding-right: 50px;
+  float: left;
+  background:linear-gradient(to right, rgb(236, 40, 14), rgb(124, 124, 216));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  text-align: center;
+  margin-top: 4px;
+  text-decoration: none;
+  font-size: 35px;
+  text-decoration: none;
 }
 
 .controlBar {
-  font-size: 20px;
-  padding-right: 120px;
-  padding-top: 7px;
   float: right;
-}
-
-.login, .register {
-  font-size: 20px;
-  padding-top: 20px;
-  padding-left: 30%;
-}
-
-li a {
+  display: flex;
+  background:linear-gradient(to right, rgb(52, 221, 10), rgb(124, 124, 216));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  text-align: center;
+  width: 110px;
   text-decoration: none;
-  color: aliceblue;
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 6px;
+  width: 300px;
+  height: 60px;
 }
-
-li a:hover {
-  text-decoration: none;
-  color: palegoldenrod;
-}
-*/
+ 
+ .settings {
+  margin-top: 2px;
+  margin-right: 40px;
+ }
+  
+ .logout {
+  margin-top: 2px;
+ }

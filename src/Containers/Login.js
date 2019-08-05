@@ -9,6 +9,8 @@ import Button from '../Components/Button';
 import Input from '../Components/InputField';
 import video2 from '../assets/images/loginVideo.mp4';
 import track from '../assets/images/.vtt';
+import '../stylesheets/login.css';
+import '../stylesheets/navbar.css';
 
 
 class Login extends Component {

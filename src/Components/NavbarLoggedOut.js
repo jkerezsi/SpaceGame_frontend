@@ -1,12 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import '../stylesheets/App.css'
+//import '../stylesheets/App.css';
 
 
 const NavbarLoggedIn = () => (
-  <div className="header">
-    <div className="login"><NavLink to="/login" className="loginNavbar">Login</NavLink></div>
-    <div className="register"><NavLink to="/register" className="registerNavbar">Register</NavLink></div>
+  <div className="navbar">
+    <div className="login"><NavLink className="logina" to="/login">login</NavLink></div>
+    <div className="register"><NavLink to="/register">register</NavLink></div>
   </div>
 );
 

@@ -1,0 +1,53 @@
+.leaderboardPage {
+  background-color: rgb(72, 255, 0);
+}
+
+.leaderbuttons p {
+  font-family: 'hacked', cursive;
+  font-size: 25px;
+  color: rgb(164, 30, 226);
+  text-align: center;
+  text-decoration: none;
+  font-weight: bolder;
+  /*margin: 10px;*/
+  }
+  
+.leaderBuildingsButton, .leaderTroopsButton {
+  background: none;
+  width: 90px;
+  height: 90px;
+  margin: 20px;
+  }
+  
+.leaderBuildingsButton {
+  margin-right: 80px;
+  }
+
+.leaderBuildingsButton:active {
+  background: none;
+  
+  }
+
+.leaderTroopsButton:active {
+  background: none;
+  
+  }
+
+.leaderbuttons {
+  text-decoration: none;
+  opacity: 1;
+  text-align: center;
+  margin: 10px 0px 0px 80px;
+  float: left;
+  }
+
+.leaderbuttons:active {
+  text-decoration: none;
+  }
+  
+.leaderbuttons img {
+  width: 90px;
+  height: 90px; 
+  }
+  
+  

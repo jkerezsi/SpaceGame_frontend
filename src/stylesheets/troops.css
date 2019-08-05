@@ -1,8 +1,13 @@
-.troops {
-  color: white;
+.troopsPage {
+  background-color: blue;
 }
 
+.troops {
+  color: rgb(147, 206, 51);
+  font-family: 'hacked';
+}
 
 .troop{
   padding-bottom: 20px;
+  background-color: rgb(255, 0, 119);
 }

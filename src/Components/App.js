@@ -16,6 +16,8 @@ import WorldMap from '../Containers/Worldmap/WorldMap';
 import ShowResource from './resources';
 import Landing from './Landing';
 import '../stylesheets/App.css';
+import '../stylesheets/navbar.css';
+import Kingdom from '../Containers/Kingdom';
 
 
 const App = () => (
@@ -23,7 +25,7 @@ const App = () => (
     <div>
       <Navbar />
       <Switch>
-        <PrivateRoute exact path="/kingdom" component={Menu} />
+        <PrivateRoute exact path="/kingdom" component={Kingdom} />
         <PrivateRoute exact path="/kingdom/buildings" component={addBuildingPlusMenu} />
         <PrivateRoute exact path="/kingdom/troops" component={TroopsContent} />
         <PrivateRoute exact path="/settings" component={Settings} />

@@ -1,0 +1,36 @@
+.buildingsPage {
+  background-color: rgb(72, 255, 0);
+}
+
+.addFarm {
+  font-family: 'hacked';
+  margin-right: 50px;
+  background: url(../assets/images/farm.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 120px;
+  opacity: 0.8;
+}
+
+.addMine {
+  font-family: 'hacked';
+  margin: 0px; 
+  background: url(../assets/images/mine.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 120px;
+  opacity: 0.8;
+}
+
+.buildingStatus {
+  color: rgb(62, 128, 0);
+  font-family: 'hacked';
+}
+
+.addBuildings {
+  margin: 80px 0px 0px 80px;
+}

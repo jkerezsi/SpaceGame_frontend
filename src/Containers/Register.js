@@ -10,6 +10,9 @@ import Button from '../Components/Button';
 import Input from '../Components/InputField';
 import video3 from '../assets/images/registerVideo.mp4';
 import track from '../assets/images/.vtt';
+import '../stylesheets/register.css';
+//import '../stylesheets/navbar.css';
+
 
 class Register extends Component {
   state = {
@@ -69,8 +72,8 @@ class Register extends Component {
           <input type="password" label="Password" id="password" onChange={this.handleChange} placeholder="Password" />
           <Input label="Kingdom name" id="kingdom" onChange={this.handleChange} />
           <Button onClick={this.handleClick} buttonText="Register" />
-          <p>{ error }</p>
-          <p>{ registerBackendError }</p>
+          <p className="error">{ error }</p>
+          <p className="error">{ registerBackendError }</p>
         </form>
       </div>
     );
