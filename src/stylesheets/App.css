@@ -20,9 +20,6 @@ video {
   z-index: -1;
 }
 
-
-
-
 audio {
   position: absolute;
   top: 90%;
@@ -45,7 +42,7 @@ audio::-webkit-media-controls-volume-slider
 }
 
 audio::-webkit-media-controls-panel {
-	background: rgb(145, 187, 28);
+	background: rgb(221, 200, 17);
   border-radius: 0;
 }
 

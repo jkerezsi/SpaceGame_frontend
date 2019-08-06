@@ -4,15 +4,14 @@
   overflow: hidden;
   opacity: 0.7;
   font-weight: bold;
-  height: 70px;
-  margin-top: 10px;
+  height: 50px;
   opacity: 0.6;
 }
 
 .login {
   float: right;
   text-align: center;
-  margin-top: 3px;
+  margin-top: -9px;
   margin-left: 20px;
   padding: 15px; 
   height: 30px;
@@ -20,6 +19,7 @@
   font-size: 35px;
   background:linear-gradient(to right, rgb(240, 243, 242), rgb(56, 150, 187));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-position: center;
   background-size: 110%;
@@ -32,7 +32,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center; 
-  margin-top: 3px;
+  margin-top: -9px;
   margin-right: 20px;
   margin-left: 20px;
   padding: 15px;
@@ -56,7 +56,7 @@
   background-repeat: no-repeat;   
 }
 
-.login a.active {
+.logina.active {
   float: right;
   text-align: center;
   height: 30px;
@@ -71,7 +71,6 @@
   background-repeat: no-repeat;   
 }
 
-
 .kingdom {
   float: left;
   background:linear-gradient(to right, rgb(236, 40, 14), rgb(124, 124, 216));
@@ -79,7 +78,8 @@
   -webkit-text-fill-color: transparent;
   background-repeat: no-repeat;
   text-align: center;
-  margin-top: 4px;
+  margin-top: 6px; 
+  margin-left: 15px;
   text-decoration: none;
   font-size: 35px;
   text-decoration: none;
@@ -97,16 +97,28 @@
   text-decoration: none;
   font-size: 35px;
   font-weight: bold;
-  margin-top: 6px;
+  margin-top: 7px;
   width: 300px;
   height: 60px;
 }
  
  .settings {
-  margin-top: 2px;
   margin-right: 40px;
  }
+
+ a.registera.active {
+  float: right;
+  text-align: center;
+  height: 30px;
+  margin-top: -15px; 
+  padding: 15px;
+  text-decoration: none;
+  -webkit-text-fill-color: rgb(152, 161, 236);
+  font-size: 35px;
+  background: url(../assets/images/activeBg2.gif);
+  background-position: center;
+  background-size: 130%;
+  background-repeat: no-repeat;   
+}
   
- .logout {
-  margin-top: 2px;
- }
+ 

@@ -10,55 +10,7 @@
     background-repeat: no-repeat;
     border-radius: 40px;
     opacity: 0.4;
-    margin: 10px auto 0 auto;
     text-align: center;
-  }
-
-  label {
-    display: none;
-  }
-  
-  input {
-    font-size: 20px;
-    border-radius: 40px;
-    font-family: 'hacked';
-  }
-  
-  input::placeholder {
-    color: rgb(157, 43, 233);
-    font-family: 'hacked';
-  }
-
-  #username {
-    padding: 10px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    font-family: 'hacked';
-    font-size: 20px;
-    background-color: rgb(171, 188, 243);
-    /*background: url(../assets/images/regback1.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;*/
-    opacity: 0.8;
-    border: none;
-    width: 317px;
-    color: rgb(76, 18, 211);
-  }
-  
-  #password {
-    padding: 10px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    font-family: 'hacked';
-    font-size: 20px;
-    background-color: rgb(171, 188, 243);
-    opacity: 0.8;
-    border: none;
-    width: 317px;
-    color: rgb(76, 18, 211);
-  }
-  
-  form {
     position: absolute;
     top: 20%;
     left: 35%;
@@ -67,28 +19,60 @@
     box-sizing: border-box;
   }
 
-  button {
+  label {
+    display: none;
+  }
+
+  .loginForm input {
+    border-radius: 40px;
+    font-family: 'hacked';
+    -webkit-text-fill-color: rgb(43, 46, 233);
+    font-size: 20px;
+  }
+  
+  #username {
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    /*background: url(../assets/images/regback1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;*/
+    opacity: 0.8;
+    border: none;
+    width: 317px;
+  }
+  
+  #password {
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    opacity: 0.8;
+    border: none;
+    width: 317px;
+  }
+
+  buttonl {
     background: url(../assets/images/buttonBg.gif);
+    position: absolute;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'hacked';
     font-size: 25px;
     font-weight: bold;
-    color: silver;
+    -webkit-text-fill-color: rgb(43, 46, 233);
     text-align: center;
-    padding: 0px;
-    /*margin: 20px 20px;*/
     border: none;
     top: 75%;
-    left: 30%;
+    left: 35%;
     border-radius: 50%;
-    border: none;
     transition: 0.1s;
     opacity: 0.7;
+    width: 100px;
+    height: 100px;
   }
   
-  button:active {
+  buttonl:active {
     background: url(../assets/images/buttonBg2.gif);
     background-position: center;
     background-size: cover;
@@ -97,14 +81,17 @@
     font-family: 'hacked';
   }
   
-  button:focus {
+  buttonl:focus {
     outline: 0;
   }
 
-  p {
-    color: rgb(126, 13, 233);
+  .errorLog {
+    -webkit-text-fill-color: rgb(43, 46, 233);
     display: flex;
     font-weight: bold;
     text-align: center;
     font-family: 'hacked';
+    font-size: 35px;
+    margin: 15px 0 0 0;
   }
+  

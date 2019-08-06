@@ -5,7 +5,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { userLogin } from '../actions/actions';
-import Button from '../Components/Button';
+import ButtonL from '../Components/ButtonLogin';
 import Input from '../Components/InputField';
 import video2 from '../assets/images/loginVideo.mp4';
 import track from '../assets/images/.vtt';
@@ -60,12 +60,12 @@ class Login extends Component {
         </video>
         <div className="gamerLogin" />
         <form className="loginForm">
-          <Input label="Username" id="username" onChange={this.handleChange} />
+          <Input label="Username" id="username" autocomplete="off" onChange={this.handleChange} />
           <label id="password" htmlFor="password">Password</label>
           <input type="password" label="Password" id="password" onChange={this.handleChange} placeholder="Password" />
-          <Button onClick={this.handleClick} buttonText="Login" />
-          <p>{ error }</p>
-          <p>{ backendError }</p>
+          <ButtonL onClick={this.handleClick} buttonText="Login" />
+          <p className="errorLog">{ error }</p>
+          <p className="errorLog">{ backendError }</p>
         </form>
       </div>
     );

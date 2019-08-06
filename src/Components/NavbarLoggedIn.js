@@ -16,13 +16,11 @@ class NavbarLoggedIn extends Component {
   render() {
     return (
       <div className="navbar">
-        <ul>
-          <li className="kingdom"><NavLink to="/kingdom">Kingdom Name</NavLink></li>
-          <div className="controlBar">
-            <li className="settings"><NavLink to="/settings">Settings</NavLink></li>
-            <li className="logout"><NavLink to="/login" onClick={this.handleClick}>Logout</NavLink></li>
-          </div>
-        </ul>
+        <div className="kingdom"><NavLink to="/kingdom">Kingdom Name</NavLink></div>
+        <div className="controlBar">
+          <div className="settings"><NavLink className="registera" to="/settings">Settings</NavLink></div>
+          <div className="logout"><NavLink to="/login" onClick={this.handleClick}>Logout</NavLink></div>
+        </div>
       </div>
     );
   }

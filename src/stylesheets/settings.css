@@ -1,32 +1,53 @@
 .settingsPage {
-  background-color: blueviolet;
+  background: url(../assets/images/lion5.jpg);
+ 
+  position: absolute;
+  
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
 }
 
-form.settingsForm {
+.settingsForm {
+  position: absolute;
   width: 450px;
   height: 450px;
   background: url(../assets/images/--.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   border-radius: 80px;
-  opacity: 0.9;
-  margin: 10px auto 0 auto;
+  opacity: 0.7;
+  text-align: center;
+  top: 20%;
+    left: 55%;
+    padding: 20px 20px;
+    margin: 20px 20px;
+    box-sizing: border-box;
+    
   }
 
 label {
   display: none;
 }
   
-input {
+.settingsForm input {
   font-size: 20px;
   border-radius: 40px;
   font-family: 'hacked';
-  text-align: center;
+  text-align: left;
+  color: rgb(233, 16, 168);
 }
   
 input::placeholder {
-  color: rgb(43, 179, 233);
-  text-align: center;
+  color: rgb(233, 16, 168);
+  text-align: left;
   font-family: 'hacked';
 }
   
@@ -34,7 +55,7 @@ input::placeholder {
   padding: 10px;
   margin-top: 90px;
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 25px;
   background-color: rgb(171, 188, 243);
     /*background: url(../assets/images/regback1.png);
     background-repeat: no-repeat;
@@ -43,34 +64,49 @@ input::placeholder {
   border: none;
   width: 317px;
   color: rgb(18, 140, 211);
-  text-align: center;
   font-family: 'hacked';
   }
   
-.settingsForm button {
+buttons {
   background: url(../assets/images/cube.gif);
-  background-position: center;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  color: rgb(240, 110, 153);
+  font-family: 'hacked';
+  top: 40%;
+  left: 30%;
+  transition: 0.1s;
+  padding: 80px;
+  width: 150px;
+  height: 150px;
+  }
+  
+
+  buttons:active {
+  background: url(../assets/images/crown.gif);
+  position: absolute;
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
   font-size: 25px;
   font-weight: bold;
-  color: silver;
+  color: transparent;
   font-family: 'hacked';
-  padding: 0px;
-  /*margin: 20px 20px;*/
+  
   border: none;
-  top: 75%;
-  left: 30%;
+  top: 40%;
+  left: 38%;
   border: none;
   transition: 0.1s;
-  padding: 50px;
-  width: 300px;
-  height: 300px;
-  margin-left: 100px;
-  margin-top: 45px;
-  }
+  width: 100px;
+  height: 100px;
   
+  }
+
   .ball1 {
     background: url(../assets/images/--.png);
     background-position: bottom;
@@ -90,10 +126,15 @@ input::placeholder {
     height: 150px;
   }
 
-p {
-  color: rgb(126, 13, 233);
-  display: flex;
+.errorSet {
+  color: rgb(233, 13, 97);
   font-weight: bold;
   text-align: center;
   font-family: 'hacked';
+  padding-top: 30px;
+  margin: 0px;
+  font-size: 30px;
+  width: 300px;
+  
   }  
+

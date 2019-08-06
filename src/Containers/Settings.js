@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updateKingdomName } from '../actions/actions';
-import Button from '../Components/Button';
+import ButtonS from '../Components/ButtonSettings';
 import Input from '../Components/InputField';
 import '../stylesheets/settings.css';
 
@@ -51,8 +51,8 @@ class Settings extends Component {
         <div className="ball2" />
         <form className="settingsForm">
           <Input label="New Kingdom name" id="newKingdomName" onChange={this.handleChange} />
-          <Button onClick={this.handleClick} buttonText="Change Kingdom Name" />
-          <p className="error">{ error }</p>
+          <ButtonS onClick={this.handleClick} buttonText="Change Kingdom Name" />
+          <p className="errorSet">{ error }</p>
         </form>
       </div>
     );
