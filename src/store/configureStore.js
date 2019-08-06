@@ -11,6 +11,7 @@ import rootSaga from '../sagas/rootSaga';
 import { settingsWorkerSaga } from '../sagas/settingsSaga';
 import { selectCountryWorkerSaga } from '../sagas/worldMapSaga';
 import { addBuildingSaga } from '../sagas/addBuildingSaga';
+import { addTroopsSaga } from '../sagas/addTroopsSaga';
 
 export const history = createHistory();
 
@@ -29,7 +30,7 @@ function configureStoreProd(initialState) {
   ));
 
   sagaMiddleware.run(selectCountryWorkerSaga, loginWorkerSaga, registerWorkerSaga, settingsWorkerSaga);
-  sagaMiddleware.run(loginWorkerSaga, registerWorkerSaga, addBuildingSaga);
+  sagaMiddleware.run(loginWorkerSaga, registerWorkerSaga, addBuildingSaga, addTroopsSaga);
   return store;
 }
 

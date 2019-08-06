@@ -10,9 +10,10 @@ const initialState = {
 const loginAuthentication = (state = initialState, action) => {
   switch (action.type) {
     case 'LOGIN_SUCCESS':
-      localStorage.setItem('TOKEN', action.payload);
+      localStorage.setItem('TOKEN', action.payload.token);
+      localStorage.setItem('kingdomName', action.payload.kingdomname);
       return {
-        token: action.payload,
+        token: action.payload.token,
         status: 'logged in',
       };
     case 'LOGIN_FAILED':
@@ -22,6 +23,7 @@ const loginAuthentication = (state = initialState, action) => {
       };
     case 'LOGOUT':
       localStorage.removeItem('TOKEN');
+      localStorage.removeItem('kingdomName');
       history.push('/');
       return {
         token: null,

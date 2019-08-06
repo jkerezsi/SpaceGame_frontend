@@ -9,11 +9,13 @@ import Login from '../Containers/Login';
 import Register from '../Containers/Register';
 import leaderboardContent from '../Containers/leaderboardContent';
 import { history } from '../store/configureStore';
-import '../stylesheets/App.css';
+// import '../stylesheets/App.css';
 import PrivateRoute from './PrivateRoute';
 import TroopsContent from '../Containers/troopsContent';
 import WorldMap from '../Containers/Worldmap/WorldMap';
 import ShowResource from './resources';
+import addBuildingPlusMenu from '../Containers/addBuilding';
+import AcademyPlusMenu from '../Containers/Buldings/Academy';
 import Landing from './Landing';
 
 const App = () => (
@@ -23,6 +25,7 @@ const App = () => (
       <Switch>
         <PrivateRoute exact path="/kingdom" component={Menu} />
         <PrivateRoute exact path="/kingdom/buildings" component={addBuildingPlusMenu} />
+        <PrivateRoute exact path="/kingdom/buildings/academy" component={AcademyPlusMenu} />
         <PrivateRoute exact path="/kingdom/troops" component={TroopsContent} />
         <PrivateRoute exact path="/settings" component={Settings} />
         <PrivateRoute exact path="/kingdom/battle" component={Menu} />
