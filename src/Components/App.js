@@ -9,7 +9,7 @@ import Login from '../Containers/Login';
 import Register from '../Containers/Register';
 import leaderboardContent from '../Containers/leaderboardContent';
 import { history } from '../store/configureStore';
-// import '../stylesheets/App.css';
+import '../stylesheets/App.css';
 import PrivateRoute from './PrivateRoute';
 import TroopsContent from '../Containers/troopsContent';
 import WorldMap from '../Containers/Worldmap/WorldMap';
