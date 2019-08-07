@@ -2,7 +2,18 @@
   color: white;
 }
 
+[class="1"] {
+  background-color: rgb(228, 0, 202);
+}
 
-.troop{
-  padding-bottom: 20px;
+[class="2"] {
+  background-color: purple;
+}
+
+[class="3"] {
+  background-color: rgb(52, 1, 52);
+}
+
+[class="10"] {
+  background-color: black;
 }
