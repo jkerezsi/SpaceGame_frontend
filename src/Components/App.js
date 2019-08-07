@@ -8,7 +8,7 @@ import '../stylesheets/App.css';
 import leaderboardContent from '../Containers/leaderboardContent';
 import { history } from '../store/configureStore';
 import Navbar from './Navbar';
-import buildingsContent from '../Containers/buildingsContent';
+import BuildingsContent from '../Containers/BuildingsContent';
 
 const App = () => (
   <Router history={history}>
@@ -16,7 +16,7 @@ const App = () => (
       <Navbar />
       <Switch>
         <Route exact path="/kingdom" component={Menu} />
-        <Route exact path="/kingdom/buildings" component={buildingsContent} />
+        <Route exact path="/kingdom/buildings" component={BuildingsContent} />
         <Route exact path="/kingdom/troops" component={Menu} />
         <Route exact path="/settings" component={Settings} />
         <Route exact path="/kingdom/battle" component={Menu} />
