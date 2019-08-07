@@ -3,7 +3,6 @@ import {
   Router, Route, Switch,
 } from 'react-router-dom';
 import Navbar from './Navbar';
-import Menu from './menu/menu';
 import Settings from '../Containers/Settings';
 import Login from '../Containers/Login';
 import Register from '../Containers/Register';
@@ -13,10 +12,9 @@ import { history } from '../store/configureStore';
 import PrivateRoute from './PrivateRoute';
 import TroopsContent from '../Containers/troopsContent';
 import WorldMap from '../Containers/Worldmap/WorldMap';
-import ShowResource from './resources';
 import Landing from './Landing';
 import '../stylesheets/App.css';
-import '../stylesheets/navbar.css';
+import '../stylesheets/Navbar.css';
 import Kingdom from '../Containers/Kingdom';
 import BattlePlusMenu from '../Containers/Kingdom-Containers/Battle';
 import LeaderTroopsPlusMenu from '../Containers/Leaderboard-Containers/Ltroops';
