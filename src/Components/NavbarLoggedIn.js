@@ -1,5 +1,6 @@
 /* eslint-disable arrow-body-style */
 /* eslint-disable react/prop-types */
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
@@ -31,7 +32,6 @@ const mapDispatchToProps = (dispatch) => {
     logoutUser: () => dispatch(logout()),
   };
 };
-
 
 export default connect(
   null,

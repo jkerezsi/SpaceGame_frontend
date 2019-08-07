@@ -28,11 +28,10 @@
   color: rgb(228, 15, 15);
 }
 
-.troopsPage .menu img {
-    
+.troopsPage .menu img {   
   opacity: 0.7;
 }
 
-.troopsPage .resources  {
+.troopsPage .resources {
   opacity: 0.6;
 }

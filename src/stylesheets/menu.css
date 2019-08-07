@@ -52,35 +52,32 @@
   display: flex; 
   padding-top: 50px;
   padding-left: 50px;
-  padding-right: 50px;
-  
+  padding-right: 50px; 
 }
 
 img {
   width: 120px;
-  height: 90px;  
-  
+  height: 90px;    
 }
 
 .resources {
   width: 200px;
-    height: 150px;
-    background: url(../assets/images/frame.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.9;
-    position: absolute;
-    top: 12%;
-    left: 70%;
-    padding: 1px 6px;   
-    font-size: 20px;
+  height: 150px;
+  background: url(../assets/images/frame.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.9;
+  position: absolute;
+  top: 12%;
+  left: 70%;
+  padding: 1px 6px;   
+  font-size: 20px;
 }
 
 p {
   color: rgb(126, 13, 233);
   display: flex;
-  
   text-align: center;
 }
 

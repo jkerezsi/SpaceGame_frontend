@@ -2,7 +2,6 @@ import { call, takeEvery, put } from 'redux-saga/effects';
 import { fetchSettings } from '../services/api';
 import { history } from '../store/configureStore';
 
-
 export function* settingsWorkerSaga(action) {
   try {
     const response = yield call(fetchSettings, action.payload);

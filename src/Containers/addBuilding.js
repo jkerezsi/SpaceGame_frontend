@@ -10,5 +10,4 @@ const addBuildingPlusMenu = () => (
   </div>
 );
 
-
 export default addBuildingPlusMenu;

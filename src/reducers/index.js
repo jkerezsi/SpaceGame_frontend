@@ -8,6 +8,7 @@ import showResources from './resourcesReducer';
 import addBuildingReducer from './addBuildingReducer';
 import getTroopsReducer from './getTroopsReducer';
 
+
 const rootReducer = combineReducers({
   changeKingdomName,
   loginAuthentication,

@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getResources } from '../actions/actions';
@@ -16,7 +17,6 @@ class ShowResources extends Component {
     const localStorageToken = localStorage.getItem('TOKEN');
     return getResources(localStorageToken);
   }
-
 
   render() {
     const { food, gold, error } = this.props;
@@ -45,7 +45,6 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = {
   getResources,
 };
-
 
 export default connect(
   mapStateToProps,

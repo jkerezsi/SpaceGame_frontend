@@ -20,7 +20,6 @@ const wrapperStyles = {
   margin: '0 auto',
 };
 
-
 class WorldMap extends Component {
   constructor() {
     super();
@@ -48,7 +47,6 @@ class WorldMap extends Component {
       this.setState({ message: `You have selected ${countryName}` });
     }
   };
-
 
     submitButton = (e) => {
       e.preventDefault();

@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
 const Input = ({ id, label, onChange }) => (
   <div>
     <label htmlFor={label}>{label}</label>

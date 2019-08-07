@@ -10,16 +10,15 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;   
-  }
+}
 
-  .kingdomPage p.error {
-    margin-top: 50px;
-    font-size: 25px;
-    color: rgb(224, 33, 176);
+.kingdomPage p.error {
+  margin-top: 50px;
+  font-size: 30px;
+  color: rgb(224, 17, 52);
   font-weight: bold;
-    }
+}
 
-    .kingdomPage .menu img {
-    
-      opacity: 0.8;
-    }
+.kingdomPage .menu img {  
+  opacity: 0.8;
+}

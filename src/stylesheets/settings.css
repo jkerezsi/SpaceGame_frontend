@@ -1,8 +1,6 @@
 .settingsPage {
   background: url(../assets/images/lion5.jpg);
- 
-  position: absolute;
-  
+  position: absolute; 
   overflow: hidden;
   top: 0;
   bottom: 0;
@@ -10,10 +8,10 @@
   right: 0;
   z-index: -1;
   background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-   
+  background-size: cover;
+  background-repeat: no-repeat;   
 }
+
 /*
 .settingsa.active {
   float: right;
@@ -30,6 +28,7 @@
   background-repeat: no-repeat;   
 }
 */
+
 .settingsForm {
   position: absolute;
   width: 450px;
@@ -41,12 +40,11 @@
   opacity: 0.7;
   text-align: center;
   top: 20%;
-    left: 55%;
-    padding: 20px 20px;
-    margin: 20px 20px;
-    box-sizing: border-box;
-    
-  }
+  left: 55%;
+  padding: 20px 20px;
+  margin: 20px 20px;
+  box-sizing: border-box;  
+}
 
 label {
   display: none;
@@ -73,36 +71,33 @@ input::placeholder {
   box-sizing: border-box;
   font-size: 25px;
   background-color: rgb(171, 188, 243);
-    /*background: url(../assets/images/regback1.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;*/
   opacity: 1;
   border: none;
   width: 317px;
   color: rgb(18, 140, 211);
   font-family: 'hacked';
-  }
+}
   
-buttons {
+.buttons {
   background: url(../assets/images/cube.gif);
   position: absolute;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   text-align: center;
-  font-size: 35px;
-  font-weight: bold;
+  font-size: 33px;
   color: rgb(224, 33, 176);
   font-family: 'hacked';
   top: 40%;
   left: 30%;
   transition: 0.1s;
-  padding: 80px;
-  width: 150px;
-  height: 150px;
-  }
-  
+  border: none;
+  margin: 50px;
+  width: 200px;
+  height: 200px;
+}
 
-  buttons:active {
+.buttons:active {
   background: url(../assets/images/crown.gif);
   position: absolute;
   background-size: cover;
@@ -111,8 +106,7 @@ buttons {
   font-size: 25px;
   font-weight: bold;
   color: transparent;
-  font-family: 'hacked';
-  
+  font-family: 'hacked'; 
   border: none;
   top: 40%;
   left: 38%;
@@ -120,30 +114,29 @@ buttons {
   transition: 0.1s;
   width: 100px;
   height: 100px;
-  
-  }
+}
 
-  .ball1 {
-    background: url(../assets/images/--.png);
-    background-position: bottom;
-    background-size: cover;
-    background-repeat: no-repeat;  
-    height: 350px;
-    margin-left: 200px;
-    opacity: 0.7;
-  }
+.ball1 {
+  background: url(../assets/images/--.png);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;  
+  height: 350px;
+  margin-left: 200px;
+  opacity: 0.7;
+}
   
-  .ball2 {
-    background: url(../assets/images/--.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.8;
-    width: 150x;
-    height: 150px;
-    position: relative;
-    top: 0px;
-    left: 50px;
-  }
+.ball2 {
+  background: url(../assets/images/--.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  width: 150x;
+  height: 150px;
+  position: relative;
+  top: 0px;
+  left: 50px;
+}
 
 .errorSet {
   color: rgb(233, 13, 97);
@@ -154,6 +147,5 @@ buttons {
   margin: 0px;
   font-size: 30px;
   width: 300px;
-  
-  }  
+}  
 

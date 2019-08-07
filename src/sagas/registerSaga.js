@@ -2,7 +2,6 @@ import { call, takeEvery, put } from 'redux-saga/effects';
 import { fetchRegister } from '../services/api';
 import { history } from '../store/configureStore';
 
-
 export function* registerWorkerSaga(action) {
   try {
     const response = yield call(fetchRegister, action.payload);

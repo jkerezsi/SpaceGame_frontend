@@ -4,6 +4,7 @@ import building from '../assets/images/leaderBuildings.jpg';
 import troop from '../assets/images/leaderTroops.jpg';
 import '../stylesheets/leaderboard.css';
 
+
 const Leaderboard = () => (
   <div>
     <nav className="leaderbuttons">
@@ -24,6 +25,5 @@ const Leaderboard = () => (
     </nav>
   </div>
 );
-
 
 export default Leaderboard;

@@ -63,7 +63,6 @@ const mapStateToProps = state => ({
   storeToken: state.loginAuthentication.token,
 });
 
-
 const mapDispatchToProps = {
   updateKingdomName,
 };

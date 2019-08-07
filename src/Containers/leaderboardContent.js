@@ -10,5 +10,4 @@ const leaderboardContent = () => (
   </div>
 );
 
-
 export default leaderboardContent;

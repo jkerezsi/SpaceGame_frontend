@@ -1,123 +1,120 @@
 .regVid {
-    opacity: 0.9;
-  }
+  opacity: 0.9;
+}
 .registerForm {
-    width: 400px;
-    height: 450px;
-    background: url(../assets/images/gamerRegister.gif);
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    opacity: 0.6;
-    text-align: center;
-    position: absolute;
-    top: 20%;
-    left: 35%;
-    padding: 20px 20px;
-    margin: 20px 20px;
-    box-sizing: border-box;
-    color: red;
-  }
+  width: 400px;
+  height: 450px;
+  background: url(../assets/images/gamerRegister.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 40px;
+  opacity: 0.6;
+  text-align: center;
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  padding: 20px 20px;
+  margin: 20px 20px;
+  box-sizing: border-box;
+  color: red;
+}
 
-  label {
-    display: none;
-  }
+label {
+  display: none;
+}
   
-  .registerForm input {
-    font-size: 20px;
-    border-radius: 40px;
-    font-family: 'hacked';
-    color: red;
-    font-size: 20px;
-  }
+.registerForm input {
+  font-size: 20px;
+  border-radius: 40px;
+  font-family: 'hacked';
+  color: red;
+  font-size: 20px;
+}
   
 input:focus {
   outline: 0;
 }
 
-  .registerForm input::placeholder {
-    color: red;
-    font-family: 'hacked';
-    font-size: 20px;
-  }
+.registerForm input::placeholder {
+  color: red;
+  font-family: 'hacked';
+  font-size: 20px;
+}
 
-  #username {
-    padding: 10px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    font-family: 'hacked';
-    background-color: rgb(171, 188, 243);
-    /*background: url(../assets/images/regback1.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;*/
-    opacity: 0.8;
-    border: none;
-    width: 317px;
-  }
+#username {
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-family: 'hacked';
+  background-color: rgb(171, 188, 243);
+  opacity: 0.8;
+  border: none;
+  width: 317px;
+}
   
-  #password {
-    padding: 10px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    background-color: rgb(171, 188, 243);
-    opacity: 0.8;
-    border: none;
-    width: 317px;
-    font-family: 'hacked';
-  }
+#password {
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: rgb(171, 188, 243);
+  opacity: 0.8;
+  border: none;
+  width: 317px;
+  font-family: 'hacked';
+}
   
-  #kingdom {
-    padding: 10px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    background-color: rgb(171, 188, 243);
-    opacity: 0.8;
-    border: none;
-    width: 317px;
-    font-family: 'hacked';
-  }
+#kingdom {
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: rgb(171, 188, 243);
+  opacity: 0.8;
+  border: none;
+  width: 317px;
+  font-family: 'hacked';
+}
   
-  buttonr {
-    background: url(../assets/images/buttonBg.gif);
-    background-position: center;
-    position: absolute;
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-family: 'hacked';
-    font-size: 25px;
-    font-weight: bold;
-    color: red;
-    text-align: center;
-    border: none;
-    top: 75%;
-    left: 40%;
-    border-radius: 50%;
-    transition: 0.1s;
-    opacity: 0.7;
-    width: 100px;
-    height: 100px;  
-  }
+.buttonr {
+  background: url(../assets/images/buttonBg.gif);
+  background-position: center;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'hacked';
+  font-size: 26px;
+  font-weight: bold;
+  color: rgb(235, 213, 15);
+  text-align: center;
+  border: none;
+  top: 75%;
+  left: 40%;
+  border-radius: 50%;
+  transition: 0.1s;
+  opacity: 0.7;
+  width: 100px;
+  height: 100px;  
+}
 
-  buttonr:active {
-    background: url(../assets/images/buttonBg2.gif);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: rgb(28, 203, 209);
-    font-family: 'hacked';
-  }
+.buttonr:active {
+  background: url(../assets/images/buttonBg2.gif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(28, 203, 209);
+  font-family: 'hacked';
+}
   
-  buttonr:focus {
-    outline: 0;
-  }
+.buttonr:focus {
+  outline: 0;
+}
 
-  .errorReg {
-    color: red;
-    display: flex;
-    font-weight: bold;
-    text-align: center;
-    font-family: 'hacked';
-    font-size: 35px;
-    margin: 15px 0 0 0;
-    }  
+.errorReg {
+  color: red;
+  display: flex;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'hacked';
+  font-size: 35px;
+  margin: 15px 0 0 0;
+}  
   

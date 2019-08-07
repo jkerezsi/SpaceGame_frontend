@@ -12,7 +12,6 @@ export const userRegister = (username, password, kingdom) => ({
   },
 });
 
-
 export const loginSuccess = () => ({ type: 'LOGIN_SUCCESS', payload: '' });
 export const loginFailed = () => ({ type: 'LOGIN_FAILED', payload: '' });
 
@@ -46,7 +45,6 @@ export const FailedGotResources = () => ({ type: 'GET_RESOURCES_FAILED', payload
 export const addBuildingAction = (type, token) => ({ type: 'ADD_BUILDING', payload: { type, token } });
 export const addBuildingSuccess = () => ({ type: 'ADD_BUILDING_SUCCESS', payload: '' });
 export const addBuildingFail = () => ({ type: 'ADD_BUILDING_FAIL', payload: '' });
-
 
 export const getTroopsAction = () => ({ type: 'GET_TROOPS', payload: '' });
 export const getTroopsSuccess = () => ({ type: 'GET_TROOPS_SUCCESS', payload: '' });

@@ -1,5 +1,5 @@
 .lBuildingsPage {
-    background: url(../assets/images/lBuiBg.jpg);
+  background: url(../assets/images/lBuiBg.jpg);
   position: absolute;  
   overflow: hidden;
   top: 0;
@@ -14,18 +14,17 @@
 }
 
 .lBuildingsPage .menu p {
-    color: rgb(36, 158, 195);
-  }
+  color: rgb(36, 158, 195);
+}
 
-  .lBuildingsPage .resources p {
-    color: rgb(126, 13, 233);
-  }
+.lBuildingsPage .resources p {
+  color: rgb(126, 13, 233);
+}
 
-  .lBuildingsPage .menu img {
-    
-    opacity: 0.8;
-  }
+.lBuildingsPage .menu img {   
+  opacity: 0.8;
+}
 
-  .lBuildingsPage .resources  {
-    opacity: 0.7;
-  }
+.lBuildingsPage .resources  {
+  opacity: 0.7;
+}

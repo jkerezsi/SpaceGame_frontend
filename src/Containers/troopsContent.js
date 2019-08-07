@@ -10,5 +10,4 @@ const TroopsContent = () => (
   </div>
 );
 
-
 export default TroopsContent;
