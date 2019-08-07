@@ -1,10 +1,8 @@
 import axios from 'axios';
 
-console.log(localStorage.getItem('TOKEN'));
 axios.defaults.headers.common.token = localStorage.getItem('TOKEN');
 
 export function fetchLogin(payload) {
-  console.log(payload);
   return axios({
     method: 'post',
     url: 'http://localhost:3012/login',
@@ -21,7 +19,6 @@ export function fetchRegister(payload) {
 }
 
 export function fetchSettings(payload) {
-  console.log(payload);
   return axios({
     method: 'put',
     url: 'http://localhost:3012/kingdom',
