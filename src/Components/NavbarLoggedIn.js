@@ -18,7 +18,7 @@ class NavbarLoggedIn extends Component {
       <div className="navbar">
         <div className="kingdom"><NavLink to="/kingdom">Kingdom Name</NavLink></div>
         <div className="controlBar">
-          <div className="settings"><NavLink className="registera" to="/settings">Settings</NavLink></div>
+          <div className="settings"><NavLink className="settingsa" to="/settings">Settings</NavLink></div>
           <div className="logout"><NavLink to="/login" onClick={this.handleClick}>Logout</NavLink></div>
         </div>
       </div>

@@ -1,10 +1,12 @@
 import React from 'react';
+import Menu from '../../Components/menu/menu';
+import '../../stylesheets/leaderTroops.css';
 
 
-const Ltroops = () => (
+const LeaderTroopsPlusMenu = () => (
   <div className="lTroopsPage">
-    <h1>Buildings page</h1>
+    <Menu />
   </div>
 );
 
-export default Ltroops;
+export default LeaderTroopsPlusMenu;

@@ -1,3 +1,21 @@
-.battlePage {
-    background-color: rgb(156, 226, 43);
-  }
+.battlePage .resources {
+    position: absolute;
+    top: 12%;
+}
+
+.battlePage .menu { 
+  margin-top: -4%;
+}
+
+.battlePage .linkbutton p {
+  color: rgb(176, 15, 204);
+}
+
+.battlePage .menu img {
+    
+  opacity: 0.7;
+}
+
+.battlePage .resources  {
+  opacity: 0.7;
+}

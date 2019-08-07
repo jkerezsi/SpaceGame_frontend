@@ -22,11 +22,11 @@ class ShowResources extends Component {
     const { food, gold, error } = this.props;
     return (
       <div className="resources">
-        <p>
+        <p className="food">
           <img className="foodPic" src={foodPic} alt="Food pic" />
           {food}
         </p>
-        <p>
+        <p className="gold">
           <img className="goldPic" src={goldPic} alt="Money pic" />
           {gold}
         </p>

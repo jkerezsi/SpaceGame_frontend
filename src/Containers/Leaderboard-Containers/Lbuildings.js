@@ -1,10 +1,12 @@
 import React from 'react';
+import Menu from '../../Components/menu/menu';
+import '../../stylesheets/leaderBuildings.css';
 
 
-const Lbuildings = () => (
+const LeaderBuildingsPlusMenu = () => (
   <div className="lBuildingsPage">
-    <h1>Buildings page</h1>
+    <Menu />
   </div>
 );
 
-export default Lbuildings;
+export default LeaderBuildingsPlusMenu;

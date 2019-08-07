@@ -75,7 +75,7 @@ buttonm {
     -webkit-text-fill-color: transparent;
     border: none;
     top: 15%;
-    left: -1%;
+    left: 0%;
     border-radius: 50%;
     transition: 0.1s;
     opacity: 0.9;

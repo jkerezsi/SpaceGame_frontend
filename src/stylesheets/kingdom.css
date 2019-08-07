@@ -1,11 +1,25 @@
-.kingVid {
-  opacity: 0.9;
+.kingdomPage {
+  background: url(../assets/images/kingBg.jpg);
+  position: fixed;  
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;   
   }
-  
-/*p {
-  color: rgb(233, 119, 13);
-  display: flex;
+
+  .kingdomPage p.error {
+    margin-top: 50px;
+    font-size: 25px;
+    color: rgb(224, 33, 176);
   font-weight: bold;
-  text-align: center;
-  font-family: 'hacked';
-  }*/
+    }
+
+    .kingdomPage .menu img {
+    
+      opacity: 0.8;
+    }

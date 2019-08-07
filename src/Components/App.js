@@ -18,6 +18,9 @@ import Landing from './Landing';
 import '../stylesheets/App.css';
 import '../stylesheets/navbar.css';
 import Kingdom from '../Containers/Kingdom';
+import BattlePlusMenu from '../Containers/Kingdom-Containers/Battle';
+import LeaderTroopsPlusMenu from '../Containers/Leaderboard-Containers/Ltroops';
+import LeaderBuildingsPlusMenu from '../Containers/Leaderboard-Containers/Lbuildings';
 
 
 const App = () => (
@@ -29,10 +32,10 @@ const App = () => (
         <PrivateRoute exact path="/kingdom/buildings" component={addBuildingPlusMenu} />
         <PrivateRoute exact path="/kingdom/troops" component={TroopsContent} />
         <PrivateRoute exact path="/settings" component={Settings} />
-        <PrivateRoute exact path="/kingdom/battle" component={Menu} />
+        <PrivateRoute exact path="/kingdom/battle" component={BattlePlusMenu} />
         <PrivateRoute exact path="/kingdom/leaderboard" component={leaderboardContent} />
-        <PrivateRoute exact path="/kingdom/leaderboard/buildings" component={Menu} />
-        <PrivateRoute exact path="/kingdom/leaderboard/troops" component={Menu} />
+        <PrivateRoute exact path="/kingdom/leaderboard/buildings" component={LeaderBuildingsPlusMenu} />
+        <PrivateRoute exact path="/kingdom/leaderboard/troops" component={LeaderTroopsPlusMenu} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/register/map" component={WorldMap} />

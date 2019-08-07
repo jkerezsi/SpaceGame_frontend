@@ -5,13 +5,34 @@
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  /*margin: 10px;*/
+  margin: 10px 0 0 0;
 }
 
 .buildingsButton, .troopsButton, .battleButton, .leaderboardButton {
   background: none;
   width: 120px;
-  margin: 20px;
+  margin: 30px;
+  border: none; 
+}
+
+.buildingsButton p {
+  position: absolute;
+  left: 7.5%;
+}
+
+.troopsButton p {
+  position: absolute;
+  left: 22%;
+}
+
+.battleButton p {
+  position: absolute;
+  left: 35.5%;
+}
+
+.leaderboardButton p {
+  position: absolute;
+  left: 45.5%;
 }
 
 .linkbutton {
@@ -19,30 +40,12 @@
   width: 120px;
   margin: 20px;
   text-decoration: none;
+  position: center;
+  text-align: center;
 }
 
 .linkbutton:active {
   text-decoration: none;
-}
-
-.buildingsButton:active {
-  background: none;
-
-}
-
-.troopsButton:active {
-  background: none;
-  
-}
-
-.battleButton:active {
-  background: none;
-  
-}
-
-.leaderboardButton:active {
-  background: none;
-  
 }
 
 .menu {
@@ -50,45 +53,56 @@
   padding-top: 50px;
   padding-left: 50px;
   padding-right: 50px;
+  
 }
-/*
-.menu .button {
-  width: 140px;
-  height: 150px;
-  background-color: transparent;
-  border: 0;
-  padding: 10px;
-  margin: 10px;
-}
-*/
 
 img {
   width: 120px;
-  height: 90px; 
+  height: 90px;  
+  
 }
 
-
 .resources {
-  margin-top: 20px;
-  margin-left: 50px;
+  width: 200px;
+    height: 150px;
+    background: url(../assets/images/frame.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.9;
+    position: absolute;
+    top: 12%;
+    left: 70%;
+    padding: 1px 6px;   
+    font-size: 20px;
 }
 
 p {
   color: rgb(126, 13, 233);
   display: flex;
-  font-weight: bold;
+  
   text-align: center;
 }
 
+.food {
+  margin-top: 40px; 
+  margin-left: 40px;  
+}
+
+.gold {
+  margin-left: 40px; 
+}
+
 img.foodPic {
-  width: 20px;
-  height: 30px;
-  padding-right: 10px; 
+  width: 23px;
+  height: 35px;
+  padding-right: 10px;
+  margin-top: -4px;
 }
 
 img.goldPic {
   width: 25px;
-  height: 20px;
+  height: 25px;
   padding-right: 10px;
 }
 
