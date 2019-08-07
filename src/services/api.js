@@ -26,7 +26,6 @@ export function fetchSettings(payload) {
 }
 
 export function fetchMap(payload) {
-  console.log(payload);
   return axios({
     method: 'post',
     url: 'http://localhost:3012/register/map',
@@ -57,5 +56,12 @@ export function fetchTroops() {
     method: 'get',
     url: 'http://localhost:3012/kingdom/troops',
     headers: { token: localStorage.getItem('TOKEN') },
+  });
+}
+
+export function fetchNewTroops() {
+  return axios({
+    method: 'post',
+    url: 'http://localhost:3012/kingdom/troops',
   });
 }
