@@ -72,8 +72,6 @@ Number of buildings:
 const mapStateToProps = state => ({
   leaderboard: state.getBuildingLeaderboardReducer.leaderboard,
   status: state.getBuildingLeaderboardReducer.status,
-  howManyToShow2: state.getBuildingLeaderboardReducer.howManyToShow,
-
 });
 
 const mapDispatchToProps = {

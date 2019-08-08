@@ -1,7 +1,6 @@
 const initialState = {
   status: '',
   leaderboard: [],
-  howManyToShow: 5,
 };
 
 const getBuildingLeaderboardReducer = (state = initialState, action) => {
