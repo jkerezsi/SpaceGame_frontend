@@ -15,6 +15,8 @@ import TroopsContent from '../Containers/troopsContent';
 import WorldMap from '../Containers/Worldmap/WorldMap';
 import addBuildingPlusMenu from '../Containers/addBuilding';
 import Landing from './Landing';
+import BuildingLeaderboardPlusMenu from '../Containers/buildingleaderboardplusmenu';
+
 
 const App = () => (
   <Router history={history}>
@@ -27,7 +29,7 @@ const App = () => (
         <PrivateRoute exact path="/settings" component={Settings} />
         <PrivateRoute exact path="/kingdom/battle" component={Menu} />
         <PrivateRoute exact path="/kingdom/leaderboard" component={leaderboardContent} />
-        <PrivateRoute exact path="/kingdom/leaderboard/buildings" component={Menu} />
+        <PrivateRoute exact path="/kingdom/leaderboard/buildings" component={BuildingLeaderboardPlusMenu} />
         <PrivateRoute exact path="/kingdom/leaderboard/troops" component={Menu} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
