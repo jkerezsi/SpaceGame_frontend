@@ -1,10 +1,11 @@
 /* eslint-disable arrow-body-style */
 /* eslint-disable react/prop-types */
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { logout } from '../actions/actions';
-import '../stylesheets/Navbar.css';
+
 
 class NavbarLoggedIn extends Component {
   handleClick = (e) => {
@@ -16,16 +17,14 @@ class NavbarLoggedIn extends Component {
   render() {
     const { kingdomName } = this.props;
     return (
-      <div className="header">
-        <ul>
-          <li className="kingdom">
-            <NavLink to="/kingdom">{ (kingdomName !== '') ? kingdomName : localStorage.getItem('kingdomName') }</NavLink>
-          </li>
-          <div className="controlBar">
-            <li className="settings"><NavLink to="/settings">Settings</NavLink></li>
-            <li className="logout"><NavLink to="/login" onClick={this.handleClick}>Logout</NavLink></li>
-          </div>
-        </ul>
+      <div className="navbar">
+        <div className="kingdom">
+          <NavLink to="/kingdom">{ (kingdomName !== '') ? kingdomName : localStorage.getItem('kingdomName') }</NavLink>
+        </div>
+        <div className="controlBar">
+          <div className="settings"><NavLink className="settingsa" to="/settings">Settings</NavLink></div>
+          <div className="logout"><NavLink to="/login" onClick={this.handleClick}>Logout</NavLink></div>
+        </div>
       </div>
     );
   }
@@ -40,7 +39,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
   logout,
 };
-
 
 export default connect(
   mapStateToProps,

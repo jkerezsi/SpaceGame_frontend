@@ -1,10 +1,11 @@
 /* eslint-disable arrow-body-style */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/prefer-stateless-function */
+
 import React, { Component } from 'react';
 import NavbarLoggedIn from './NavbarLoggedIn';
 import NavbarLoggedOut from './NavbarLoggedOut';
-import '../stylesheets/Navbar.css';
+
 
 class Navbar extends Component {
   render() {

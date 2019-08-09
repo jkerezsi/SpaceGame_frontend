@@ -34,7 +34,7 @@ class GetBuildingLeaderboard extends React.Component {
             <div className="leaderboardElement">
               <h4>{leaderboard.kingdomName}</h4>
               <h6>
-Number of buildings:
+                Number of buildings:
                 {leaderboard.numberOfBuildings}
               </h6>
             </div>

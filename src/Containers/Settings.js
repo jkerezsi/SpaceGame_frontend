@@ -1,11 +1,12 @@
-
 /* eslint-disable react/prop-types */
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updateKingdomName } from '../actions/actions';
-import Button from '../Components/Button';
+import ButtonS from '../Components/ButtonSettings';
 import Input from '../Components/InputField';
+import '../stylesheets/settings.css';
+
 
 class Settings extends Component {
   state = {
@@ -45,11 +46,13 @@ class Settings extends Component {
   render() {
     const { error } = this.state;
     return (
-      <div className="settings">
-        <form>
-          <Input label="New Kingdom" id="newKingdomName" onChange={this.handleChange} />
-          <Button onClick={this.handleClick} buttonText="Change Kingdom Name" />
-          <p>{ error }</p>
+      <div className="settingsPage">
+        <div className="ball1" />
+        <div className="ball2" />
+        <form className="settingsForm">
+          <Input label="New Kingdom name" id="newKingdomName" onChange={this.handleChange} />
+          <ButtonS onClick={this.handleClick} buttonText="Change Kingdom Name" />
+          <p className="errorSet">{ error }</p>
         </form>
       </div>
     );
@@ -59,7 +62,6 @@ class Settings extends Component {
 const mapStateToProps = state => ({
   storeToken: state.loginAuthentication.token,
 });
-
 
 const mapDispatchToProps = {
   updateKingdomName,

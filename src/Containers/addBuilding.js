@@ -5,12 +5,11 @@ import Buildings from './Kingdom-Containers/Buildings';
 
 
 const addBuildingPlusMenu = () => (
-  <div>
+  <div className="buildingsPage">
     <Menu />
     <Buildings />
     <AddBuilding />
   </div>
 );
-
 
 export default addBuildingPlusMenu;

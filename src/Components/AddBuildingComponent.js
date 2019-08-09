@@ -5,7 +5,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addBuildingAction } from '../actions/actions';
-import '../stylesheets/buildingbuttons.css';
+import '../stylesheets/buildings.css';
 
 
 class AddBuilding extends Component {

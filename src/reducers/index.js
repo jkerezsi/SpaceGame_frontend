@@ -10,6 +10,7 @@ import getTroopsReducer from './getTroopsReducer';
 import getBuildingLeaderboardReducer from './getBuildingLeaderboardReducer';
 import addTroopsReducer from './addTroopsReducer';
 
+
 const rootReducer = combineReducers({
   changeKingdomName,
   loginAuthentication,
