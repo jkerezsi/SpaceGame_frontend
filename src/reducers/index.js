@@ -7,6 +7,8 @@ import mapReducer from './worldMapReducer';
 import showResources from './resourcesReducer';
 import addBuildingReducer from './addBuildingReducer';
 import getTroopsReducer from './getTroopsReducer';
+import getBuildingLeaderboardReducer from './getBuildingLeaderboardReducer';
+import addTroopsReducer from './addTroopsReducer';
 
 
 const rootReducer = combineReducers({
@@ -16,7 +18,9 @@ const rootReducer = combineReducers({
   mapReducer,
   showResources,
   addBuildingReducer,
+  addTroopsReducer,
   getTroopsReducer,
+  getBuildingLeaderboardReducer,
   routing: routerReducer,
 });
 

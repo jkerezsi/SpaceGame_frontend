@@ -15,9 +15,12 @@ class NavbarLoggedIn extends Component {
   }
 
   render() {
+    const { kingdomName } = this.props;
     return (
       <div className="navbar">
-        <div className="kingdom"><NavLink to="/kingdom">Kingdom Name</NavLink></div>
+        <div className="kingdom">
+          <NavLink to="/kingdom">{ (kingdomName !== '') ? kingdomName : localStorage.getItem('kingdomName') }</NavLink>
+        </div>
         <div className="controlBar">
           <div className="settings"><NavLink className="settingsa" to="/settings">Settings</NavLink></div>
           <div className="logout"><NavLink to="/login" onClick={this.handleClick}>Logout</NavLink></div>
@@ -27,11 +30,17 @@ class NavbarLoggedIn extends Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    kingdomName: state.changeKingdomName.newKingdomName,
+  };
+};
+
 const mapDispatchToProps = {
   logout,
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps,
 )(NavbarLoggedIn);
