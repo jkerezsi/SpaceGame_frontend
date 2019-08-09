@@ -25,7 +25,7 @@ export function fetchSettings(payload) {
   });
 }
 
-export function fetchMap() {
+export function fetchMap(payload) {
   return axios({
     method: 'post',
     url: 'http://localhost:3012/register/map',
