@@ -14,6 +14,7 @@ import PrivateRoute from './PrivateRoute';
 import TroopsContent from '../Containers/troopsContent';
 import WorldMap from '../Containers/Worldmap/WorldMap';
 import addBuildingPlusMenu from '../Containers/addBuilding';
+import AcademyPlusMenu from '../Containers/Buldings/Academy';
 import Landing from './Landing';
 import BuildingLeaderboardPlusMenu from '../Containers/buildingleaderboardplusmenu';
 
@@ -25,6 +26,7 @@ const App = () => (
       <Switch>
         <PrivateRoute exact path="/kingdom" component={Menu} />
         <PrivateRoute exact path="/kingdom/buildings" component={addBuildingPlusMenu} />
+        <PrivateRoute exact path="/kingdom/buildings/academy" component={AcademyPlusMenu} />
         <PrivateRoute exact path="/kingdom/troops" component={TroopsContent} />
         <PrivateRoute exact path="/settings" component={Settings} />
         <PrivateRoute exact path="/kingdom/battle" component={Menu} />

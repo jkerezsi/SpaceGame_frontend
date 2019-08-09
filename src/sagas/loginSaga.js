@@ -6,7 +6,7 @@ export function* loginWorkerSaga(action) {
   try {
     const response = yield call(fetchLogin, action.payload);
     if (response.data.status === 'ok') {
-      yield put({ type: 'LOGIN_SUCCESS', payload: response.data.token });
+      yield put({ type: 'LOGIN_SUCCESS', payload: response.data });
       history.push('/kingdom');
     }
   } catch (error) {
