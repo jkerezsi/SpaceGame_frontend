@@ -26,6 +26,8 @@
 
 .troopsPage .linkbutton p {
   color: rgb(228, 15, 15);
+  background-color: rgb(163, 33, 163);
+  opacity: 0.7;
 }
 
 .troopsPage .menu img {   

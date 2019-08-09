@@ -27,7 +27,7 @@
   text-align: center;
   border: none;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 25%;
   border-radius: 50%;
   transition: 0.1s;
@@ -47,7 +47,7 @@
   text-align: center;
   border: none;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 40%;
   border-radius: 50%;
   transition: 0.1s;   
@@ -70,4 +70,6 @@ button:focus {
 
 .buildingsPage .linkbutton p {
   color: rgb(35, 64, 195);
+  background-color: rgb(106, 107, 207);
+  opacity: 0.9;
 }

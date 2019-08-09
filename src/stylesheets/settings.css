@@ -12,8 +12,7 @@
   background-repeat: no-repeat;   
 }
 
-/*
-.settingsa.active {
+a:visited {
   float: right;
   text-align: center;
   height: 30px;
@@ -27,7 +26,6 @@
   background-size: 100%;
   background-repeat: no-repeat;   
 }
-*/
 
 .settingsForm {
   position: absolute;
@@ -59,10 +57,9 @@ label {
 }
   
 input::placeholder {
-  color: rgb(202, 85, 30);
+  color: rgb(17, 200, 94);
   text-align: left;
   font-family: 'hacked';
-  opacity: 0.5;
 }
   
 #newKingdomName {
@@ -71,7 +68,6 @@ input::placeholder {
   box-sizing: border-box;
   font-size: 25px;
   background-color: rgb(171, 188, 243);
-  opacity: 1;
   border: none;
   width: 317px;
   color: rgb(18, 140, 211);

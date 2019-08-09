@@ -43,6 +43,7 @@ class WorldMap extends Component {
       this.setState({ message: 'This country is taken' });
       this.setState({ selectedCountryCode: '' });
     } else {
+      this.setState({ error: '' });
       this.setState({ selectedCountryCode: countryCode });
       this.setState({ message: `You have selected ${countryName}` });
     }

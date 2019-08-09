@@ -22,15 +22,18 @@
   font-weight: bold;
   margin-top: 40px;
   margin-left: 40px;
-  }
+}
   
-  .leaderboardPage .menu p {
-    color: rgb(138, 170, 180);
-  }
+.leaderboardPage .menu p {
+  color: rgb(138, 170, 180);
+  background-color: rgb(90, 50, 184);
+  opacity: 0.7;
+}
 
-  .leaderboardPage .resources p {
-    color: rgb(126, 13, 233);
-  }
+.leaderboardPage .resources p {
+  color: rgb(126, 13, 233);
+  background: none;
+}
 
 .leaderBuildingsButton, .leaderTroopsButton {
   background: none;
@@ -38,12 +41,11 @@
   height: 90px;
   margin: 40px;
   border: none; 
-  }
+}
   
 .leaderBuildingsButton {
   margin-right: 80px;
-  }
-
+}
 
 .leaderbuttons {
   text-decoration: none;
@@ -51,27 +53,25 @@
   margin: 80px 0px 0px 0px;
   float: left;
   opacity: 0.8;
-  }
+}
 
 .leaderbuttons img {
   width: 120px;
   height: 120px; 
+}
   
-  }
-  
-  .leaderboardPage .menu img {
-    
-    opacity: 0.6;
-  }
+.leaderboardPage .menu img {  
+  opacity: 0.6;
+}
 
-  .leaderBuildingsButton img {
-    transform: rotate(-25deg);
-    }
+.leaderBuildingsButton img {
+  transform: rotate(-25deg);
+}
   
-    .leaderTroopsButton img {
-      transform: rotate(10deg);
-      }
+.leaderTroopsButton img {
+  transform: rotate(10deg);
+}
 
-      .leaderboardPage .resources  {
-        opacity: 0.7;
-      }
+.leaderboardPage .resources  {
+  opacity: 0.7;
+}
