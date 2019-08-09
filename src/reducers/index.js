@@ -9,6 +9,7 @@ import addBuildingReducer from './addBuildingReducer';
 import getTroopsReducer from './getTroopsReducer';
 import getBuildingLeaderboardReducer from './getBuildingLeaderboardReducer';
 import addTroopsReducer from './addTroopsReducer';
+import getTroopLeaderboardReducer from './getTroopsLeaderboardReducer';
 
 const rootReducer = combineReducers({
   changeKingdomName,
@@ -20,6 +21,7 @@ const rootReducer = combineReducers({
   addTroopsReducer,
   getTroopsReducer,
   getBuildingLeaderboardReducer,
+  getTroopLeaderboardReducer,
   routing: routerReducer,
 });
 

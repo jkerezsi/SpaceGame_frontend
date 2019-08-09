@@ -51,9 +51,13 @@ export const getTroopsAction = () => ({ type: 'GET_TROOPS', payload: '' });
 export const getTroopsSuccess = () => ({ type: 'GET_TROOPS_SUCCESS', payload: '' });
 export const getTroopsFail = () => ({ type: 'GET_TROOPS_FAIL', payload: '' });
 
-export const getbuildingLeaderboardAction = () => ({ type: 'GET_BUILDINGLEADERBOARD', paylGET_BUILDINGLEADERBOARD_SUCCESSoad: '' });
+export const getbuildingLeaderboardAction = () => ({ type: 'GET_BUILDINGLEADERBOARD', payload: '' });
 export const getbuildingLeaderboardSuccess = () => ({ type: 'GET_BUILDINGLEADERBOARD_SUCCESS', payload: '' });
 export const getbuildingLeaderboardFail = () => ({ type: 'GET_BUILDINGLEADERBOARD_FAIL', payload: '' });
+
+export const getTroopLeaderboardAction = () => ({ type: 'GET_TROOPLEADERBOARD', payload: '' });
+export const getTroopLeaderboardSuccess = () => ({ type: 'GET_TROOPLEADERBOARD_SUCCESS', payload: '' });
+export const getTroopLeaderboardFail = () => ({ type: 'GET_TROOPLEADERBOARD_FAIL', payload: '' });
 
 export const addTroopsAction = () => ({ type: 'ADD_TROOPS', payload: '' });
 export const addTroopsSuccess = () => ({ type: 'ADD_TROOPS_SUCCESS', payload: '' });
