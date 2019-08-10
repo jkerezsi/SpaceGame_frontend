@@ -9,7 +9,7 @@ export function* settingsWorkerSaga(action) {
     yield put({ type: 'KINGDOM_NAME_CHANGED', payload: response.data });
     history.push('/kingdom');
   } catch (error) {
-    console.log(error);
+    yield put({ type: 'KINGDOM_NAME_CHANGE_ERROR', payload: error });
   }
 }
 
