@@ -8,7 +8,7 @@ import Login from '../Containers/Login';
 import Register from '../Containers/Register';
 import leaderboardContent from '../Containers/leaderboardContent';
 import { history } from '../store/configureStore';
-import BuildingsContent from '../Containers/BuildingsContent';
+import BuildingsContent from '../Containers/buildingsContent';
 import PrivateRoute from './PrivateRoute';
 import TroopsContent from '../Containers/troopsContent';
 import WorldMap from '../Containers/Worldmap/WorldMap';
