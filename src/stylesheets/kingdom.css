@@ -2,11 +2,8 @@
   background: url(../assets/images/kingBg.jpg);
   position: fixed;  
   overflow: hidden;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   z-index: -1;
+  height: 100vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;   
@@ -15,10 +12,5 @@
 .kingdomPage p.error {
   margin-top: 50px;
   font-size: 30px;
-  color: rgb(224, 17, 52);
-  font-weight: bold;
-}
-
-.kingdomPage .menu img {  
-  opacity: 0.8;
+  color: rgb(255, 255, 255);
 }

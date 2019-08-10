@@ -23,7 +23,7 @@
   height: 150px;  
   font-family: 'hacked';
   font-size: 50px;  
-  color: rgb(204, 16, 72);
+  color: rgb(255, 255, 255);
   text-align: center;
   border: none;
   position: absolute;
@@ -43,7 +43,7 @@
   height: 150px;  
   font-family: 'hacked';
   font-size: 50px;  
-  color: rgb(177, 65, 230);
+  color: rgb(255, 255, 255);
   text-align: center;
   border: none;
   position: absolute;
@@ -59,7 +59,7 @@ button:focus {
 }
 
 .buildingStatus {
-  color: rgb(212, 22, 22);
+  color: rgb(255, 255, 255);
   font-family: 'hacked';
   font-size: 50px;
 }
@@ -69,7 +69,5 @@ button:focus {
 }
 
 .buildingsPage .linkbutton p {
-  color: rgb(35, 64, 195);
-  background-color: rgb(106, 107, 207);
-  opacity: 0.9;
+  color: rgb(255, 255, 255);
 }

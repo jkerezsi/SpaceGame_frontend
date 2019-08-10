@@ -1,23 +1,28 @@
+.menu {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  margin-top: 50px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 0 0 50px 50px;
+}
+
 .linkbutton p {
   font-family: 'hacked';
   font-size: 35px;
-  color: rgb(226, 30, 167);
   text-align: center;
   text-decoration: none;
-  font-weight: bold;
   margin: 10px 0 0 0;
-  background-color: rgb(33, 36, 189);
-  opacity: 0.8;
 }
 
 .buildingsButton, .troopsButton, .battleButton, .leaderboardButton {
   background: none;
   width: 120px;
   margin: 30px;
-  border: none; 
+  border: none;
 }
 
-.buildingsButton p {
+/* .buildingsButton p {
   position: absolute;
   left: 7.5%;
 }
@@ -35,31 +40,26 @@
 .leaderboardButton p {
   position: absolute;
   left: 45.5%;
-}
+} */
 
-.linkbutton {
+/* .linkbutton {
   background: none;
   width: 120px;
   margin: 20px;
   text-decoration: none;
   position: center;
   text-align: center;
-}
+} */
 
-.linkbutton:active {
+/* .linkbutton:active {
   text-decoration: none;
-}
+} */
 
-.menu {
-  display: flex; 
-  padding-top: 50px;
-  padding-left: 50px;
-  padding-right: 50px; 
-}
 
 img {
   width: 120px;
-  height: 90px;    
+  height: 90px;
+  border-radius: 20px;
 }
 
 .resources {
@@ -69,16 +69,12 @@ img {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.9;
-  position: absolute;
-  top: 12%;
-  left: 70%;
   padding: 1px 6px;   
   font-size: 20px;
 }
 
 p {
-  color: rgb(126, 13, 233);
+  color: rgb(255, 255, 255);
   display: flex;
   text-align: center;
 }

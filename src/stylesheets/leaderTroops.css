@@ -13,17 +13,9 @@
 }
 
 .lTroopsPage .linkbutton p {
-  color: rgb(23, 207, 78);
+  color: rgb(255, 255, 255);
 }
 
 .lTroopsPage .resources p {
-  color: rgb(126, 13, 233);
-}
-
-.lTroopsPage .menu img {    
-  opacity: 0.8;
-}
-
-.lTroopsPage .resources  {
-  opacity: 0.7;
+  color: rgb(255, 255, 255);
 }

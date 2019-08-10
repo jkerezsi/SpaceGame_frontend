@@ -2,10 +2,7 @@
   background: url(../assets/images/navBg.jpg);
   background-repeat: repeat;
   overflow: hidden;
-  opacity: 0.7;
-  font-weight: bold;
   height: 50px;
-  opacity: 0.8;
 }
 
 .login {
@@ -97,7 +94,6 @@
   width: 110px;
   text-decoration: none;
   font-size: 35px;
-  font-weight: bold; 
   width: 300px;
   height: 60px; 
   margin-top: 6px;
