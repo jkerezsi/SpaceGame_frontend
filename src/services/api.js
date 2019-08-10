@@ -67,3 +67,18 @@ export function fetchBuildings() {
     url: 'http://localhost:3012/kingdom/buildings',
   });
 }
+
+export function fetchbuildingLeaderboard() {
+  return axios({
+    method: 'get',
+    url: 'http://localhost:3012/leaderboard/buildings',
+    headers: { token: localStorage.getItem('TOKEN') },
+  });
+}
+
+export function fetchNewTroops() {
+  return axios({
+    method: 'post',
+    url: 'http://localhost:3012/kingdom/troops',
+  });
+}

@@ -1,0 +1,75 @@
+.buildingsPage {
+  background: url(../assets/images/city.jpg);
+  position: fixed;  
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; 
+}
+
+.addFarm {
+  font-family: 'hacked';
+  margin-right: 50px;
+  background: url(../assets/images/farm.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 150px;  
+  font-family: 'hacked';
+  font-size: 50px;  
+  color: rgb(204, 16, 72);
+  text-align: center;
+  border: none;
+  position: absolute;
+  top: 60%;
+  left: 25%;
+  border-radius: 50%;
+  transition: 0.1s;
+}
+
+.addMine {
+  font-family: 'hacked'; 
+  background: url(../assets/images/mine.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 150px;  
+  font-family: 'hacked';
+  font-size: 50px;  
+  color: rgb(177, 65, 230);
+  text-align: center;
+  border: none;
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  border-radius: 50%;
+  transition: 0.1s;   
+}
+
+button:focus {
+  border: none;
+  outline: none; 
+}
+
+.buildingStatus {
+  color: rgb(212, 22, 22);
+  font-family: 'hacked';
+  font-size: 50px;
+}
+
+.addBuildings {
+  margin: 60px 0px 0px 60px;
+}
+
+.buildingsPage .linkbutton p {
+  color: rgb(35, 64, 195);
+  background-color: rgb(106, 107, 207);
+  opacity: 0.9;
+}
