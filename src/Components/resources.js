@@ -1,7 +1,11 @@
 /* eslint-disable react/prop-types */
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getResources } from '../actions/actions';
+import foodPic from '../assets/images/food.png';
+import goldPic from '../assets/images/gold.png';
+
 
 class ShowResources extends Component {
   componentWillMount() {
@@ -14,21 +18,19 @@ class ShowResources extends Component {
     return getResources(localStorageToken);
   }
 
-
   render() {
     const { food, gold, error } = this.props;
     return (
       <div className="resources">
-        <p>
-          <span role="img" aria-label="Bread">🍞</span>
+        <p className="food">
+          <img className="foodPic" src={foodPic} alt="Food pic" />
           {food}
         </p>
-        <p>
-          <span role="img" aria-label="Money">💰</span>
+        <p className="gold">
+          <img className="goldPic" src={goldPic} alt="Money pic" />
           {gold}
-
         </p>
-        <p>{error}</p>
+        <p className="error">{error}</p>
       </div>
     );
   }
@@ -43,7 +45,6 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = {
   getResources,
 };
-
 
 export default connect(
   mapStateToProps,

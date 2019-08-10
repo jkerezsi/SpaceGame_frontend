@@ -1,0 +1,147 @@
+.settingsPage {
+  background: url(../assets/images/lion5.jpg);
+  position: absolute; 
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;   
+}
+
+a:visited {
+  float: right;
+  text-align: center;
+  height: 30px;
+  margin-top: -15px; 
+  padding: 15px;
+  text-decoration: none;
+  -webkit-text-fill-color: rgb(226, 33, 113);
+  font-size: 35px;
+  background: url(../assets/images/set.gif);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;   
+}
+
+.settingsForm {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: url(../assets/images/--.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 80px;
+  opacity: 0.7;
+  text-align: center;
+  top: 20%;
+  left: 55%;
+  padding: 20px 20px;
+  margin: 20px 20px;
+  box-sizing: border-box;  
+}
+
+label {
+  display: none;
+}
+  
+.settingsForm input {
+  font-size: 20px;
+  border-radius: 40px;
+  font-family: 'hacked';
+  text-align: left;
+  color: rgb(233, 16, 168);
+}
+  
+input::placeholder {
+  color: rgb(17, 200, 94);
+  text-align: left;
+  font-family: 'hacked';
+}
+  
+#newKingdomName {
+  padding: 10px;
+  margin-top: 90px;
+  box-sizing: border-box;
+  font-size: 25px;
+  background-color: rgb(171, 188, 243);
+  border: none;
+  width: 317px;
+  color: rgb(18, 140, 211);
+  font-family: 'hacked';
+}
+  
+.buttons {
+  background: url(../assets/images/cube.gif);
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  font-size: 33px;
+  color: rgb(224, 33, 176);
+  font-family: 'hacked';
+  top: 40%;
+  left: 30%;
+  transition: 0.1s;
+  border: none;
+  margin: 50px;
+  width: 200px;
+  height: 200px;
+}
+
+.buttons:active {
+  background: url(../assets/images/crown.gif);
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: transparent;
+  font-family: 'hacked'; 
+  border: none;
+  top: 40%;
+  left: 38%;
+  border: none;
+  transition: 0.1s;
+  width: 100px;
+  height: 100px;
+}
+
+.ball1 {
+  background: url(../assets/images/--.png);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;  
+  height: 350px;
+  margin-left: 200px;
+  opacity: 0.7;
+}
+  
+.ball2 {
+  background: url(../assets/images/--.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  width: 150x;
+  height: 150px;
+  position: relative;
+  top: 0px;
+  left: 50px;
+}
+
+.errorSet {
+  color: rgb(233, 13, 97);
+  font-weight: bold;
+  text-align: center;
+  font-family: 'hacked';
+  padding-top: 30px;
+  margin: 0px;
+  font-size: 30px;
+  width: 300px;
+}  
+

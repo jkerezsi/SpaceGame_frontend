@@ -9,6 +9,7 @@ const registerAuthentication = (state = initialState, action) => {
   switch (action.type) {
     case 'REGISTER_SUCCESS':
       localStorage.setItem('TOKEN', action.payload.token);
+      localStorage.setItem('kingdomName', action.payload.kingdomname);
       return {
         id: action.payload.userID,
         username: action.payload.username,
