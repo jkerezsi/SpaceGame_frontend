@@ -19,8 +19,8 @@ import Kingdom from '../Containers/Kingdom';
 import BattlePlusMenu from '../Containers/Kingdom-Containers/Battle';
 import LeaderTroopsPlusMenu from '../Containers/Leaderboard-Containers/Ltroops';
 import BuildingLeaderboardPlusMenu from '../Containers/buildingleaderboardplusmenu';
-import '../stylesheets/App.css';
-import '../stylesheets/Navbar.css';
+import '../stylesheets/App.scss';
+import '../stylesheets/Navbar.scss';
 
 
 const App = () => (

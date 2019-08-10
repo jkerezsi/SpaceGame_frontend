@@ -9,8 +9,8 @@ import ButtonL from '../Components/ButtonLogin';
 import Input from '../Components/InputField';
 import video2 from '../assets/images/loginVideo.mp4';
 import track from '../assets/images/.vtt';
-import '../stylesheets/login.css';
-import '../stylesheets/Navbar.css';
+import '../stylesheets/login.scss';
+import '../stylesheets/Navbar.scss';
 
 class Login extends Component {
   state = {

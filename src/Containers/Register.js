@@ -10,7 +10,7 @@ import ButtonR from '../Components/ButtonRegister';
 import Input from '../Components/InputField';
 import video3 from '../assets/images/registerVideo.mp4';
 import track from '../assets/images/.vtt';
-import '../stylesheets/register.css';
+import '../stylesheets/register.scss';
 
 
 class Register extends Component {

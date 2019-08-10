@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { updateKingdomName } from '../actions/actions';
 import ButtonS from '../Components/ButtonSettings';
 import Input from '../Components/InputField';
-import '../stylesheets/settings.css';
+import '../stylesheets/settings.scss';
 
 
 class Settings extends Component {

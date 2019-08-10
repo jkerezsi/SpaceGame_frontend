@@ -1,7 +1,7 @@
 import React from 'react';
 import Menu from '../Components/menu/menu';
-import '../stylesheets/kingdom.css';
-import '../stylesheets/Navbar.css';
+import '../stylesheets/kingdom.scss';
+import '../stylesheets/Navbar.scss';
 
 
 const Kingdom = () => (

@@ -2,7 +2,7 @@ import React from 'react';
 import Menu from '../../Components/menu/menu';
 import video5 from '../../assets/images/battle1.mp4';
 import track from '../../assets/images/.vtt';
-import '../../stylesheets/battle.css';
+import '../../stylesheets/battle.scss';
 
 
 const BattlePlusMenu = () => (

@@ -11,7 +11,7 @@ import {
 import mapInfo from './world-50m.json';
 import ButtonM from '../../Components/ButtonMap';
 import { selectCountry } from '../../actions/actions';
-import '../../stylesheets/map.css';
+import '../../stylesheets/map.scss';
 
 
 const wrapperStyles = {

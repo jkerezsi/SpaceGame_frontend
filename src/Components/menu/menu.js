@@ -5,7 +5,7 @@ import battle from '../../assets/images/battle1.gif';
 import leaderboard from '../../assets/images/leader1.gif';
 import troop from '../../assets/images/troop1.gif';
 import ShowResources from '../resources';
-import '../../stylesheets/menu.css';
+import '../../stylesheets/menu.scss';
 
 
 const Menu = () => (

@@ -2,7 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getBuildingsAction } from '../actions/actions';
-import '../stylesheets/App.css';
+import '../stylesheets/App.scss';
 
 
 class GetBuildingsComponent extends React.Component {

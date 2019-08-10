@@ -2,7 +2,7 @@ import React from 'react';
 import video1 from '../assets/images/landingVideo.mp4';
 import track from '../assets/images/.vtt';
 import music from '../assets/images/landingMusic.mp3';
-import '../stylesheets/landing.css';
+import '../stylesheets/landing.scss';
 
 
 const Landing = () => (

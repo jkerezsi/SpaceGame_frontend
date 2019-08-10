@@ -7,7 +7,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { getTroopsAction } from '../actions/actions';
-import '../stylesheets/troops.css';
+import '../stylesheets/troops.scss';
 
 
 class GetTroopsComponent extends React.Component {

@@ -5,7 +5,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getbuildingLeaderboardAction } from '../actions/actions';
-import '../stylesheets/buildingLeaderBoard.css';
+import '../stylesheets/buildingLeaderBoard.scss';
 
 class GetBuildingLeaderboard extends React.Component {
   state = {

@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import building from '../assets/images/leaderBuildings.jpg';
 import troop from '../assets/images/leaderTroops.jpg';
-import '../stylesheets/leaderboard.css';
+import '../stylesheets/leaderboard.scss';
 
 
 const Leaderboard = () => (
