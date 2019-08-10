@@ -1,3 +1,6 @@
+
+import { history } from '../store/configureStore';
+
 const initialState = {
   token: '',
   status: '',
@@ -19,6 +22,7 @@ const loginAuthentication = (state = initialState, action) => {
       };
     case 'LOGOUT':
       localStorage.removeItem('TOKEN');
+      history.push('/');
       return {
         token: null,
         status: 'logged out',

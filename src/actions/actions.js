@@ -27,7 +27,26 @@ export const updateKingdomName = (newKingdomName, token) => ({
 export const updateKingdomNameSuccess = () => ({ type: 'KINGDOM_NAME_CHANGED', payload: '' });
 
 export const logout = () => ({ type: 'LOGOUT' });
-
 export const getBuildingsAction = () => ({ type: 'GETBUILDINGS', payload: '' });
 export const getBuildingsSucces = () => ({ type: 'GETBUILDINGS_SUCCESS', payload: '' });
 export const getBuildingsFailed = () => ({ type: 'GETBUILDINGS_FAILED', payload: '' });
+export const selectCountry = countryCode => ({ type: 'SELECT_COUNTRY', payload: { countryCode } });
+export const selectCountrySuccess = () => ({ type: 'COUNTRY_AVAILABLE', payload: '' });
+export const selectCountryReject = () => ({ type: 'COUNTRY_REJECT', payload: 'Country code is required!' });
+
+export const getResources = token => ({
+  type: 'getResources',
+  payload: {
+    token,
+  },
+});
+export const gotResources = () => ({ type: 'GOT_RESOURCES', payload: '' });
+export const FailedGotResources = () => ({ type: 'GET_RESOURCES_FAILED', payload: '' });
+
+export const addBuildingAction = (type, token) => ({ type: 'ADD_BUILDING', payload: { type, token } });
+export const addBuildingSuccess = () => ({ type: 'ADD_BUILDING_SUCCESS', payload: '' });
+export const addBuildingFail = () => ({ type: 'ADD_BUILDING_FAIL', payload: '' });
+
+export const getTroopsAction = () => ({ type: 'GET_TROOPS', payload: '' });
+export const getTroopsSuccess = () => ({ type: 'GET_TROOPS_SUCCESS', payload: '' });
+export const getTroopsFail = () => ({ type: 'GET_TROOPS_FAIL', payload: '' });

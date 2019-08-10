@@ -4,12 +4,20 @@ import loginAuthentication from './loginReducer';
 import registerAuthentication from './registerReducer';
 import changeKingdomName from './settingsReducer';
 import getBuildingsReducer from './getBuildingsReducer';
+import mapReducer from './worldMapReducer';
+import showResources from './resourcesReducer';
+import addBuildingReducer from './addBuildingReducer';
+import getTroopsReducer from './getTroopsReducer';
 
 const rootReducer = combineReducers({
   changeKingdomName,
   loginAuthentication,
   registerAuthentication,
   getBuildingsReducer,
+  mapReducer,
+  showResources,
+  addBuildingReducer,
+  getTroopsReducer,
   routing: routerReducer,
 });
 

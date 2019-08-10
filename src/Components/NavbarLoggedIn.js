@@ -9,8 +9,8 @@ import '../stylesheets/Navbar.css';
 class NavbarLoggedIn extends Component {
   handleClick = (e) => {
     e.preventDefault();
-    const { logoutUser } = this.props;
-    logoutUser();
+    const { logout } = this.props;
+    logout();
   }
 
   render() {
@@ -28,10 +28,8 @@ class NavbarLoggedIn extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    logoutUser: () => dispatch(logout()),
-  };
+const mapDispatchToProps = {
+  logout,
 };
 
 

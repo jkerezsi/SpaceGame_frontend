@@ -7,6 +7,8 @@ import { connect } from 'react-redux';
 import { userLogin } from '../actions/actions';
 import Button from '../Components/Button';
 import Input from '../Components/InputField';
+import video2 from '../assets/images/loginVideo.mp4';
+import track from '../assets/images/.vtt';
 
 
 class Login extends Component {
@@ -39,7 +41,7 @@ class Login extends Component {
   validate = () => {
     const { username, password } = this.state;
     if (!username || !password) {
-      this.setState({ error: 'All input fields are required' });
+      this.setState({ error: 'All input fields are required!' });
       return false;
     }
     return true;
@@ -50,7 +52,12 @@ class Login extends Component {
     const { backendError } = this.props;
     return (
       <div className="login">
-        <form>
+        <video className="logVid" autoPlay loop>
+          <source src={video2} type="video/mp4" />
+          <track default kind="captions" srcLang="en" src={track} />
+        </video>
+        <div className="gamerLogin" />
+        <form className="loginForm">
           <Input label="Username" id="username" onChange={this.handleChange} />
           <label id="password" htmlFor="password">Password</label>
           <input type="password" label="Password" id="password" onChange={this.handleChange} placeholder="Password" />
@@ -62,7 +69,6 @@ class Login extends Component {
     );
   }
 }
-
 
 const mapStateToProps = (state) => {
   return {
