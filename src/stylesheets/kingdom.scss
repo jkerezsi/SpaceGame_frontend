@@ -1,0 +1,16 @@
+.kingdomPage {
+  background: url(../assets/images/kingBg.jpg);
+  position: fixed;  
+  overflow: hidden;
+  z-index: -1;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;   
+}
+
+.kingdomPage p.error {
+  margin-top: 50px;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+}

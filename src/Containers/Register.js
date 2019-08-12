@@ -6,10 +6,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { userRegister } from '../actions/actions';
-import Button from '../Components/Button';
+import ButtonR from '../Components/ButtonRegister';
 import Input from '../Components/InputField';
 import video3 from '../assets/images/registerVideo.mp4';
 import track from '../assets/images/.vtt';
+import '../stylesheets/register.scss';
+
 
 class Register extends Component {
   state = {
@@ -62,15 +64,15 @@ class Register extends Component {
           <source src={video3} type="video/mp4" />
           <track default kind="captions" srcLang="en" src={track} />
         </video>
-        <div className="gamerRegister" />
+        <div className="gamerRegistration" />
         <form className="registerForm">
           <Input label="Username" id="username" onChange={this.handleChange} />
           <label htmlFor="password">Password</label>
           <input type="password" label="Password" id="password" onChange={this.handleChange} placeholder="Password" />
           <Input label="Kingdom name" id="kingdom" onChange={this.handleChange} />
-          <Button onClick={this.handleClick} buttonText="Register" />
-          <p>{ error }</p>
-          <p>{ registerBackendError }</p>
+          <ButtonR onClick={this.handleClick} buttonText="Register" />
+          <p className="errorReg">{ error }</p>
+          <p className="errorReg">{ registerBackendError }</p>
         </form>
       </div>
     );

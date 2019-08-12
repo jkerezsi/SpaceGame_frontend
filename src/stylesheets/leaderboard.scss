@@ -1,0 +1,64 @@
+.leaderboardPage {
+  background: url(../assets/images/angel6.jpg);
+  background-color: #0D0115;  
+  position: fixed;  
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-position:  left 100px top -60px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.leaderbuttons p {
+  font-family: 'hacked';
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  margin-left: 40px;
+}
+  
+.leaderboardPage .menu p {
+  color: rgb(255, 255, 255);
+}
+
+.leaderboardPage .resources p {
+  color: rgb(255, 255, 255);
+  background: none;
+}
+
+.leaderBuildingsButton, .leaderTroopsButton {
+  background: none;
+  width: 90px;
+  height: 90px;
+  margin: 40px;
+  border: none; 
+}
+  
+.leaderBuildingsButton {
+  margin-right: 80px;
+}
+
+.leaderbuttons {
+  text-decoration: none;
+  text-align: center;
+  margin: 80px 0px 0px 0px;
+  float: left;
+}
+
+.leaderbuttons img {
+  width: 120px;
+  height: 120px; 
+}
+
+.leaderBuildingsButton img {
+  transform: rotate(-25deg);
+}
+  
+.leaderTroopsButton img {
+  transform: rotate(10deg);
+}

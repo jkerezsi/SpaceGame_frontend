@@ -1,0 +1,57 @@
+@font-face {
+  font-family: hacked;
+  src: url(./fonts/hacked.ttf);
+}
+
+body {
+  font-family: 'hacked';
+  margin: 0;
+}
+
+video {
+  object-fit: fill;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+audio {
+  position: absolute;
+  top: 90%;
+  left: 0.5%;
+  width: 100px;
+  height: 50px;
+  opacity: 0.3;
+  border: none;
+}
+
+audio::-webkit-media-controls-play,
+audio::-webkit-media-controls-pause,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-volume-slider-container,
+audio::-webkit-media-controls-volume-slider
+{
+	display: none;
+}
+
+audio::-webkit-media-controls-panel {
+	background: rgb(221, 200, 17);
+  border-radius: 0;
+}
+
+audio.input[type="file"]::-webkit-file-upload-button {
+  display: none;
+}
+
+audio:focus {
+  border: none;
+  outline: none; 
+}

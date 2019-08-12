@@ -9,8 +9,9 @@ import {
   Geography,
 } from 'react-simple-maps';
 import mapInfo from './world-50m.json';
-import Button from '../../Components/Button';
+import ButtonM from '../../Components/ButtonMap';
 import { selectCountry } from '../../actions/actions';
+import '../../stylesheets/map.scss';
 
 
 const wrapperStyles = {
@@ -18,7 +19,6 @@ const wrapperStyles = {
   maxWidth: 980,
   margin: '0 auto',
 };
-
 
 class WorldMap extends Component {
   constructor() {
@@ -49,7 +49,6 @@ class WorldMap extends Component {
     }
   };
 
-
     submitButton = (e) => {
       e.preventDefault();
       const isValid = this.validate();
@@ -75,15 +74,14 @@ class WorldMap extends Component {
       const { selectedCountryCode } = this.state;
       let color = '';
       if (occupiedCountries.indexOf(item) > -1) {
-        color = '#FF4500';
+        color = '#662079';
       } else if (selectedCountryCode === item) {
-        color = '#00FF00';
+        color = '#0C16A1';
       } else {
         color = '#D3D3D3';
       }
       return color;
     }
-
 
     loopAll = (object) => {
       const all = [];
@@ -101,65 +99,67 @@ class WorldMap extends Component {
       if (occupiedCountries === '') {
         return (
           <div>
-            <h2 style={{ color: 'white' }}>Loading...</h2>
+            <h2 style={{ color: 'crimson' }}>Loading...</h2>
           </div>
         );
       }
       return (
-        <div>
-          <div style={wrapperStyles}>
-            <h2 style={{ color: 'white' }}>Please select your kingdom</h2>
-            <h3 style={{ color: 'white' }}>{ error }</h3>
-            <h3 style={{ color: 'white' }}>{ message }</h3>
-            <h3 style={{ color: 'white' }}>{ countryError }</h3>
-            <Button className="selectCountry" onClick={this.submitButton} buttonText="Submit" />
-            <ComposableMap
-              projectionConfig={{
-                scale: 205,
-                rotation: [-11, 0, 0],
-              }}
-              width={980}
-              height={551}
-              style={{
-                width: '100%',
-                height: 'auto',
-              }}
-            >
-              <ZoomableGroup center={[0, 20]} disablePanning>
-                <Geographies geography={mapInfo} disableOptimization>
-                  {(geographies, projection) => geographies.map((geography, i) => (
-                    <Geography
-                      // eslint-disable-next-line react/no-array-index-key
-                      key={i}
-                      onClick={
+        <div className="mapPage">
+          <div>
+            <div style={wrapperStyles}>
+              <h2 style={{ color: '#ff00bf' }}>Please select your kingdom</h2>
+              <h3 style={{ color: '#ff0066' }}>{ error }</h3>
+              <h4 style={{ color: '#ff0066' }}>{ message }</h4>
+              <h5 style={{ color: '#ff0066' }}>{ countryError }</h5>
+              <ButtonM className="selectCountry" onClick={this.submitButton} buttonText="SELECT" />
+              <ComposableMap
+                projectionConfig={{
+                  scale: 205,
+                  rotation: [-11, 0, 0],
+                }}
+                width={980}
+                height={551}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                }}
+              >
+                <ZoomableGroup center={[0, 20]} disablePanning>
+                  <Geographies geography={mapInfo} disableOptimization>
+                    {(geographies, projection) => geographies.map((geography, i) => (
+                      <Geography
+                        // eslint-disable-next-line react/no-array-index-key
+                        key={i}
+                        onClick={
 () => this.handleCountryClick(mapInfo.objects.units.geometries[i].id, mapInfo.objects.units.geometries[i].properties.name)}
-                      geography={geography}
-                      projection={projection}
-                      style={{
-                        default: {
-                          fill: this.checkCountryColor(mapInfo.objects.units.geometries[i].id),
-                          stroke: '#607D8B',
-                          strokeWidth: 0.75,
-                          outline: 'none',
-                        },
-                        hover: {
-                          fill: '#607D8B',
-                          stroke: '#607D8B',
-                          strokeWidth: 0.75,
-                          outline: 'none',
-                        },
-                        pressed: {
-                          fill: '#FFE4B5',
-                          stroke: '#607D8B',
-                          strokeWidth: 0.75,
-                          outline: 'none',
-                        },
-                      }}
-                    />
-                  ))}
-                </Geographies>
-              </ZoomableGroup>
-            </ComposableMap>
+                        geography={geography}
+                        projection={projection}
+                        style={{
+                          default: {
+                            fill: this.checkCountryColor(mapInfo.objects.units.geometries[i].id),
+                            stroke: '#ff0066',
+                            strokeWidth: 0.75,
+                            outline: 'none',
+                          },
+                          hover: {
+                            fill: '#ff0066',
+                            stroke: '#ff0066',
+                            strokeWidth: 0.75,
+                            outline: 'none',
+                          },
+                          pressed: {
+                            fill: '#e9e9f0',
+                            stroke: '#ff0066',
+                            strokeWidth: 0.75,
+                            outline: 'none',
+                          },
+                        }}
+                      />
+                    ))}
+                  </Geographies>
+                </ZoomableGroup>
+              </ComposableMap>
+            </div>
           </div>
         </div>
       );

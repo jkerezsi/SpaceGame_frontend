@@ -1,0 +1,21 @@
+.buildingLeaderboardContainer{
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+flex-direction: column;
+}
+
+.buildingLeaderboard {
+  display: flex;
+  background-color: black;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.leaderboardElement{
+  display: flex;
+  border: 0px,solid,white;
+  color: white;
+}

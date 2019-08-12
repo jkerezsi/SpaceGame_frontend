@@ -1,9 +1,10 @@
 import React from 'react';
 
+
 const Troops = () => (
-  <h1>
-    Troops page
-  </h1>
+  <div>
+    <h1>Troops page</h1>
+  </div>
 );
 
 export default Troops;

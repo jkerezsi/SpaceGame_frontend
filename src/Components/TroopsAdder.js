@@ -5,7 +5,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addTroopsAction } from '../actions/actions';
-import '../stylesheets/buildingbuttons.css';
+import '../stylesheets/buildings.scss';
 
 class AddTroops extends Component {
   state={

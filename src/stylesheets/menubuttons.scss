@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/scss?family=Orbitron');
+
+.linkbutton {
+  text-decoration: none;
+  font-family: 'Orbitron'; 
+  font-size: 16px;
+}
+
+.leaderbuttons{
+  display: flex;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.leaderbuttons[img] {
+  width: 120px;
+  height: 90px; 
+}
+
+.menu {
+  display: flex;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: 200px;
+}
+
+button {
+  width: 140px;
+  height: 150px;
+  background-color: transparent;
+  border: 0;
+  padding: 10px;
+  margin: 10px;
+}
+
+img {
+  width: 120px;
+  height: 90px; 
+}
+
+p {
+  color: rgb(255, 255, 255);  
+  text-align: center;
+}

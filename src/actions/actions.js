@@ -24,12 +24,13 @@ export const updateKingdomName = (newKingdomName, token) => ({
     newKingdomName, token,
   },
 });
-
 export const updateKingdomNameSuccess = () => ({ type: 'KINGDOM_NAME_CHANGED', payload: '' });
-export const logout = () => ({ type: 'LOGOUT' });
 
-// eslint-disable-next-line camelcase
-export const selectCountry = country_code => ({ type: 'SELECT_COUNTRY', payload: { country_code } });
+export const logout = () => ({ type: 'LOGOUT' });
+export const getBuildingsAction = () => ({ type: 'GETBUILDINGS', payload: '' });
+export const getBuildingsSucces = () => ({ type: 'GETBUILDINGS_SUCCESS', payload: '' });
+export const getBuildingsFailed = () => ({ type: 'GETBUILDINGS_FAILED', payload: '' });
+export const selectCountry = countryCode => ({ type: 'SELECT_COUNTRY', payload: { countryCode } });
 export const selectCountrySuccess = () => ({ type: 'COUNTRY_AVAILABLE', payload: '' });
 export const selectCountryReject = () => ({ type: 'COUNTRY_REJECT', payload: 'Country code is required!' });
 

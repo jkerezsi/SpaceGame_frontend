@@ -1,9 +1,10 @@
 import React from 'react';
 
+
 const Leaderboard = () => (
-  <h1>
-    Leaderboard page
-  </h1>
+  <div>
+    <h1>Leaderboard page</h1>
+  </div>
 );
 
 export default Leaderboard;

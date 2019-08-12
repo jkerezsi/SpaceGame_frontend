@@ -4,11 +4,10 @@ import Menu from '../Components/menu/menu';
 
 
 const leaderboardContent = () => (
-  <div>
+  <div className="leaderboardPage">
     <Menu />
     <Leaderboard />
   </div>
 );
-
 
 export default leaderboardContent;

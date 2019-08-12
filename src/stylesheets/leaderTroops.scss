@@ -1,0 +1,21 @@
+.lTroopsPage {
+  background: url(../assets/images/lTroBg.jpg);
+  position: absolute;  
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;  
+}
+
+.lTroopsPage .linkbutton p {
+  color: rgb(255, 255, 255);
+}
+
+.lTroopsPage .resources p {
+  color: rgb(255, 255, 255);
+}

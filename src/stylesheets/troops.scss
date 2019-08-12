@@ -1,0 +1,45 @@
+.troopsPage {
+  background: url(../assets/images/troopBg.jpg);
+  position: fixed;  
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.troops {
+  color: rgb(147, 206, 51);
+  font-family: 'hacked';
+  font-size: 50px;
+  margin: 120px 0 0 50px;
+}
+
+.troop {
+  padding-bottom: 20px;
+  background-color: rgb(255, 0, 119);
+}
+
+.troopsPage .linkbutton p {
+  color: rgb(255, 255, 255);
+}
+
+[class="1"] {
+  background-color: rgb(228, 0, 202);
+}
+
+[class="2"] {
+  background-color: purple;
+}
+
+[class="3"] {
+  background-color: rgb(52, 1, 52);
+}
+
+[class="10"] {
+  background-color: black;
+}
