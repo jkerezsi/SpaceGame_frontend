@@ -8,6 +8,7 @@ import { resourceWatcherSaga } from './resourcesSaga';
 import { addBuildingWatcherSaga } from './addBuildingSaga';
 import { getTroopsSaga } from './getTroopsSaga';
 import { getbuildingLeaderboardWatcherSaga } from './getBuildingScoresSaga';
+import { getTroopLeaderboardWatcherSaga } from './getTroopLeaderboardSaga';
 import { addTroopsWatcherSaga } from './addTroopsSaga';
 
 export default function* rootSaga() {
@@ -22,6 +23,7 @@ export default function* rootSaga() {
     fork(addBuildingWatcherSaga),
     fork(getTroopsSaga),
     fork(getbuildingLeaderboardWatcherSaga),
+    fork(getTroopLeaderboardWatcherSaga),
     fork(addTroopsWatcherSaga),
   ]);
 }

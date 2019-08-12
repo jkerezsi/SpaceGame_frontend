@@ -4,10 +4,10 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { connect } from 'react-redux';
-import { getbuildingLeaderboardAction } from '../actions/actions';
-import '../stylesheets/buildingLeaderBoard.scss';
+import { getTroopLeaderboardAction } from '../actions/actions';
+import '../stylesheets/buildingLeaderBoard.css';
 
-class GetBuildingLeaderboard extends React.Component {
+class GetTroopsLeaderboard extends React.Component {
   state = {
     howManyToShow: 5,
   }
@@ -19,8 +19,8 @@ class GetBuildingLeaderboard extends React.Component {
   }
 
   componentWillMount() {
-    const { getbuildingLeaderboardAction } = this.props;
-    return getbuildingLeaderboardAction();
+    const { getTroopLeaderboardAction } = this.props;
+    return getTroopLeaderboardAction();
   }
 
   getkingdomScoreFromProps() {
@@ -34,8 +34,8 @@ class GetBuildingLeaderboard extends React.Component {
             <div className="leaderboardElement">
               <h4>{leaderboard.kingdomName}</h4>
               <h6>
-                Number of buildings:
-                {leaderboard.numberOfBuildings}
+Number of troops:
+                {leaderboard.troops}
               </h6>
             </div>
           ))}
@@ -70,15 +70,15 @@ class GetBuildingLeaderboard extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  leaderboard: state.getBuildingLeaderboardReducer.leaderboard,
-  status: state.getBuildingLeaderboardReducer.status,
+  leaderboard: state.getTroopLeaderboardReducer.leaderboard,
+  status: state.getTroopLeaderboardReducer.status,
 });
 
 const mapDispatchToProps = {
-  getbuildingLeaderboardAction,
+  getTroopLeaderboardAction,
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(GetBuildingLeaderboard);
+)(GetTroopsLeaderboard);

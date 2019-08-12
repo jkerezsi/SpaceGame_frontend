@@ -19,6 +19,7 @@ import Kingdom from '../Containers/Kingdom';
 import BattlePlusMenu from '../Containers/Kingdom-Containers/Battle';
 import LeaderTroopsPlusMenu from '../Containers/Leaderboard-Containers/Ltroops';
 import BuildingLeaderboardPlusMenu from '../Containers/buildingleaderboardplusmenu';
+import TroopsLeaderboardPlusMenu from '../Containers/TroopsLeaderboardPlusMenu';
 import '../stylesheets/App.scss';
 import '../stylesheets/Navbar.scss';
 
@@ -37,7 +38,7 @@ const App = () => (
         <PrivateRoute exact path="/kingdom/battle" component={BattlePlusMenu} />
         <PrivateRoute exact path="/kingdom/leaderboard" component={leaderboardContent} />
         <PrivateRoute exact path="/kingdom/leaderboard/buildings" component={BuildingLeaderboardPlusMenu} />
-        <PrivateRoute exact path="/kingdom/leaderboard/troops" component={LeaderTroopsPlusMenu} />
+        <PrivateRoute exact path="/kingdom/leaderboard/troops" component={TroopsLeaderboardPlusMenu} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/register/map" component={WorldMap} />
