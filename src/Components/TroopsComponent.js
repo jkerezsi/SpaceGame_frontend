@@ -21,7 +21,7 @@ class GetTroopsComponent extends React.Component {
     return (
       <div className="troops">
         {[].concat(troop).sort((a, b) => b.level - a.level).map((troops, i) => (
-          <button type="submit" className={troops.level}>
+          <button type="submit" className="trooplist">
             <NavLink to="/kingdom/buildings" className="linkbutton">
               <h4>
                 Troop number:

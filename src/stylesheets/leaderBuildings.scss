@@ -1,6 +1,5 @@
 .lBuildingsPage {
   background: url(../assets/images/lBuiBg.jpg);
-  position: absolute;  
   overflow: hidden;
   top: 0;
   bottom: 0;
@@ -10,7 +9,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position:  left 0 bottom 0.1px;
+  // background-position:  left 0 bottom 0.1px;
 }
 
 .lBuildingsPage p {

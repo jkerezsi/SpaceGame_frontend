@@ -19,7 +19,7 @@ class NavbarLoggedIn extends Component {
     return (
       <div className="navbar">
         <div className="kingdom">
-          <NavLink to="/kingdom">{ (kingdomName !== '') ? kingdomName : localStorage.getItem('kingdomName') }</NavLink>
+          <NavLink to="/kingdom">{ (kingdomName !== '') ? kingdomName : 'enkiskacsam' }</NavLink>
         </div>
         <div className="controlBar">
           <div className="settings"><NavLink className="settingsa" to="/settings">Settings</NavLink></div>

@@ -5,7 +5,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getTroopLeaderboardAction } from '../actions/actions';
-import '../stylesheets/buildingLeaderBoard.css';
+import '../stylesheets/leaderTroops.scss';
 
 class GetTroopsLeaderboard extends React.Component {
   state = {

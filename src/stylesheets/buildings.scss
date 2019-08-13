@@ -12,6 +12,10 @@
   background-repeat: no-repeat; 
 }
 
+.buildingMenu.linkbutton{
+  background-color:yellow;
+}
+
 .addFarm {
   font-family: 'hacked';
   margin-right: 50px;
@@ -27,8 +31,8 @@
   text-align: center;
   border: none;
   position: absolute;
-  top: 60%;
-  left: 25%;
+  top: 70%;
+  left: 20%;
   border-radius: 50%;
   transition: 0.1s;
 }
@@ -47,7 +51,7 @@
   text-align: center;
   border: none;
   position: absolute;
-  top: 60%;
+  top: 70%;
   left: 40%;
   border-radius: 50%;
   transition: 0.1s;   
@@ -62,6 +66,7 @@ button:focus {
   color: rgb(255, 255, 255);
   font-family: 'hacked';
   font-size: 50px;
+  margin-top:120px;
 }
 
 .addBuildings {
